@@ -6,339 +6,107 @@
 <title>مشاور هوشمند اندام برتر</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  font-family: Tahoma, sans-serif;
-  background: #0a0f1e;
-  min-height: 100vh;
-  color: #eee;
-  padding: 16px;
-}
-
+body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; color: #eee; padding: 16px; }
 .container { max-width: 750px; margin: auto; }
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 32px 16px 24px;
-}
-.hero-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #1b4332, #2d6a4f);
-  color: #a8d5ba;
-  font-size: 11px;
-  padding: 4px 14px;
-  border-radius: 99px;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-.hero h1 {
-  font-size: 22px;
-  color: #a8d5ba;
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
+.hero { text-align: center; padding: 28px 16px 20px; }
+.hero-badge { display: inline-block; background: linear-gradient(135deg,#1b4332,#2d6a4f); color: #a8d5ba; font-size: 11px; padding: 4px 14px; border-radius: 99px; letter-spacing: 2px; margin-bottom: 14px; }
+.hero h1 { font-size: 20px; color: #a8d5ba; margin-bottom: 8px; line-height: 1.6; }
 .hero p { font-size: 13px; color: #6b8a7a; line-height: 1.8; }
-
-/* CARD */
-.card {
-  background: #111827;
-  border: 1px solid #1f2d3d;
-  border-radius: 16px;
-  margin-bottom: 14px;
-  overflow: hidden;
-}
-.card-head {
-  background: linear-gradient(135deg, #1b4332, #2d6a4f);
-  padding: 14px 20px;
-  font-size: 14px;
-  color: #a8d5ba;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.card-body { padding: 20px; }
-
-/* INPUTS */
+.card { background: #111827; border: 1px solid #1f2d3d; border-radius: 16px; margin-bottom: 14px; overflow: hidden; }
+.card-head { background: linear-gradient(135deg,#1b4332,#2d6a4f); padding: 13px 18px; font-size: 14px; color: #a8d5ba; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+.card-body { padding: 18px; }
 .field { margin-bottom: 14px; }
-.field label {
-  display: block;
-  font-size: 12px;
-  color: #6b8a7a;
-  margin-bottom: 6px;
-  letter-spacing: 0.5px;
-}
-.field input, .field select, .field textarea {
-  width: 100%;
-  padding: 11px 14px;
-  background: #0a0f1e;
-  border: 1px solid #1f2d3d;
-  border-radius: 10px;
-  color: #eee;
-  font-size: 14px;
-  font-family: Tahoma, sans-serif;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.field input:focus, .field select:focus, .field textarea:focus {
-  border-color: #2d6a4f;
-}
-.field textarea { min-height: 80px; resize: vertical; }
+.field label { display: block; font-size: 12px; color: #6b8a7a; margin-bottom: 6px; }
+.field input, .field select, .field textarea { width: 100%; padding: 11px 14px; background: #0a0f1e; border: 1px solid #1f2d3d; border-radius: 10px; color: #eee; font-size: 14px; font-family: Tahoma, sans-serif; outline: none; transition: border-color 0.2s; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #2d6a4f; }
+.field textarea { min-height: 70px; resize: vertical; }
 .field select option { background: #111827; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-/* CHECKBOX GROUP */
-.check-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-top: 6px;
-}
-.check-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 12px;
-  background: #0a0f1e;
-  border: 1px solid #1f2d3d;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  color: #aaa;
-  transition: all 0.2s;
-  user-select: none;
-}
+/* چک‌باکس‌ها */
+.check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
+.check-item { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 8px; cursor: pointer; font-size: 13px; color: #aaa; transition: all 0.15s; user-select: none; }
 .check-item:hover { border-color: #2d6a4f; color: #eee; }
-.check-item.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; }
-.check-item input { display: none; }
-.check-dot {
-  width: 16px; height: 16px;
-  border: 2px solid #333;
-  border-radius: 4px;
-  flex-shrink: 0;
-  transition: all 0.2s;
-}
-.check-item.active .check-dot {
-  background: #2d6a4f;
-  border-color: #2d6a4f;
-}
+.check-item.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; font-weight: bold; }
+.check-dot { width: 18px; height: 18px; border: 2px solid #333; border-radius: 4px; flex-shrink: 0; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
+.check-item.active .check-dot { background: #2d6a4f; border-color: #2d6a4f; }
+.check-item.active .check-dot::after { content: '✓'; color: white; font-size: 11px; }
 
-/* TONGUE */
-.tongue-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
-  margin-top: 6px;
-}
-.tongue-btn {
-  padding: 10px 8px;
-  background: #0a0f1e;
-  border: 2px solid #1f2d3d;
-  border-radius: 10px;
-  color: #aaa;
-  font-size: 12px;
-  font-family: Tahoma, sans-serif;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.2s;
-  line-height: 1.6;
-}
+/* تست بلغم */
+.balqham-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.balqham-item { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 8px; cursor: pointer; font-size: 13px; color: #aaa; transition: all 0.15s; user-select: none; line-height: 1.7; }
+.balqham-item:hover { border-color: #2d6a4f; color: #eee; }
+.balqham-item.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; font-weight: bold; }
+.balqham-dot { width: 18px; height: 18px; border: 2px solid #333; border-radius: 4px; flex-shrink: 0; margin-top: 2px; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
+.balqham-item.active .balqham-dot { background: #2d6a4f; border-color: #2d6a4f; }
+.balqham-item.active .balqham-dot::after { content: '✓'; color: white; font-size: 11px; }
+
+/* زبان */
+.tongue-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 6px; }
+.tongue-btn { padding: 12px 8px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 10px; color: #aaa; font-size: 12px; font-family: Tahoma, sans-serif; cursor: pointer; text-align: center; transition: all 0.15s; line-height: 1.7; }
 .tongue-btn:hover { border-color: #2d6a4f; }
-.tongue-btn.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; }
-.tongue-icon { font-size: 20px; display: block; margin-bottom: 4px; }
+.tongue-btn.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; font-weight: bold; }
+.tongue-icon { font-size: 22px; display: block; margin-bottom: 4px; }
 
-/* BUDGET */
-.budget-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
-  margin-top: 6px;
-}
-.budget-btn {
-  padding: 12px 8px;
-  background: #0a0f1e;
-  border: 2px solid #1f2d3d;
-  border-radius: 10px;
-  color: #aaa;
-  font-size: 12px;
-  font-family: Tahoma, sans-serif;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.2s;
-  line-height: 1.8;
-}
+/* بودجه */
+.budget-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 6px; }
+.budget-btn { padding: 14px 8px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 10px; color: #aaa; font-size: 12px; font-family: Tahoma, sans-serif; cursor: pointer; text-align: center; transition: all 0.15s; line-height: 1.9; }
 .budget-btn:hover { border-color: #2d6a4f; }
-.budget-btn.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; }
+.budget-btn.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; font-weight: bold; }
 
-/* BTN */
-.btn {
-  width: 100%;
-  padding: 15px;
-  background: linear-gradient(135deg, #1b4332, #2d6a4f);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: Tahoma, sans-serif;
-  cursor: pointer;
-  margin-top: 6px;
-  transition: opacity 0.2s;
-  letter-spacing: 1px;
-}
+.btn { width: 100%; padding: 15px; background: linear-gradient(135deg,#1b4332,#2d6a4f); color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: bold; font-family: Tahoma, sans-serif; cursor: pointer; margin-top: 6px; transition: opacity 0.2s; letter-spacing: 1px; }
 .btn:hover { opacity: 0.9; }
+.err { background: #2b0a0a; border: 1px solid #7d1a1a; color: #f08080; padding: 12px 16px; border-radius: 10px; font-size: 13px; margin-bottom: 12px; display: none; }
 
-/* RESULT */
-#result { display: none; }
-
-.result-header {
-  background: linear-gradient(135deg, #1b4332, #2d6a4f);
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 14px;
-  text-align: center;
-}
-.result-header .client-name { font-size: 13px; color: #a8d5ba; opacity: 0.7; margin-bottom: 4px; }
-.result-header .mizaj-title { font-size: 24px; font-weight: bold; color: #a8d5ba; margin-bottom: 6px; }
+/* نتیجه */
+#result { display: none; margin-top: 20px; }
+.result-header { background: linear-gradient(135deg,#1b4332,#2d6a4f); border-radius: 16px; padding: 24px; margin-bottom: 14px; text-align: center; }
+.result-header .client-name { font-size: 13px; color: #a8d5ba; opacity: 0.8; margin-bottom: 6px; }
+.result-header .mizaj-title { font-size: 22px; font-weight: bold; color: white; margin-bottom: 6px; }
 .result-header .mizaj-sub { font-size: 13px; color: #d8f3dc; opacity: 0.8; }
+.section-title { font-size: 14px; color: #a8d5ba; font-weight: bold; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #1f2d3d; }
+.analysis-box { background: #0a0f1e; border: 1px solid #1f2d3d; border-radius: 10px; padding: 14px; font-size: 13px; color: #ccc; line-height: 2.1; margin-bottom: 12px; }
+.analysis-box.warn { border-color: #7d4a1e; color: #f0a060; }
+.analysis-box.success { border-color: #2d6a4f; color: #a8d5ba; }
+.symptom-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.tag { background: #0d2b1e; border: 1px solid #2d6a4f; color: #a8d5ba; padding: 4px 10px; border-radius: 99px; font-size: 12px; }
 
-.section-title {
-  font-size: 14px;
-  color: #a8d5ba;
-  font-weight: bold;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #1f2d3d;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+/* محصولات */
+.product-card { background: #0a0f1e; border: 1px solid #2d6a4f; border-radius: 12px; padding: 14px; margin-bottom: 10px; }
+.p-priority { display: inline-block; font-size: 10px; padding: 2px 10px; border-radius: 99px; margin-bottom: 8px; }
+.p1 { background: #0d2b0d; color: #4caf50; border: 1px solid #4caf50; }
+.p2 { background: #2b2200; color: #ffc107; border: 1px solid #ffc107; }
+.p3 { background: #1a2a3a; color: #64b5f6; border: 1px solid #64b5f6; }
+.p-name { font-size: 15px; font-weight: bold; color: #a8d5ba; margin-bottom: 3px; }
+.p-price { font-size: 12px; color: #6b8a7a; margin-bottom: 8px; }
+.p-why { font-size: 13px; color: #ccc; line-height: 1.9; margin-bottom: 8px; }
+.p-dose { font-size: 12px; color: #a8d5ba; background: #0d2b1e; padding: 7px 12px; border-radius: 6px; line-height: 1.8; }
 
-.analysis-box {
-  background: #0a0f1e;
-  border: 1px solid #1f2d3d;
-  border-radius: 10px;
-  padding: 14px;
-  font-size: 13px;
-  color: #ccc;
-  line-height: 2;
-  margin-bottom: 12px;
-}
-
-.symptom-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-.tag {
-  background: #0d2b1e;
-  border: 1px solid #2d6a4f;
-  color: #a8d5ba;
-  padding: 4px 10px;
-  border-radius: 99px;
-  font-size: 12px;
-}
-.tag.warn {
-  background: #2b1a0d;
-  border-color: #7d4a1e;
-  color: #f0a060;
-}
-
-.product-card {
-  background: #0a0f1e;
-  border: 1px solid #2d6a4f;
-  border-radius: 12px;
-  padding: 14px;
-  margin-bottom: 10px;
-}
-.product-card .p-name {
-  font-size: 15px;
-  font-weight: bold;
-  color: #a8d5ba;
-  margin-bottom: 4px;
-}
-.product-card .p-price {
-  font-size: 12px;
-  color: #6b8a7a;
-  margin-bottom: 8px;
-}
-.product-card .p-why {
-  font-size: 13px;
-  color: #ccc;
-  line-height: 1.8;
-  margin-bottom: 8px;
-}
-.product-card .p-dose {
-  font-size: 12px;
-  color: #a8d5ba;
-  background: #0d2b1e;
-  padding: 6px 10px;
-  border-radius: 6px;
-}
-.priority-badge {
-  display: inline-block;
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 99px;
-  margin-bottom: 6px;
-}
-.priority-1 { background: #1a3a1a; color: #4caf50; border: 1px solid #4caf50; }
-.priority-2 { background: #2b2200; color: #ffc107; border: 1px solid #ffc107; }
-.priority-3 { background: #1a2a3a; color: #64b5f6; border: 1px solid #64b5f6; }
-
-.food-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-.food-box {
-  background: #0a0f1e;
-  border-radius: 10px;
-  padding: 12px;
-}
+/* تغذیه */
+.food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.food-box { background: #0a0f1e; border-radius: 10px; padding: 14px; }
 .food-box.good { border: 1px solid #2d6a4f; }
 .food-box.bad { border: 1px solid #7d1a1a; }
-.food-box h4 { font-size: 13px; margin-bottom: 8px; }
+.food-box h4 { font-size: 13px; margin-bottom: 10px; }
 .food-box.good h4 { color: #a8d5ba; }
 .food-box.bad h4 { color: #f08080; }
 .food-box ul { padding-right: 16px; }
-.food-box li { font-size: 12px; color: #aaa; line-height: 2; }
+.food-box li { font-size: 12px; color: #aaa; line-height: 2.1; }
 
-.lifestyle-list { list-style: none; }
-.lifestyle-list li {
-  font-size: 13px;
-  color: #ccc;
-  line-height: 1.8;
-  padding: 8px 0;
-  border-bottom: 1px solid #1f2d3d;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-.lifestyle-list li:last-child { border-bottom: none; }
+/* سبک زندگی */
+.life-list { list-style: none; }
+.life-list li { font-size: 13px; color: #ccc; line-height: 1.8; padding: 10px 0; border-bottom: 1px solid #1f2d3d; }
+.life-list li:last-child { border-bottom: none; }
 
-.total-box {
-  background: linear-gradient(135deg, #1b4332, #2d6a4f);
-  border-radius: 12px;
-  padding: 16px;
-  text-align: center;
-  margin-bottom: 14px;
-}
-.total-box .t-label { font-size: 12px; color: #d8f3dc; opacity: 0.8; margin-bottom: 4px; }
-.total-box .t-amount { font-size: 24px; font-weight: bold; color: white; }
+/* جمع */
+.total-box { background: linear-gradient(135deg,#1b4332,#2d6a4f); border-radius: 14px; padding: 18px; text-align: center; margin-bottom: 14px; }
+.total-box .t-label { font-size: 12px; color: #d8f3dc; opacity: 0.8; margin-bottom: 6px; }
+.total-box .t-amount { font-size: 26px; font-weight: bold; color: white; }
 
-.err {
-  background: #2b0a0a;
-  border: 1px solid #7d1a1a;
-  color: #f08080;
-  padding: 12px 16px;
-  border-radius: 10px;
-  font-size: 13px;
-  margin-bottom: 12px;
-  display: none;
-}
+/* متن پیام */
+.msg-box { background: #0a0f1e; border: 1px solid #2d6a4f; border-radius: 10px; padding: 16px; font-size: 13px; color: #ccc; line-height: 2.3; white-space: pre-line; }
+.copy-btn { width: 100%; padding: 11px; background: #0d2b1e; border: 1px solid #2d6a4f; color: #a8d5ba; border-radius: 8px; font-size: 13px; font-family: Tahoma, sans-serif; cursor: pointer; margin-top: 10px; }
+.copy-btn:hover { background: #2d6a4f; color: white; }
 </style>
 </head>
 <body>
@@ -354,121 +122,89 @@ body {
 <div class="card">
   <div class="card-head">👤 اطلاعات پایه مشتری</div>
   <div class="card-body">
-    <div class="field">
-      <label>نام مشتری</label>
-      <input type="text" id="clientName" placeholder="مثال: خانم احمدی">
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-      <div class="field">
-        <label>سن</label>
-        <input type="number" id="clientAge" placeholder="مثال: ۳۵">
-      </div>
-      <div class="field">
-        <label>جنسیت</label>
-        <select id="clientGender">
-          <option value="">انتخاب کنید</option>
-          <option value="female">خانم</option>
-          <option value="male">آقا</option>
-        </select>
+    <div class="field"><label>نام مشتری</label><input type="text" id="clientName" placeholder="مثال: خانم احمدی"></div>
+    <div class="row2">
+      <div class="field"><label>سن</label><input type="number" id="clientAge" placeholder="مثال: ۳۵"></div>
+      <div class="field"><label>جنسیت</label>
+        <select id="clientGender"><option value="">انتخاب کنید</option><option value="female">خانم</option><option value="male">آقا</option></select>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-      <div class="field">
-        <label>قد (سانتیمتر)</label>
-        <input type="number" id="clientHeight" placeholder="مثال: ۱۶۵">
-      </div>
-      <div class="field">
-        <label>وزن (کیلوگرم)</label>
-        <input type="number" id="clientWeight" placeholder="مثال: ۷۵">
-      </div>
+    <div class="row2">
+      <div class="field"><label>قد (سانتیمتر)</label><input type="number" id="clientHeight" placeholder="مثال: ۱۶۵"></div>
+      <div class="field"><label>وزن (کیلوگرم)</label><input type="number" id="clientWeight" placeholder="مثال: ۷۵"></div>
     </div>
   </div>
 </div>
 
-<!-- علائم و مشکلات -->
+<!-- علائم -->
 <div class="card">
-  <div class="card-head">🔍 علائم و مشکلات مشتری</div>
+  <div class="card-head">🔍 علائم و مشکلات مشتری (چند گزینه)</div>
   <div class="card-body">
-    <div class="field">
-      <label>کدام علائم را دارد؟ (چند گزینه)</label>
-      <div class="check-grid" id="symptomsGrid">
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="nafkh"><span class="check-dot"></span>نفخ و سنگینی شکم</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="yoboosat"><span class="check-dot"></span>یبوست</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="khastegi"><span class="check-dot"></span>خستگی زود هنگام</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="rizekhori"><span class="check-dot"></span>ریزه‌خوری و میل به شیرینی</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="sardi"><span class="check-dot"></span>سردی دست و پا</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="rizesh"><span class="check-dot"></span>ریزش مو زیاد</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="puf"><span class="check-dot"></span>پف صورت صبح‌ها</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="charbi_shekam"><span class="check-dot"></span>چربی شکم و پهلو</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="reflux"><span class="check-dot"></span>رفلاکس و سوزش معده</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="stress"><span class="check-dot"></span>استرس و اضطراب</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="bikhabi"><span class="check-dot"></span>بی‌خوابی</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="kabd"><span class="check-dot"></span>کبد چرب</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="kolesterol"><span class="check-dot"></span>کلسترول بالا</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="faresharkhooni"><span class="check-dot"></span>فشار خون بالا</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="qand"><span class="check-dot"></span>قند خون بالا</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="moafiyat"><span class="check-dot"></span>ضعف سیستم ایمنی</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="poost"><span class="check-dot"></span>مشکل پوست و جوش</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="qaedegi"><span class="check-dot"></span>بی‌نظمی قاعدگی (بانوان)</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="dard_qaedegi"><span class="check-dot"></span>دردهای قاعدگی</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="sang_kolieh"><span class="check-dot"></span>سنگ کلیه</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="tavarom"><span class="check-dot"></span>تورم و آب آوردن بدن</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="lazari"><span class="check-dot"></span>لاغری و کم وزنی</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="hafeze"><span class="check-dot"></span>ضعف حافظه و تمرکز</label>
-        <label class="check-item" onclick="toggleCheck(this)"><input type="checkbox" value="moafsal"><span class="check-dot"></span>درد مفاصل و زانو</label>
-      </div>
+    <div class="check-grid" id="sympGrid">
+      <div class="check-item" data-val="nafkh" onclick="toggleSymp(this)"><span class="check-dot"></span>نفخ و سنگینی شکم</div>
+      <div class="check-item" data-val="yoboosat" onclick="toggleSymp(this)"><span class="check-dot"></span>یبوست</div>
+      <div class="check-item" data-val="khastegi" onclick="toggleSymp(this)"><span class="check-dot"></span>خستگی زود هنگام</div>
+      <div class="check-item" data-val="rizekhori" onclick="toggleSymp(this)"><span class="check-dot"></span>ریزه‌خوری و میل به شیرینی</div>
+      <div class="check-item" data-val="sardi" onclick="toggleSymp(this)"><span class="check-dot"></span>سردی دست و پا</div>
+      <div class="check-item" data-val="rizesh" onclick="toggleSymp(this)"><span class="check-dot"></span>ریزش مو زیاد</div>
+      <div class="check-item" data-val="puf" onclick="toggleSymp(this)"><span class="check-dot"></span>پف صورت صبح‌ها</div>
+      <div class="check-item" data-val="charbi_shekam" onclick="toggleSymp(this)"><span class="check-dot"></span>چربی شکم و پهلو</div>
+      <div class="check-item" data-val="reflux" onclick="toggleSymp(this)"><span class="check-dot"></span>رفلاکس و سوزش معده</div>
+      <div class="check-item" data-val="stress" onclick="toggleSymp(this)"><span class="check-dot"></span>استرس و اضطراب</div>
+      <div class="check-item" data-val="bikhabi" onclick="toggleSymp(this)"><span class="check-dot"></span>بی‌خوابی</div>
+      <div class="check-item" data-val="kabd" onclick="toggleSymp(this)"><span class="check-dot"></span>کبد چرب</div>
+      <div class="check-item" data-val="kolesterol" onclick="toggleSymp(this)"><span class="check-dot"></span>کلسترول بالا</div>
+      <div class="check-item" data-val="faresharkhooni" onclick="toggleSymp(this)"><span class="check-dot"></span>فشار خون بالا</div>
+      <div class="check-item" data-val="qand" onclick="toggleSymp(this)"><span class="check-dot"></span>قند خون بالا</div>
+      <div class="check-item" data-val="moafiyat" onclick="toggleSymp(this)"><span class="check-dot"></span>ضعف سیستم ایمنی</div>
+      <div class="check-item" data-val="poost" onclick="toggleSymp(this)"><span class="check-dot"></span>مشکل پوست و جوش</div>
+      <div class="check-item" data-val="qaedegi" onclick="toggleSymp(this)"><span class="check-dot"></span>بی‌نظمی قاعدگی</div>
+      <div class="check-item" data-val="dard_qaedegi" onclick="toggleSymp(this)"><span class="check-dot"></span>دردهای قاعدگی</div>
+      <div class="check-item" data-val="sang_kolieh" onclick="toggleSymp(this)"><span class="check-dot"></span>سنگ کلیه</div>
+      <div class="check-item" data-val="tavarom" onclick="toggleSymp(this)"><span class="check-dot"></span>تورم و آب آوردن بدن</div>
+      <div class="check-item" data-val="lazari" onclick="toggleSymp(this)"><span class="check-dot"></span>لاغری و کم‌وزنی</div>
+      <div class="check-item" data-val="hafeze" onclick="toggleSymp(this)"><span class="check-dot"></span>ضعف حافظه و تمرکز</div>
+      <div class="check-item" data-val="moafsal" onclick="toggleSymp(this)"><span class="check-dot"></span>درد مفاصل و زانو</div>
     </div>
   </div>
 </div>
 
 <!-- تست بلغم -->
 <div class="card">
-  <div class="card-head">🧪 نتیجه تست بلغم</div>
+  <div class="card-head">🧪 تست بلغم — کدام علائم را دارد؟ (چند گزینه)</div>
   <div class="card-body">
-    <div class="field">
-      <label>تعداد موارد بلغمی که مشتری تأیید کرد</label>
-      <select id="balqhamCount">
-        <option value="0">هیچکدام</option>
-        <option value="1">۱ تا ۳ مورد — بلغم خفیف</option>
-        <option value="2">۴ تا ۷ مورد — بلغم متوسط</option>
-        <option value="3">۸ مورد و بیشتر — بلغم شدید</option>
-      </select>
+    <p style="font-size:12px;color:#6b8a7a;margin-bottom:10px">موارد زیر را که مشتری تأیید کرده علامت بزنید:</p>
+    <div class="balqham-grid" id="balqhamGrid">
+      <div class="balqham-item" data-val="b1" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>نفخ و ورم معده</div>
+      <div class="balqham-item" data-val="b2" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>یبوست یا هضم کند</div>
+      <div class="balqham-item" data-val="b3" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>خستگی مزمن</div>
+      <div class="balqham-item" data-val="b4" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>ریزه‌خوری و میل به شیرینی</div>
+      <div class="balqham-item" data-val="b5" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>سردی دست و پا</div>
+      <div class="balqham-item" data-val="b6" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>اذیت شدن با لبنیات سرد</div>
+      <div class="balqham-item" data-val="b7" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>ریزش مو زیاد</div>
+      <div class="balqham-item" data-val="b8" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>سفیدی مو زودرس</div>
+      <div class="balqham-item" data-val="b9" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>پف چشم صبح‌ها</div>
+      <div class="balqham-item" data-val="b10" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>آب دهان روی بالشت</div>
+      <div class="balqham-item" data-val="b11" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>ضعف دست و پا</div>
+      <div class="balqham-item" data-val="b12" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>چربی فقط شکم و پهلو</div>
+      <div class="balqham-item" data-val="b13" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>خلط پشت حلق</div>
+      <div class="balqham-item" data-val="b14" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>درد زانو شبانه</div>
+      <div class="balqham-item" data-val="b15" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>کسل بودن و بی‌حالی</div>
     </div>
   </div>
 </div>
 
-<!-- تصویر زبان -->
+<!-- زبان -->
 <div class="card">
   <div class="card-head">👅 تشخیص از روی زبان</div>
   <div class="card-body">
-    <div class="field">
-      <label>وضعیت زبان مشتری چگونه بود؟</label>
-      <div class="tongue-grid">
-        <button class="tongue-btn" onclick="selectTongue(this,'white')">
-          <span class="tongue-icon">🤍</span>
-          سفید و ضخیم<br><small>غلبه بلغم</small>
-        </button>
-        <button class="tongue-btn" onclick="selectTongue(this,'red')">
-          <span class="tongue-icon">❤️</span>
-          قرمز و ملتهب<br><small>غلبه صفرا</small>
-        </button>
-        <button class="tongue-btn" onclick="selectTongue(this,'pale')">
-          <span class="tongue-icon">🩶</span>
-          کم‌رنگ و بی‌روح<br><small>غلبه سودا</small>
-        </button>
-        <button class="tongue-btn" onclick="selectTongue(this,'cracked')">
-          <span class="tongue-icon">🟤</span>
-          شیاردار یا ترک‌دار<br><small>کمبود مایعات</small>
-        </button>
-        <button class="tongue-btn" onclick="selectTongue(this,'yellow')">
-          <span class="tongue-icon">💛</span>
-          جرم زرد روی زبان<br><small>مشکل کبد</small>
-        </button>
-        <button class="tongue-btn" onclick="selectTongue(this,'normal')">
-          <span class="tongue-icon">🌸</span>
-          صورتی طبیعی<br><small>مزاج متعادل</small>
-        </button>
-      </div>
+    <div class="tongue-grid">
+      <button class="tongue-btn" onclick="selectTongue(this,'white')"><span class="tongue-icon">🤍</span>سفید و ضخیم<br><small>غلبه بلغم</small></button>
+      <button class="tongue-btn" onclick="selectTongue(this,'red')"><span class="tongue-icon">❤️</span>قرمز و ملتهب<br><small>غلبه صفرا</small></button>
+      <button class="tongue-btn" onclick="selectTongue(this,'pale')"><span class="tongue-icon">🩶</span>کم‌رنگ و بی‌روح<br><small>غلبه سودا</small></button>
+      <button class="tongue-btn" onclick="selectTongue(this,'cracked')"><span class="tongue-icon">🟤</span>شیاردار یا ترک‌دار<br><small>کمبود مایعات</small></button>
+      <button class="tongue-btn" onclick="selectTongue(this,'yellow')"><span class="tongue-icon">💛</span>جرم زرد روی زبان<br><small>مشکل کبد</small></button>
+      <button class="tongue-btn" onclick="selectTongue(this,'normal')"><span class="tongue-icon">🌸</span>صورتی طبیعی<br><small>مزاج متعادل</small></button>
     </div>
   </div>
 </div>
@@ -477,31 +213,19 @@ body {
 <div class="card">
   <div class="card-head">💰 بودجه مشتری</div>
   <div class="card-body">
-    <div class="field">
-      <label>مشتری چقدر هزینه می‌کند؟</label>
-      <div class="budget-grid">
-        <button class="budget-btn" onclick="selectBudget(this,'low')">
-          💚<br>اقتصادی<br><small>تا ۲ میلیون</small>
-        </button>
-        <button class="budget-btn" onclick="selectBudget(this,'mid')">
-          💛<br>متوسط<br><small>۲ تا ۴ میلیون</small>
-        </button>
-        <button class="budget-btn" onclick="selectBudget(this,'high')">
-          💎<br>کامل<br><small>۴ میلیون به بالا</small>
-        </button>
-      </div>
+    <div class="budget-grid">
+      <button class="budget-btn" onclick="selectBudget(this,'low')">💚<br>اقتصادی<br><small>تا ۳ میلیون</small></button>
+      <button class="budget-btn" onclick="selectBudget(this,'mid')">💛<br>متوسط<br><small>۳ تا ۶ میلیون</small></button>
+      <button class="budget-btn" onclick="selectBudget(this,'high')">💎<br>کامل<br><small>۶ میلیون به بالا</small></button>
     </div>
   </div>
 </div>
 
-<!-- توضیحات اضافه -->
+<!-- توضیحات -->
 <div class="card">
-  <div class="card-head">📝 توضیحات اضافه</div>
+  <div class="card-head">📝 توضیحات اضافه (اختیاری)</div>
   <div class="card-body">
-    <div class="field">
-      <label>هر اطلاعات دیگری که مشتری گفته (اختیاری)</label>
-      <textarea id="extraInfo" placeholder="مثلاً: دیابت دارد، باردار است، دارو خاصی مصرف می‌کند، سابقه بیماری خاص..."></textarea>
-    </div>
+    <div class="field"><textarea id="extraInfo" placeholder="مثلاً: دیابت دارد، باردار است، دارو خاصی مصرف می‌کند..."></textarea></div>
   </div>
 </div>
 
@@ -509,127 +233,246 @@ body {
 <button class="btn" onclick="analyze()">🔍 تحلیل و تشخیص پکیج</button>
 
 <!-- نتیجه -->
-<div id="result" style="margin-top:20px">
+<div id="result">
   <div class="result-header" id="resultHeader"></div>
-
-  <div class="card">
-    <div class="card-head">🧬 تحلیل مزاج و وضعیت بدن</div>
-    <div class="card-body">
-      <div id="mizajAnalysis"></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-head">📦 پکیج پیشنهادی محصولات</div>
-    <div class="card-body" id="productsSection"></div>
-  </div>
-
-  <div class="card">
-    <div class="card-head">🥗 برنامه تغذیه اختصاصی</div>
-    <div class="card-body" id="nutritionSection"></div>
-  </div>
-
-  <div class="card">
-    <div class="card-head">🌟 توصیه‌های سبک زندگی</div>
-    <div class="card-body" id="lifestyleSection"></div>
-  </div>
-
+  <div class="card"><div class="card-head">🧬 تحلیل مزاج و وضعیت بدن</div><div class="card-body" id="mizajSection"></div></div>
+  <div class="card"><div class="card-head">📦 پکیج پیشنهادی محصولات</div><div class="card-body" id="productsSection"></div></div>
+  <div class="card"><div class="card-head">🥗 برنامه تغذیه اختصاصی</div><div class="card-body" id="nutritionSection"></div></div>
+  <div class="card"><div class="card-head">🌟 توصیه‌های سبک زندگی</div><div class="card-body" id="lifestyleSection"></div></div>
   <div class="total-box" id="totalBox"></div>
-
-  <div class="card">
-    <div class="card-head">💬 متن پیشنهادی برای ارسال به مشتری</div>
-    <div class="card-body" id="messageSection"></div>
-  </div>
+  <div class="card"><div class="card-head">💬 متن پیشنهادی برای ارسال به مشتری</div><div class="card-body" id="messageSection"></div></div>
 </div>
 
 </div>
-
 <script>
 let selectedTongue = '';
 let selectedBudget = '';
+let selectedSymptoms = new Set();
+let selectedBalqham = new Set();
 
-function toggleCheck(el) {
-  el.classList.toggle('active');
+function toggleSymp(el) {
+  const val = el.dataset.val;
+  if(selectedSymptoms.has(val)) { selectedSymptoms.delete(val); el.classList.remove('active'); }
+  else { selectedSymptoms.add(val); el.classList.add('active'); }
+}
+
+function toggleBalqham(el) {
+  const val = el.dataset.val;
+  if(selectedBalqham.has(val)) { selectedBalqham.delete(val); el.classList.remove('active'); }
+  else { selectedBalqham.add(val); el.classList.add('active'); }
 }
 
 function selectTongue(el, val) {
   document.querySelectorAll('.tongue-btn').forEach(b => b.classList.remove('active'));
-  el.classList.add('active');
-  selectedTongue = val;
+  el.classList.add('active'); selectedTongue = val;
 }
 
 function selectBudget(el, val) {
   document.querySelectorAll('.budget-btn').forEach(b => b.classList.remove('active'));
-  el.classList.add('active');
-  selectedBudget = val;
+  el.classList.add('active'); selectedBudget = val;
 }
 
-// محصولات بیز
-const products = {
-  kafeLate: { name: 'کافه لاته با قارچ گانودرما', price: 1925000, unit: 'بسته ۲۰عددی', benefits: ['تقویت سیستم ایمنی', 'انرژی پایدار', 'ضد التهاب', 'تقویت حافظه'], for: ['khastegi', 'moafiyat', 'hafeze', 'stress'] },
-  kafeMoka: { name: 'کافه موکا با قارچ گانودرما', price: 1985000, unit: 'بسته ۲۰عددی', benefits: ['تقویت مغز', 'کاهش التهاب', 'انرژی و تمرکز'], for: ['khastegi', 'hafeze', 'stress'] },
-  kafeSupreme: { name: 'کافه سوپریم با قارچ گانودرما', price: 1985000, unit: 'بسته ۲۰عددی', benefits: ['فرمول قوی‌تر با جینسینگ', 'تقویت انرژی و ایمنی', 'ضد استرس'], for: ['khastegi', 'stress', 'moafiyat'] },
-  hotChocolate: { name: 'هات چاکلت با قارچ گانودرما', price: 1985000, unit: 'بسته ۲۰عددی', benefits: ['کاهش فشار خون', 'آنتی اکسیدان قوی', 'بهبود عملکرد قلب'], for: ['faresharkhooni', 'kolesterol', 'stress'] },
-  masala: { name: 'قهوه ماسالا با قارچ گانودرما', price: 1985000, unit: 'بسته ۲۰عددی', benefits: ['گرم‌کننده بدن', 'بهبود گوارش', 'ضد نفخ', 'تقویت سوخت‌وساز'], for: ['sardi', 'nafkh', 'yoboosat', 'khastegi'] },
-  raziyanehBanovan: { name: 'دمنوش رازیانه ویژه بانوان', price: 249800, unit: 'بسته ۲۰عددی', benefits: ['تنظیم قاعدگی', 'کاهش دردهای قاعدگی', 'تعادل هورمونی', 'کاهش علائم یائسگی'], for: ['qaedegi', 'dard_qaedegi', 'tavarom'] },
-  kharkhask: { name: 'دمنوش خارخاسک دیورتیک', price: 348000, unit: 'بسته ۲۰عددی', benefits: ['دفع سنگ کلیه', 'کاهش تورم', 'دیورتیک طبیعی', 'پاکسازی مجاری ادراری'], for: ['sang_kolieh', 'tavarom', 'faresharkhooni'] },
-  badranjboyeh: { name: 'دمنوش بادرنجبویه مفرح', price: 348000, unit: 'بسته ۲۰عددی', benefits: ['آرام‌بخش طبیعی', 'تقویت حافظه', 'کاهش اضطراب', 'تقویت گوارش'], for: ['stress', 'bikhabi', 'hafeze'] },
-  raziyanehNafkh: { name: 'دمنوش رازیانه ضدنفخ', price: 348000, unit: 'بسته ۲۰عددی', benefits: ['رفع نفخ', 'بهبود گوارش', 'کاهش درد شکم', 'تنظیم روده'], for: ['nafkh', 'yoboosat', 'reflux'] },
-  aramBakhsh: { name: 'دمنوش بادرنجبویه آرام‌بخش', price: 348000, unit: 'بسته ۲۰عددی', benefits: ['بهبود کیفیت خواب', 'کاهش اضطراب', 'آرامش اعصاب'], for: ['bikhabi', 'stress'] },
-  shahtareh: { name: 'دمنوش شاهتره مصفی خون', price: 1879000, unit: 'بسته', benefits: ['پاکسازی و تقویت کبد', 'دفع سموم', 'بهبود کبد چرب', 'کاهش چربی خون'], for: ['kabd', 'kolesterol', 'poost'] },
-  chaiSabz: { name: 'دمنوش چای سبز موثر در کاهش وزن', price: 1879000, unit: 'بسته', benefits: ['کاهش وزن', 'چربی‌سوزی', 'تنظیم قند خون', 'کاهش اشتها'], for: ['charbi_shekam', 'qand', 'kolesterol'] },
-  saboosBeranj: { name: 'سبوس برنج', price: 468000, unit: 'بسته ۲۵ساشه', benefits: ['جلوگیری از ریزش مو', 'تأمین فیبر', 'کاهش کلسترول', 'تنظیم قند خون', 'احساس سیری'], for: ['rizesh', 'kolesterol', 'qand', 'charbi_shekam', 'yoboosat'] },
-  saboosChandGhale: { name: 'سبوس چند غله', price: 440000, unit: 'بسته', benefits: ['فیبر کامل', 'جلوگیری از یبوست', 'کاهش کلسترول', 'تقویت اعصاب'], for: ['yoboosat', 'kolesterol', 'moafsal'] },
-  javanahGandom: { name: 'پودر جوانه گندم', price: 440000, unit: 'بسته', benefits: ['جلوگیری از پیری زودرس', 'تقویت پوست و مو', 'آنتی اکسیدان قوی', 'انرژی'], for: ['rizesh', 'poost', 'khastegi', 'moafiyat'] },
-  macha: { name: 'چای ماچا', price: 798000, unit: 'بسته', benefits: ['تمرکز و هوشیاری', 'آنتی اکسیدان قوی', 'کاهش استرس', 'چربی‌سوزی'], for: ['stress', 'hafeze', 'charbi_shekam', 'khastegi'] },
-  dynamineBox: { name: 'نوشیدنی ورزشی داینامین', price: 1794000, unit: 'باکس ۶عددی', benefits: ['جایگزین الکترولیت', 'تأمین ویتامین و مواد معدنی', 'رفع خستگی', 'تمرکز و نشاط'], for: ['khastegi', 'moafiyat', 'hafeze'] },
-  hypotonic: { name: 'نوشیدنی ورزشی هیپوتونیک', price: 1794000, unit: 'بسته', benefits: ['بدون قند و کالری', 'مناسب دیابتی', 'جذب سریع', 'تأمین ویتامین'], for: ['qand', 'khastegi', 'moafiyat'] },
-  seerSiyah: { name: 'سیر سیاه فرآوری شده', price: 492000, unit: 'بسته', benefits: ['آنتی اکسیدان قوی', 'تقویت سیستم ایمنی', 'کاهش کلسترول', 'تنظیم فشار خون', 'ضد التهاب'], for: ['moafiyat', 'kolesterol', 'faresharkhooni', 'kabd'] }
+const products = [
+  { id:'kafeLate', name:'کافه لاته با قارچ گانودرما', price:1925000, unit:'بسته ۲۰عددی',
+    benefits:['تقویت سیستم ایمنی بدن','انرژی پایدار در طول روز','ضد التهاب قوی','تقویت حافظه و تمرکز','کاهش استرس اکسیداتیو'],
+    for:['khastegi','moafiyat','hafeze','stress'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۱ عدد صبح یا ظهر — با ۱۷۰ تا ۲۸۵ میلی‌لیتر آب جوش' },
+  { id:'kafeMoka', name:'کافه موکا با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
+    benefits:['تقویت عملکرد مغز','کاهش التهاب','افزایش تمرکز','بهبود خلق‌وخو'],
+    for:['khastegi','hafeze','stress'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۱ عدد صبح — با آب جوش' },
+  { id:'kafeSupreme', name:'کافه سوپریم با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
+    benefits:['فرمول قوی با جینسینگ','ضد استرس قوی‌تر','تقویت انرژی و ایمنی','مناسب خستگی مزمن'],
+    for:['khastegi','stress','moafiyat'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۱ عدد صبح — با آب جوش' },
+  { id:'hotChoc', name:'هات چاکلت با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
+    benefits:['کاهش فشار خون','آنتی‌اکسیدان فلاوانول','بهبود عملکرد قلب','کاهش کلسترول'],
+    for:['faresharkhooni','kolesterol','stress'], mizaj:['safravi'],
+    dose:'روزی ۱ عدد عصر یا شب' },
+  { id:'masala', name:'قهوه ماسالا با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
+    benefits:['گرم‌کننده بدن','بهبود گوارش','ضد نفخ','تقویت سوخت‌وساز','مناسب سردمزاجان'],
+    for:['sardi','nafkh','yoboosat','khastegi'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۱ عدد صبح با آب جوش' },
+  { id:'raziyanehBanovan', name:'دمنوش رازیانه ویژه بانوان', price:249800, unit:'بسته ۲۰عددی',
+    benefits:['تنظیم چرخه قاعدگی','کاهش دردهای قاعدگی','تعادل هورمونی','کاهش علائم یائسگی','افزایش شیر مادران'],
+    for:['qaedegi','dard_qaedegi','tavarom'], mizaj:['balqham','safravi'],
+    dose:'روزی ۲ تا ۳ فنجان — ترجیحاً بعد از غذا' },
+  { id:'kharkhask', name:'دمنوش خارخاسک دیورتیک', price:348000, unit:'بسته ۲۰عددی',
+    benefits:['دفع سنگ کلیه','کاهش تورم بدن','دیورتیک طبیعی','پاکسازی مجاری ادراری','کاهش فشار خون'],
+    for:['sang_kolieh','tavarom','faresharkhooni'], mizaj:['balqham','safravi'],
+    dose:'روزی ۲ فنجان — صبح ناشتا و شب قبل از خواب' },
+  { id:'badranjboyeh', name:'دمنوش بادرنجبویه مفرح', price:348000, unit:'بسته ۲۰عددی',
+    benefits:['آرام‌بخش طبیعی','تقویت حافظه','کاهش اضطراب','تقویت گوارش','دفع بلغم از مغز'],
+    for:['stress','bikhabi','hafeze','nafkh'], mizaj:['balqham','safravi'],
+    dose:'روزی ۲ تا ۳ فنجان — بعد از ناهار و شب' },
+  { id:'raziyanehNafkh', name:'دمنوش رازیانه ضدنفخ', price:348000, unit:'بسته ۲۰عددی',
+    benefits:['رفع فوری نفخ','بهبود گوارش','کاهش درد شکم','تنظیم روده','مفید بعد از غذاهای سنگین'],
+    for:['nafkh','yoboosat','reflux'], mizaj:['balqham'],
+    dose:'روزی ۲ تا ۳ فنجان — بعد از وعده‌های غذایی' },
+  { id:'aramBakhsh', name:'دمنوش بادرنجبویه آرام‌بخش', price:348000, unit:'بسته ۲۰عددی',
+    benefits:['بهبود کیفیت خواب','کاهش اضطراب شبانه','آرامش اعصاب','مناسب بی‌خوابی مزمن'],
+    for:['bikhabi','stress'], mizaj:['safravi','sodavi'],
+    dose:'۱ فنجان ۳۰ دقیقه قبل از خواب' },
+  { id:'shahtareh', name:'دمنوش شاهتره مصفی خون', price:1879000, unit:'بسته',
+    benefits:['پاکسازی و تقویت کبد','دفع سموم بدن','بهبود کبد چرب','کاهش چربی خون','صافی خون'],
+    for:['kabd','kolesterol','poost'], mizaj:['safravi','balqham'],
+    dose:'روزی ۲ فنجان — صبح ناشتا و شب' },
+  { id:'chaiSabz', name:'دمنوش چای سبز کاهش وزن', price:1879000, unit:'بسته',
+    benefits:['چربی‌سوزی موثر','کاهش اشتها','تنظیم قند خون','کاهش کلسترول','سرشار از آنتی‌اکسیدان'],
+    for:['charbi_shekam','qand','kolesterol'], mizaj:['balqham'],
+    dose:'روزی ۳ فنجان — نیم ساعت قبل از هر وعده غذایی | منع مصرف در بارداری' },
+  { id:'saboosBeranj', name:'سبوس برنج', price:468000, unit:'بسته ۲۵ساشه',
+    benefits:['جلوگیری از ریزش مو','تأمین فیبر غذایی','کاهش کلسترول','تنظیم قند خون','ایجاد احساس سیری'],
+    for:['rizesh','kolesterol','qand','charbi_shekam','yoboosat'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۱ تا ۲ ساشه — داخل ماست، سالاد یا صبحانه' },
+  { id:'saboosChand', name:'سبوس چند غله', price:440000, unit:'بسته',
+    benefits:['فیبر کامل چندگانه','درمان یبوست','کاهش کلسترول','تقویت اعصاب','ویتامین B کامل'],
+    for:['yoboosat','kolesterol','moafsal'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۱ تا ۲ قاشق — داخل ماست یا آش و سوپ' },
+  { id:'javanahGandom', name:'پودر جوانه گندم', price:440000, unit:'بسته',
+    benefits:['جلوگیری از پیری زودرس','تقویت پوست و مو','آنتی‌اکسیدان قوی','انرژی پایدار','تقویت سیستم ایمنی'],
+    for:['rizesh','poost','khastegi','moafiyat','lazari'], mizaj:['sodavi','balqham'],
+    dose:'روزی ۱ تا ۲ قاشق — داخل ماست، اسموتی یا سالاد' },
+  { id:'macha', name:'چای ماچا', price:798000, unit:'بسته',
+    benefits:['تمرکز و هوشیاری بالا','آنتی‌اکسیدان فوق‌العاده','کاهش استرس','چربی‌سوزی ملایم','بهبود خلق‌وخو'],
+    for:['stress','hafeze','charbi_shekam','khastegi'], mizaj:['safravi','balqham'],
+    dose:'روزی ۱ فنجان — ترجیحاً صبح | با معده خالی مصرف نشود' },
+  { id:'dynamine', name:'نوشیدنی ورزشی داینامین', price:1794000, unit:'باکس ۶عددی',
+    benefits:['جایگزین الکترولیت','۱۰ ویتامین و ۸ ماده معدنی','رفع خستگی سریع','جلوگیری از گرفتگی عضلات','تمرکز و نشاط'],
+    for:['khastegi','moafiyat','hafeze','moafsal'], mizaj:['balqham','sodavi'],
+    dose:'بعد از ورزش یا در روزهای گرم — با ۵۰۰ میلی‌لیتر آب' },
+  { id:'hypotonic', name:'نوشیدنی هیپوتونیک', price:1794000, unit:'بسته',
+    benefits:['بدون قند و کالری','مناسب دیابتی','جذب ۴ برابر سریع‌تر از آب','تأمین ویتامین','مناسب زنان باردار'],
+    for:['qand','khastegi','moafiyat'], mizaj:['safravi','balqham'],
+    dose:'در طول روز یا بعد از فعالیت بدنی' },
+  { id:'seerSiyah', name:'سیر سیاه فرآوری شده', price:492000, unit:'بسته',
+    benefits:['آنتی‌اکسیدان فوق‌العاده قوی','تقویت سیستم ایمنی','کاهش کلسترول','تنظیم فشار خون','ضد التهاب','بدون بوی نامطبوع'],
+    for:['moafiyat','kolesterol','faresharkhooni','kabd','poost'], mizaj:['safravi','balqham','sodavi'],
+    dose:'روزی ۱ تا ۲ حبه — همراه غذا | احتیاط برای مصرف‌کنندگان ضدانعقاد خون' },
+  { id:'asal500', name:'عسل طبیعی ۵۰۰ گرمی', price:1475000, unit:'بسته',
+    benefits:['آنتی‌بیوتیک طبیعی','تقویت حافظه','بهبود گوارش','تقویت سیستم ایمنی','انرژی سریع','محافظت از کبد'],
+    for:['hafeze','moafiyat','yoboosat','kabd','khastegi'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۱ تا ۲ قاشق چای‌خوری — ناشتا با آب ولرم | احتیاط برای دیابتی‌ها' },
+  { id:'asal900', name:'عسل طبیعی ۹۰۰ گرمی', price:2350000, unit:'بسته',
+    benefits:['آنتی‌بیوتیک طبیعی','تقویت حافظه','بهبود گوارش','تقویت سیستم ایمنی','انرژی سریع','صرفه اقتصادی بیشتر'],
+    for:['hafeze','moafiyat','yoboosat','kabd','khastegi'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۱ تا ۲ قاشق چای‌خوری — ناشتا با آب ولرم | احتیاط برای دیابتی‌ها' },
+  { id:'khormaTabii', name:'خرما بار طبیعی', price:820600, unit:'بسته',
+    benefits:['انرژی فوری و طبیعی','سرشار از آهن و پتاسیم','تقویت استخوان','بهبود کم‌خونی','مقوی و مغذی'],
+    for:['khastegi','lazari','moafiyat','moafsal'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۲ تا ۳ عدد — صبح یا قبل از ورزش' },
+  { id:'khormaZanjabil', name:'خرما بار زنجبیلی', price:593000, unit:'بسته',
+    benefits:['گرم‌کننده بدن','تقویت گوارش','ضد تهوع','ضد التهاب','مناسب سردمزاجان'],
+    for:['sardi','nafkh','yoboosat','khastegi'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۲ تا ۳ عدد — صبح یا بعد از غذا' },
+  { id:'khormaDarchin', name:'خرما بار دارچینی', price:593000, unit:'بسته',
+    benefits:['تنظیم قند خون','گرم‌کننده','تقویت سوخت‌وساز','ضد التهاب','مناسب دیابتی‌ها'],
+    for:['qand','sardi','charbi_shekam','kolesterol'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۲ تا ۳ عدد — صبح ناشتا' },
+  { id:'khormaRejimi', name:'خرما بار رژیمی', price:820600, unit:'بسته',
+    benefits:['کم‌کالری‌تر','مناسب رژیم لاغری','تأمین انرژی بدون چاقی','فیبر بالا','احساس سیری'],
+    for:['charbi_shekam','qand','lazari'], mizaj:['balqham'],
+    dose:'روزی ۲ تا ۳ عدد — بین وعده‌ها' },
+  { id:'khormaEnerji', name:'خرما بار انرژی‌زا', price:820600, unit:'بسته',
+    benefits:['انرژی فوق‌العاده','مناسب ورزشکاران','تأمین الکترولیت','ضد خستگی','تقویت عضلات'],
+    for:['khastegi','moafsal','lazari','moafiyat'], mizaj:['sodavi','balqham'],
+    dose:'قبل یا بعد از ورزش — روزی ۲ تا ۳ عدد' },
+  { id:'khormaTaqviyati', name:'خرما بار تقویتی', price:820600, unit:'بسته',
+    benefits:['فرمول تقویتی کامل','مناسب دوران بهبودی','تقویت سیستم ایمنی','مقوی عمومی'],
+    for:['moafiyat','khastegi','lazari','rizesh'], mizaj:['balqham','sodavi'],
+    dose:'روزی ۲ تا ۳ عدد — صبح و عصر' }
+];
+
+const mizajInfo = {
+  white: { name:'غلبه بلغم (سرد و تر)', icon:'💧', type:'balqham',
+    desc:'زبان سفید و ضخیم نشانه غلبه بلغم در بدن است. در طب سنتی ایران، این حالت به معنای کندی سوخت‌وساز، تجمع رطوبت و سردی در بدن است. بدن در دفع رطوبت اضافه ضعیف است و این باعث می‌شود چربی‌ها به‌سختی بسوزند، انرژی زود تحلیل برود و وزن به‌سختی کاهش یابد.' },
+  red: { name:'غلبه صفرا (گرم و خشک)', icon:'🔥', type:'safravi',
+    desc:'زبان قرمز و ملتهب نشانه غلبه صفرا و حرارت زیاد در بدن است. این حالت می‌تواند باعث رفلاکس، سوزش معده، عصبانیت، بی‌خوابی، مشکلات پوستی و التهاب مزمن شود. بدن نیاز به خنک‌کننده‌های طبیعی دارد.' },
+  pale: { name:'غلبه سودا (سرد و خشک)', icon:'🍂', type:'sodavi',
+    desc:'زبان کم‌رنگ نشانه غلبه سودا است. این مزاج با کمبود خون و انرژی، افسردگی، وسواس، پوست خشک، ریزش مو و ضعف عمومی همراه است. بدن به گرما، تغذیه و تقویت نیاز دارد.' },
+  cracked: { name:'کمبود مایعات و حرارت داخلی', icon:'🌵', type:'safravi',
+    desc:'شیار یا ترک روی زبان نشانه کمبود مایعات در بدن و حرارت داخلی است. این حالت معمولاً با خشکی پوست، یبوست، تشنگی زیاد و خستگی همراه است. بدن نیاز فوری به آبرسانی و مواد معدنی دارد.' },
+  yellow: { name:'اختلال کبد و کیسه صفرا', icon:'💛', type:'kabd',
+    desc:'جرم زرد روی زبان نشانه اختلال در عملکرد کبد و ترشح صفراست. این حالت می‌تواند با کبد چرب، کلسترول بالا، مشکلات پوستی و گوارشی همراه باشد. کبد نیاز فوری به پاکسازی و حمایت دارد.' },
+  normal: { name:'مزاج نسبتاً متعادل', icon:'🌸', type:'motadel',
+    desc:'زبان در حالت طبیعی قرار دارد. مشکلات موجود بیشتر ناشی از عادات غذایی نادرست یا سبک زندگی است. با اصلاح تغذیه و استفاده از مکمل‌های مناسب می‌توان به سرعت نتیجه گرفت.' }
 };
 
-const mizajData = {
-  white: {
-    name: 'غلبه بلغم (سرد و تر)',
-    icon: '💧',
-    desc: 'زبان سفید و ضخیم نشانه غلبه بلغم در بدن است. در طب سنتی، این حالت به معنای کندی سوخت‌وساز، تجمع رطوبت و سردی در بدن است که باعث اضافه وزن، خستگی، نفخ و کاهش انرژی می‌شود.',
-    type: 'balqham'
+const nutritionData = {
+  balqham: {
+    good: ['زنجبیل، دارچین، فلفل سیاه، هل — هر روز در چای یا غذا','گوشت قرمز کم‌چرب و مرغ بخارپز — ۳ تا ۴ بار در هفته','عسل طبیعی صبح ناشتا با آب ولرم','سیر و پیاز تازه در غذاها','آبگوشت و سوپ گرم — به‌ویژه زمستان','خرما و انجیر به‌عنوان میان‌وعده','سبزیجات پخته مثل کدو، هویج، اسفناج','ادویه‌های گرم در پخت‌وپز'],
+    bad: ['لبنیات سرد به‌ویژه شیر یخچالی و بستنی','غذاهای سرخ‌شده و پرچرب','نوشیدنی‌های یخ و سرد','آرد سفید، نان سفید و شیرینی صنعتی','موز، طالبی و هندوانه زیاد','برنج سفید زیاد','غذاهای کنسروی و فراوری‌شده','کافئین زیاد']
   },
-  red: {
-    name: 'غلبه صفرا (گرم و خشک)',
-    icon: '🔥',
-    desc: 'زبان قرمز و ملتهب نشانه غلبه صفرا و حرارت زیاد در بدن است. این حالت می‌تواند باعث رفلاکس، عصبانیت، بی‌خوابی، پرانرژی‌بودن اما ناپایدار و مشکلات پوستی شود.',
-    type: 'safravi'
+  safravi: {
+    good: ['خیار، کدو، کاهو، کرفس — سبزیجات سرد','ماست و دوغ طبیعی — روزانه','آب‌میوه طبیعی خنک (نه یخ)','ماهی آب‌پز یا بخارپز','هندوانه، خربزه، انگور','نعناع، گشنیز، ریحان تازه','روغن زیتون خام روی سالاد','چای سبز سرد شده'],
+    bad: ['غذاهای تند، فلفل قرمز، خردل','گوشت قرمز زیاد — بیش از ۲ بار هفته','قهوه زیاد و چای پررنگ','روغن‌های اشباع و سرخ‌شدنی','نمک زیاد','ادویه‌های تند و پرحرارت','الکل و دخانیات','غذاهای کنسروی پرنمک']
   },
-  pale: {
-    name: 'غلبه سودا (سرد و خشک)',
-    icon: '🍂',
-    desc: 'زبان کم‌رنگ نشانه غلبه سودا است. این مزاج با کمبود خون و انرژی، افسردگی، وسواس، پوست خشک و ریزش مو همراه است.',
-    type: 'sodavi'
+  sodavi: {
+    good: ['سوپ و آش گرم — هر روز','عسل طبیعی صبح ناشتا','انجیر، انگور، خرما — میان‌وعده روزانه','روغن زیتون بکر — روزانه','آجیل تازه — گردو، بادام، پسته','زعفران در چای یا غذا','گوشت بره و مرغ پخته','ادویه‌های گرم‌کننده']
+    ,bad: ['غذاهای سرد و خشک','نگرانی و استرس مزمن — از جمله عوامل بدتر شدن','سبزیجات خام زیاد در هوای سرد','روزه طولانی و نخوردن صبحانه','بادمجان و نخود زیاد','ترشیجات زیاد','خواب کم','انزوا و تنهایی']
   },
-  cracked: {
-    name: 'کمبود مایعات و حرارت داخلی',
-    icon: '🌵',
-    desc: 'شیار یا ترک روی زبان نشانه کمبود مایعات در بدن و حرارت داخلی است. بدن نیاز به آبرسانی و خنک‌کننده‌های طبیعی دارد.',
-    type: 'safravi'
+  kabd: {
+    good: ['هویج، چغندر، کلم بروکلی — هر روز','آووکادو و گردو — منابع چربی سالم','مرکبات (لیمو، پرتقال) — ویتامین C','جعفری و گشنیز تازه — مصفی کبد','آب لیموناشتا هر صبح — ۱ لیوان','چای سبز — ۲ تا ۳ فنجان روزانه','زغال‌اخته و توت‌فرنگی','سیر سیاه یا سیر تازه']
+    ,bad: ['الکل و دخانیات — ممنوع کامل','غذاهای سرخ‌شده — ممنوع','شیرینی و قند زیاد','نمک زیاد','فست‌فود و غذاهای آماده','کربوهیدرات تصفیه‌شده','داروهای غیرضروری','چربی ترانس']
   },
-  yellow: {
-    name: 'اختلال کبد و صفرا',
-    icon: '💛',
-    desc: 'جرم زرد روی زبان نشانه اختلال در عملکرد کبد و ترشح صفراست. کبد نیاز به پاکسازی و حمایت دارد.',
-    type: 'kabd'
-  },
-  normal: {
-    name: 'مزاج نسبتاً متعادل',
-    icon: '🌸',
-    desc: 'زبان در حالت طبیعی قرار دارد. مشکلات موجود بیشتر ناشی از عادات غذایی یا سبک زندگی است تا عدم تعادل مزاجی شدید.',
-    type: 'motadel'
+  motadel: {
+    good: ['میوه‌های تازه و فصلی — هر روز','سبزیجات رنگارنگ — هر وعده','ماهی — حداقل ۲ بار هفته','غلات کامل جای آرد سفید','آجیل و دانه‌ها — مشتی در روز','روغن زیتون به‌جای روغن معمولی','حبوبات — عدس، لوبیا، نخود','آب کافی — ۸ لیوان در روز']
+    ,bad: ['پرخوری — مهم‌ترین دشمن سلامت','غذاهای فراوری‌شده و کنسروی','قند و شکر زیاد','چربی اشباع و ترانس','نمک زیاد','نوشابه و آبمیوه صنعتی','حذف وعده‌های غذایی','خوردن دیروقت شب']
   }
 };
 
-function getSymptoms() {
-  const checked = document.querySelectorAll('.check-item.active input');
-  return Array.from(checked).map(i => i.value);
-}
+const lifestyleData = {
+  balqham: [
+    '☀️ پیاده‌روی سریع هر روز حداقل ۳۰ تا ۴۵ دقیقه — مهم‌ترین توصیه',
+    '🌡️ حمام آب گرم ۲ تا ۳ بار در هفته برای تحریک گردش خون و دفع رطوبت',
+    '😴 خواب منظم — نه بیشتر از ۷ ساعت (خواب زیاد بلغم را تشدید می‌کند)',
+    '🏃 ورزش‌های هوازی مثل دوچرخه، شنا یا ایروبیک ۳ بار در هفته',
+    '☕ نوشیدنی‌های گرم در طول روز — از آب یخ پرهیز کنید',
+    '🌅 فعالیت صبحگاهی بسیار مهم است — صبح‌ها کسل‌ترین زمان برای بلغمی‌هاست',
+    '🧘 یوگا یا کشش بدنی برای فعال کردن متابولیسم',
+    '🌿 اتاق خود را گرم نگه دارید و از نشستن در هوای سرد و مرطوب بپرهیزید'
+  ],
+  safravi: [
+    '🌊 ورزش‌های آرام مثل شنا، یوگا و تای‌چی — از ورزش‌های خشن پرهیز کنید',
+    '😴 خواب کافی و منظم — حتماً قبل از ۱۱ شب بخوابید',
+    '🧘 مدیتیشن و تنفس عمیق روزانه حداقل ۱۵ دقیقه',
+    '❄️ دوش آب خنک (نه سرد) بعد از ورزش برای کاهش حرارت',
+    '🌿 دور از استرس و محیط‌های پرسروصدا — محیط آرام انتخاب کنید',
+    '🚶 پیاده‌روی آرام صبح در طبیعت یا پارک',
+    '🌙 قبل از خواب از صفحه نمایش دوری کنید',
+    '💧 آب کافی بنوشید — حداقل ۸ لیوان در روز'
+  ],
+  sodavi: [
+    '☀️ قرار گرفتن در معرض آفتاب صبحگاهی حداقل ۲۰ دقیقه',
+    '🤸 ورزش‌های سبک و منظم — هر روز ۲۰ تا ۳۰ دقیقه',
+    '👥 ارتباط اجتماعی و دور از انزوا — با دوستان و خانواده بیشتر باشید',
+    '🎵 موسیقی شاد و فعالیت‌های لذت‌بخش هر روز',
+    '🌡️ بدن را همیشه گرم نگه دارید — از سرما دوری کنید',
+    '💆 ماساژ آرام با روغن زیتون یا روغن بادام — هفتگی',
+    '🌿 گرفتن صبحانه کامل — مهم‌ترین وعده برای سوداوی‌هاست',
+    '😊 فعالیت‌های شاد و خلاقانه برای بهبود خلق‌وخو'
+  ],
+  kabd: [
+    '🥤 ۸ تا ۱۰ لیوان آب در روز — اولین قدم',
+    '🚶 ۴۵ دقیقه پیاده‌روی روزانه برای کاهش چربی کبد',
+    '🚭 ترک دخانیات — فوری و ضروری',
+    '⚖️ کاهش وزن تدریجی — هر هفته ۵۰۰ گرم ایمن است',
+    '💊 پرهیز از داروهای غیرضروری که کبد را درگیر می‌کنند',
+    '🧘 کاهش استرس — کورتیزول بالا به کبد آسیب می‌زند',
+    '🌙 حداقل ۷ ساعت خواب — کبد شب‌ها پاکسازی می‌کند',
+    '🍽️ وعده‌های کوچک و مکرر به‌جای وعده‌های حجیم'
+  ],
+  motadel: [
+    '🏃 ورزش منظم ۳ تا ۵ بار در هفته — ترکیبی از هوازی و قدرتی',
+    '😴 ۷ تا ۸ ساعت خواب با کیفیت — زمان ثابت بخوابید',
+    '💧 ۸ لیوان آب در روز — قبل از هر وعده ۱ لیوان بنوشید',
+    '🥗 وعده‌های غذایی منظم — حذف وعده ممنوع',
+    '🧘 مدیریت استرس با مدیتیشن یا تنفس عمیق روزانه',
+    '☀️ هوای تازه و نور آفتاب هر روز',
+    '📵 ۱ ساعت قبل از خواب صفحه نمایش را کنار بگذارید',
+    '🤸 کشش و یوگا هر روز ۱۰ دقیقه برای سلامت مفاصل'
+  ]
+};
 
 function analyze() {
   const name = document.getElementById('clientName').value.trim();
@@ -637,197 +480,161 @@ function analyze() {
   const gender = document.getElementById('clientGender').value;
   const height = document.getElementById('clientHeight').value;
   const weight = document.getElementById('clientWeight').value;
-  const balqham = document.getElementById('balqhamCount').value;
   const extra = document.getElementById('extraInfo').value.trim();
-  const symptoms = getSymptoms();
   const err = document.getElementById('errMsg');
+  const symptoms = Array.from(selectedSymptoms);
+  const balqhamItems = Array.from(selectedBalqham);
 
-  if (!name) { err.style.display='block'; err.textContent='⚠️ لطفاً نام مشتری را وارد کنید'; return; }
-  if (!selectedBudget) { err.style.display='block'; err.textContent='⚠️ لطفاً بودجه مشتری را انتخاب کنید'; return; }
-  if (!selectedTongue) { err.style.display='block'; err.textContent='⚠️ لطفاً وضعیت زبان مشتری را انتخاب کنید'; return; }
-  err.style.display = 'none';
+  if(!name){ err.style.display='block'; err.textContent='⚠️ لطفاً نام مشتری را وارد کنید'; return; }
+  if(!selectedBudget){ err.style.display='block'; err.textContent='⚠️ لطفاً بودجه مشتری را انتخاب کنید'; return; }
+  if(!selectedTongue){ err.style.display='block'; err.textContent='⚠️ لطفاً وضعیت زبان مشتری را انتخاب کنید'; return; }
+  err.style.display='none';
 
-  // BMI
-  let bmi = 0, bmiText = '';
-  if (height && weight) {
-    bmi = (weight / ((height/100) ** 2)).toFixed(1);
-    if (bmi < 18.5) bmiText = `کم‌وزن (BMI: ${bmi})`;
-    else if (bmi < 25) bmiText = `طبیعی (BMI: ${bmi})`;
-    else if (bmi < 30) bmiText = `اضافه وزن (BMI: ${bmi})`;
-    else bmiText = `چاقی (BMI: ${bmi})`;
+  let bmi=0, bmiText='', bmiColor='#ccc';
+  if(height && weight){
+    bmi = (weight/((height/100)**2)).toFixed(1);
+    if(bmi<18.5){ bmiText=`کم‌وزن (BMI: ${bmi})`; bmiColor='#64b5f6'; }
+    else if(bmi<25){ bmiText=`وزن طبیعی (BMI: ${bmi})`; bmiColor='#4caf50'; }
+    else if(bmi<30){ bmiText=`اضافه وزن (BMI: ${bmi})`; bmiColor='#ffc107'; }
+    else{ bmiText=`چاقی (BMI: ${bmi})`; bmiColor='#f08080'; }
   }
 
-  const mizaj = mizajData[selectedTongue];
-  const isFemale = gender === 'female';
+  const mizaj = mizajInfo[selectedTongue];
+  const balqhamCount = balqhamItems.length;
+  const balqhamLevel = balqhamCount>=8 ? 'شدید' : balqhamCount>=4 ? 'متوسط' : balqhamCount>=1 ? 'خفیف' : 'ندارد';
 
-  // انتخاب محصولات بر اساس علائم و بودجه
-  let recommended = [];
-  let budgetLimit = selectedBudget === 'low' ? 2000000 : selectedBudget === 'mid' ? 4000000 : 10000000;
-
-  // محصولات اولویت‌بندی شده بر اساس علائم
-  let scored = {};
-  Object.entries(products).forEach(([key, p]) => {
+  // انتخاب محصولات
+  const budgetLimit = selectedBudget==='low' ? 3000000 : selectedBudget==='mid' ? 6000000 : 15000000;
+  let scored = products.map(p => {
     let score = 0;
-    p.for.forEach(f => { if (symptoms.includes(f)) score += 2; });
-    // اضافه کردن بر اساس مزاج
-    if (mizaj.type === 'balqham' && ['masala','raziyanehNafkh','saboosBeranj','chaiSabz'].includes(key)) score += 3;
-    if (mizaj.type === 'safravi' && ['aramBakhsh','badranjboyeh','hotChocolate','kharkhask'].includes(key)) score += 3;
-    if (mizaj.type === 'sodavi' && ['kafeLate','kafeSupreme','seerSiyah','javanahGandom'].includes(key)) score += 3;
-    if (mizaj.type === 'kabd' && ['shahtareh','seerSiyah','chaiSabz'].includes(key)) score += 4;
-    // بلغم
-    if (balqham === '3' && ['masala','raziyanehNafkh','chaiSabz','saboosBeranj'].includes(key)) score += 2;
-    if (score > 0) scored[key] = score;
-  });
+    p.for.forEach(f => { if(symptoms.includes(f)) score+=3; });
+    if(p.mizaj.includes(mizaj.type)) score+=4;
+    if(mizaj.type==='balqham' && balqhamCount>=4 && p.mizaj.includes('balqham')) score+=2;
+    if(mizaj.type==='kabd') { if(['shahtareh','seerSiyah','chaiSabz'].includes(p.id)) score+=4; }
+    if(symptoms.includes('rizesh') && ['saboosBeranj','javanahGandom'].includes(p.id)) score+=3;
+    if(symptoms.includes('bikhabi') && ['aramBakhsh','badranjboyeh'].includes(p.id)) score+=3;
+    if(symptoms.includes('qaedegi') && p.id==='raziyanehBanovan') score+=5;
+    if(symptoms.includes('sang_kolieh') && p.id==='kharkhask') score+=5;
+    if(symptoms.includes('kabd') && p.id==='shahtareh') score+=5;
+    if(symptoms.includes('qand') && ['hypotonic','khormaDarchin'].includes(p.id)) score+=3;
+    if(symptoms.includes('charbi_shekam') && ['chaiSabz','khormaRejimi'].includes(p.id)) score+=3;
+    return {...p, score};
+  }).filter(p=>p.score>0).sort((a,b)=>b.score-a.score);
 
-  // مرتب‌سازی بر اساس امتیاز
-  let sorted = Object.entries(scored).sort((a,b) => b[1]-a[1]);
-
-  // انتخاب در حد بودجه
-  let totalCost = 0;
-  let selected = [];
-  for (let [key, score] of sorted) {
-    const p = products[key];
-    if (totalCost + p.price <= budgetLimit) {
-      selected.push({ key, score, ...p });
-      totalCost += p.price;
+  // حذف تکراری (اگر هم لاته هم موکا هم سوپریم باشن، یکی انتخاب کن)
+  let coffeeAdded = false;
+  let filtered = [];
+  for(let p of scored){
+    if(['kafeLate','kafeMoka','kafeSupreme'].includes(p.id)){
+      if(!coffeeAdded){ filtered.push(p); coffeeAdded=true; }
+    } else if(['asal500','asal900'].includes(p.id)){
+      if(!filtered.find(x=>x.id==='asal500'||x.id==='asal900')) filtered.push(p);
+    } else {
+      filtered.push(p);
     }
-    if (selected.length >= 5) break;
   }
 
-  // حداقل یک محصول
-  if (selected.length === 0) {
-    selected.push({ key: 'kafeLate', score: 5, ...products.kafeLate });
-    totalCost = products.kafeLate.price;
+  let selected=[], totalCost=0;
+  for(let p of filtered){
+    if(totalCost+p.price<=budgetLimit && selected.length<6){
+      selected.push(p); totalCost+=p.price;
+    }
   }
+  if(selected.length===0){ selected.push(products[0]); totalCost=products[0].price; }
 
-  // نمایش نتیجه
-  document.getElementById('result').style.display = 'block';
-
-  // هدر
-  document.getElementById('resultHeader').innerHTML = `
-    <div class="client-name">${name} ${age ? '— '+age+' ساله' : ''} ${bmiText ? '| '+bmiText : ''}</div>
+  // نمایش هدر
+  document.getElementById('resultHeader').innerHTML=`
+    <div class="client-name">${name} ${age?'— '+age+' ساله':''} ${gender==='female'?'(خانم)':gender==='male'?'(آقا)':''}</div>
     <div class="mizaj-title">${mizaj.icon} ${mizaj.name}</div>
-    <div class="mizaj-sub">بر اساس تست زبان‌شناسی و علائم بالینی</div>
+    <div class="mizaj-sub">تشخیص بر اساس زبان‌شناسی، تست بلغم و علائم بالینی</div>
   `;
 
   // تحلیل مزاج
-  let sympTags = symptoms.map(s => {
-    const labels = {
-      nafkh:'نفخ',yoboosat:'یبوست',khastegi:'خستگی',rizekhori:'ریزه‌خوری',
-      sardi:'سردی بدن',rizesh:'ریزش مو',puf:'پف صورت',charbi_shekam:'چربی شکم',
-      reflux:'رفلاکس',stress:'استرس',bikhabi:'بی‌خوابی',kabd:'کبد چرب',
-      kolesterol:'کلسترول بالا',faresharkhooni:'فشار خون',qand:'قند خون',
-      moafiyat:'ضعف ایمنی',poost:'مشکل پوست',qaedegi:'بی‌نظمی قاعدگی',
-      dard_qaedegi:'دردهای قاعدگی',sang_kolieh:'سنگ کلیه',tavarom:'تورم',
-      lazari:'لاغری',hafeze:'ضعف حافظه',moafsal:'درد مفاصل'
-    };
-    return `<span class="tag">${labels[s]||s}</span>`;
-  }).join('');
+  const sympLabels = {nafkh:'نفخ',yoboosat:'یبوست',khastegi:'خستگی',rizekhori:'ریزه‌خوری',sardi:'سردی بدن',rizesh:'ریزش مو',puf:'پف صورت',charbi_shekam:'چربی شکم',reflux:'رفلاکس',stress:'استرس',bikhabi:'بی‌خوابی',kabd:'کبد چرب',kolesterol:'کلسترول بالا',faresharkhooni:'فشار خون',qand:'قند خون',moafiyat:'ضعف ایمنی',poost:'مشکل پوست',qaedegi:'بی‌نظمی قاعدگی',dard_qaedegi:'دردهای قاعدگی',sang_kolieh:'سنگ کلیه',tavarom:'تورم',lazari:'لاغری',hafeze:'ضعف حافظه',moafsal:'درد مفاصل'};
+  const tags = symptoms.map(s=>`<span class="tag">${sympLabels[s]||s}</span>`).join('');
 
-  document.getElementById('mizajAnalysis').innerHTML = `
+  document.getElementById('mizajSection').innerHTML=`
     <div class="section-title">🔬 تشخیص مزاج</div>
     <div class="analysis-box">${mizaj.desc}</div>
-    ${symptoms.length > 0 ? `
-    <div class="section-title">⚠️ علائم ثبت‌شده</div>
-    <div class="symptom-tags">${sympTags}</div>` : ''}
-    ${bmiText ? `<div class="analysis-box">📊 شاخص توده بدنی: <strong>${bmiText}</strong></div>` : ''}
-    ${balqham === '3' ? '<div class="analysis-box" style="border-color:#7d4a1e;color:#f0a060">⚠️ بلغم شدید تشخیص داده شد — نیاز به درمان فوری و پکیج کامل دارد</div>' : ''}
-    ${extra ? `<div class="analysis-box">📋 نکات ویژه: ${extra}</div>` : ''}
+    ${bmiText?`<div class="analysis-box">📊 شاخص توده بدنی: <strong style="color:${bmiColor}">${bmiText}</strong></div>`:''}
+    ${balqhamCount>0?`<div class="analysis-box ${balqhamCount>=8?'warn':''}">🧪 تست بلغم: <strong>${balqhamCount} مورد از ۱۵ — غلبه بلغم ${balqhamLevel}</strong>${balqhamCount>=8?' | ⚠️ نیاز به درمان جدی دارد':''}</div>`:''}
+    ${symptoms.length>0?`<div class="section-title" style="margin-top:14px">⚠️ علائم ثبت‌شده</div><div class="symptom-tags">${tags}</div>`:''}
+    ${extra?`<div class="analysis-box warn">📋 نکات ویژه مشتری: ${extra}</div>`:''}
   `;
 
   // محصولات
-  let productsHtml = '';
-  selected.forEach((p, i) => {
-    const priority = i === 0 ? ['priority-1','🥇 اولویت اول'] : i === 1 ? ['priority-2','🥈 اولویت دوم'] : ['priority-3','🔵 مکمل'];
-    productsHtml += `
-    <div class="product-card">
-      <span class="priority-badge ${priority[0]}">${priority[1]}</span>
+  let prodHtml='';
+  selected.forEach((p,i)=>{
+    const badge = i===0?['p1','🥇 اولویت اول — ضروری']:i===1?['p2','🥈 اولویت دوم']:['p3','🔵 مکمل پیشنهادی'];
+    prodHtml+=`<div class="product-card">
+      <span class="p-priority ${badge[0]}">${badge[1]}</span>
       <div class="p-name">${p.name}</div>
-      <div class="p-price">${(p.price/10).toLocaleString()} تومان | ${p.unit}</div>
-      <div class="p-why">✅ ${p.benefits.join(' | ')}</div>
-      <div class="p-dose">📌 طبق دستورالعمل روی بسته مصرف شود</div>
+      <div class="p-price">💰 ${(p.price/10).toLocaleString()} تومان | ${p.unit}</div>
+      <div class="p-why">✅ ${p.benefits.join(' &nbsp;|&nbsp; ')}</div>
+      <div class="p-dose">📌 روش مصرف: ${p.dose}</div>
     </div>`;
   });
-  document.getElementById('productsSection').innerHTML = productsHtml;
+  document.getElementById('productsSection').innerHTML=prodHtml;
 
-  // تغذیه بر اساس مزاج
-  const nutritionMap = {
-    balqham: {
-      good: ['زنجبیل، دارچین، فلفل سیاه', 'گوشت قرمز و مرغ بخارپز', 'عسل طبیعی و خرما', 'سبزیجات پخته', 'سیر و پیاز', 'آبگوشت و سوپ گرم'],
-      bad: ['لبنیات سرد به‌ویژه شیر سرد', 'غذاهای سرخ‌شده و چرب', 'نوشیدنی یخ و سرد', 'آرد سفید و شیرینی', 'موز و طالبی', 'برنج زیاد']
-    },
-    safravi: {
-      good: ['خیار، کدو، کاهو', 'ماست و دوغ', 'آب‌میوه طبیعی خنک', 'ماهی و مرغ آب‌پز', 'هندوانه و خربزه', 'نعناع و گشنیز'],
-      bad: ['غذاهای تند و ادویه‌دار', 'گوشت قرمز زیاد', 'قهوه و چای پررنگ', 'روغن‌های اشباع', 'نمک زیاد', 'غذاهای سرخ‌شده']
-    },
-    sodavi: {
-      good: ['سوپ و آش گرم', 'عسل، انجیر، انگور', 'روغن زیتون', 'آجیل و مغزها', 'زعفران و هل', 'گوشت بره'],
-      bad: ['غذاهای سرد و خشک', 'نگرانی و استرس مزمن', 'سبزی خام زیاد در هوای سرد', 'روزه طولانی', 'بادمجان زیاد', 'نخود زیاد']
-    },
-    kabd: {
-      good: ['هویج، چغندر، کلم بروکلی', 'آووکادو و گردو', 'زغال‌اخته و مرکبات', 'جعفری و گشنیز تازه', 'آب لیمو ناشتا', 'چای سبز'],
-      bad: ['الکل و دخانیات', 'غذاهای سرخ‌شده', 'شیرینی و قند زیاد', 'نمک زیاد', 'غذاهای فست‌فود', 'کربوهیدرات تصفیه‌شده']
-    },
-    motadel: {
-      good: ['میوه‌های تازه و فصلی', 'سبزیجات رنگارنگ', 'ماهی و مرغ', 'غلات کامل', 'آجیل و دانه‌ها', 'روغن زیتون'],
-      bad: ['پرخوری', 'غذاهای فراوری‌شده', 'قند و شکر زیاد', 'چربی اشباع', 'نمک زیاد', 'نوشابه و آبمیوه صنعتی']
-    }
-  };
-
-  const nut = nutritionMap[mizaj.type] || nutritionMap.motadel;
-  document.getElementById('nutritionSection').innerHTML = `
+  // تغذیه
+  const nut = nutritionData[mizaj.type] || nutritionData.motadel;
+  document.getElementById('nutritionSection').innerHTML=`
     <div class="food-grid">
-      <div class="food-box good">
-        <h4>✅ غذاهای مفید</h4>
-        <ul>${nut.good.map(f=>`<li>${f}</li>`).join('')}</ul>
-      </div>
-      <div class="food-box bad">
-        <h4>❌ باید پرهیز کنید</h4>
-        <ul>${nut.bad.map(f=>`<li>${f}</li>`).join('')}</ul>
-      </div>
+      <div class="food-box good"><h4>✅ غذاهای مفید و توصیه‌شده</h4><ul>${nut.good.map(f=>`<li>${f}</li>`).join('')}</ul></div>
+      <div class="food-box bad"><h4>❌ باید پرهیز کنید</h4><ul>${nut.bad.map(f=>`<li>${f}</li>`).join('')}</ul></div>
     </div>
+    ${symptoms.includes('charbi_shekam')?'<div class="analysis-box success">💡 برای چربی شکم: بعد از شام ۱۰ دقیقه پیاده‌روی کنید — این ساده‌ترین و موثرترین کار است</div>':''}
+    ${symptoms.includes('kabd')?'<div class="analysis-box success">💡 برای کبد چرب: هر روز صبح ناشتا یک لیوان آب گرم با لیمو بنوشید</div>':''}
+    ${symptoms.includes('rizesh')?'<div class="analysis-box success">💡 برای ریزش مو: سبوس برنج را روزانه با ماست مصرف کنید — نتیجه از هفته سوم پیداست</div>':''}
   `;
 
   // سبک زندگی
-  const lifestyleMap = {
-    balqham: ['☀️ هر روز حداقل ۳۰ دقیقه پیاده‌روی سریع', '🌡️ حمام آب گرم ۲ بار در هفته برای تحریک گردش خون', '😴 خواب منظم — نه بیشتر از ۷ ساعت (خواب زیاد بلغم را تشدید می‌کند)', '🧘 ورزش‌های هوازی برای فعال کردن سوخت‌وساز', '☕ نوشیدنی‌های گرم در طول روز', '🌅 فعالیت صبحگاهی بسیار مهم است'],
-    safravi: ['🌊 ورزش‌های آرام مثل شنا و یوگا', '😴 خواب کافی و منظم — قبل از ۱۱ شب', '🧘 مدیتیشن و تنفس عمیق روزانه', '❄️ دوش آب خنک بعد از ورزش', '🌿 دور از استرس و محیط‌های پرسروصدا', '🚶 پیاده‌روی آرام در طبیعت'],
-    sodavi: ['☀️ قرار گرفتن در معرض آفتاب صبحگاهی', '🤸 ورزش‌های سبک و منظم', '👥 ارتباط اجتماعی و دور از انزوا', '🎵 موسیقی شاد و فعالیت‌های لذت‌بخش', '🌡️ گرم نگه داشتن بدن', '💆 ماساژ آرام با روغن گرم'],
-    kabd: ['🥤 ۸ لیوان آب در روز', '🚶 ۴۵ دقیقه پیاده‌روی روزانه', '🚭 ترک دخانیات و الکل', '⚖️ حفظ وزن سالم', '💊 پرهیز از داروهای غیرضروری', '🧘 کاهش استرس برای سلامت کبد'],
-    motadel: ['🏃 ورزش منظم ۳ تا ۵ بار در هفته', '😴 ۷ تا ۸ ساعت خواب', '💧 آب کافی در طول روز', '🥗 وعده‌های غذایی منظم', '🧘 مدیریت استرس', '☀️ قرار گرفتن در هوای تازه']
-  };
-
-  const lifestyle = lifestyleMap[mizaj.type] || lifestyleMap.motadel;
-  document.getElementById('lifestyleSection').innerHTML = `
-    <ul class="lifestyle-list">
-      ${lifestyle.map(l=>`<li><span>${l}</span></li>`).join('')}
-    </ul>
+  const life = lifestyleData[mizaj.type] || lifestyleData.motadel;
+  document.getElementById('lifestyleSection').innerHTML=`
+    <ul class="life-list">${life.map(l=>`<li>${l}</li>`).join('')}</ul>
   `;
 
-  // جمع کل
-  document.getElementById('totalBox').innerHTML = `
+  // جمع
+  document.getElementById('totalBox').innerHTML=`
     <div class="t-label">جمع هزینه پکیج پیشنهادی</div>
     <div class="t-amount">${(totalCost/10).toLocaleString()} تومان</div>
   `;
 
-  // متن پیام برای مشتری
-  const prodList = selected.map(p => `• ${p.name}`).join('\n');
-  document.getElementById('messageSection').innerHTML = `
-    <div class="analysis-box" style="line-height:2.2;white-space:pre-line">${name} عزیز 🌿
+  // متن پیام
+  const prodList = selected.map((p,i)=>`${i===0?'🥇':i===1?'🥈':'🔵'} ${p.name} — ${(p.price/10).toLocaleString()} تومان`).join('\n');
+  const sympText = symptoms.slice(0,4).map(s=>sympLabels[s]||s).join('، ');
+  const msg = `${name} عزیز 🌿
 
-با توجه به بررسی علائم و تحلیل مزاج شما، تشخیص داده شد که بدنتون دچار ${mizaj.name} است.
+با توجه به بررسی کامل علائم و تحلیل مزاج شما، تشخیص داده شد که بدنتون دچار **${mizaj.name}** است.
 
-این وضعیت می‌تونه باعث مشکلاتی مثل ${symptoms.slice(0,3).map(s=>({nafkh:'نفخ',yoboosat:'یبوست',khastegi:'خستگی',rizesh:'ریزش مو',charbi_shekam:'چربی شکم',stress:'استرس',bikhabi:'بی‌خوابی',kabd:'کبد چرب',reflux:'رفلاکس',sardi:'سردی بدن'}[s]||s)).join('، ')} بشه.
+${mizaj.type==='balqham'?`این وضعیت باعث شده سوخت‌وسازتون کند بشه و بدنتون نتونه چربی‌ها رو بسوزونه. به همین دلیل علائمی مثل ${sympText} دارید.`:mizaj.type==='safravi'?`این وضعیت باعث التهاب و حرارت زیاد در بدنتونه که می‌تونه علائمی مثل ${sympText} ایجاد کنه.`:mizaj.type==='sodavi'?`این وضعیت باعث کمبود انرژی و خون در بدنتونه که علائمی مثل ${sympText} رو ایجاد کرده.`:`با اصلاح تغذیه و استفاده از مکمل‌های مناسب می‌تونید علائمی مثل ${sympText} رو برطرف کنید.`}
 
-📦 پکیج پیشنهادی برای شما:
+📦 پکیج پیشنهادی اختصاصی برای شما:
 ${prodList}
 
-با این پکیج از ریشه مشکل رو حل می‌کنیم، نه فقط علائم رو.
+💰 جمع کل: ${(totalCost/10).toLocaleString()} تومان
 
-برای شروع آماده‌اید؟ 🌱</div>
+با این پکیج از ریشه مشکل درمان می‌کنیم، نه فقط علائم رو.
+نتیجه از هفته دوم احساس می‌کنید 🌱
+
+برای شروع آماده‌اید؟ 😊`;
+
+  document.getElementById('messageSection').innerHTML=`
+    <div class="msg-box" id="msgText">${msg}</div>
+    <button class="copy-btn" onclick="copyMsg()">📋 کپی متن پیام</button>
   `;
 
-  document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('result').style.display='block';
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+}
+
+function copyMsg(){
+  const txt = document.getElementById('msgText').innerText;
+  navigator.clipboard.writeText(txt).then(()=>{
+    const btn = document.querySelector('.copy-btn');
+    btn.textContent='✅ کپی شد!';
+    setTimeout(()=>btn.textContent='📋 کپی متن پیام',2000);
+  });
 }
 </script>
 </body>
