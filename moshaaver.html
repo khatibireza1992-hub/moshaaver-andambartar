@@ -22,8 +22,6 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
 .field textarea { min-height: 70px; resize: vertical; }
 .field select option { background: #111827; }
 .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-/* چک‌باکس‌ها */
 .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
 .check-item { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 8px; cursor: pointer; font-size: 13px; color: #aaa; transition: all 0.15s; user-select: none; }
 .check-item:hover { border-color: #2d6a4f; color: #eee; }
@@ -31,34 +29,25 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
 .check-dot { width: 18px; height: 18px; border: 2px solid #333; border-radius: 4px; flex-shrink: 0; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
 .check-item.active .check-dot { background: #2d6a4f; border-color: #2d6a4f; }
 .check-item.active .check-dot::after { content: '✓'; color: white; font-size: 11px; }
-
-/* تست بلغم */
-.balqham-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
-.balqham-item { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 8px; cursor: pointer; font-size: 13px; color: #aaa; transition: all 0.15s; user-select: none; line-height: 1.7; }
-.balqham-item:hover { border-color: #2d6a4f; color: #eee; }
-.balqham-item.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; font-weight: bold; }
-.balqham-dot { width: 18px; height: 18px; border: 2px solid #333; border-radius: 4px; flex-shrink: 0; margin-top: 2px; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
-.balqham-item.active .balqham-dot { background: #2d6a4f; border-color: #2d6a4f; }
-.balqham-item.active .balqham-dot::after { content: '✓'; color: white; font-size: 11px; }
-
-/* زبان */
+.balghami-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.balghami-item { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 8px; cursor: pointer; font-size: 13px; color: #aaa; transition: all 0.15s; user-select: none; line-height: 1.7; }
+.balghami-item:hover { border-color: #2d6a4f; color: #eee; }
+.balghami-item.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; font-weight: bold; }
+.balghami-dot { width: 18px; height: 18px; border: 2px solid #333; border-radius: 4px; flex-shrink: 0; margin-top: 2px; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
+.balghami-item.active .balghami-dot { background: #2d6a4f; border-color: #2d6a4f; }
+.balghami-item.active .balghami-dot::after { content: '✓'; color: white; font-size: 11px; }
 .tongue-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 6px; }
 .tongue-btn { padding: 12px 8px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 10px; color: #aaa; font-size: 12px; font-family: Tahoma, sans-serif; cursor: pointer; text-align: center; transition: all 0.15s; line-height: 1.7; }
 .tongue-btn:hover { border-color: #2d6a4f; }
 .tongue-btn.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; font-weight: bold; }
 .tongue-icon { font-size: 22px; display: block; margin-bottom: 4px; }
-
-/* بودجه */
 .budget-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 6px; }
 .budget-btn { padding: 14px 8px; background: #0a0f1e; border: 2px solid #1f2d3d; border-radius: 10px; color: #aaa; font-size: 12px; font-family: Tahoma, sans-serif; cursor: pointer; text-align: center; transition: all 0.15s; line-height: 1.9; }
 .budget-btn:hover { border-color: #2d6a4f; }
 .budget-btn.active { border-color: #2d6a4f; background: #0d2b1e; color: #a8d5ba; font-weight: bold; }
-
 .btn { width: 100%; padding: 15px; background: linear-gradient(135deg,#1b4332,#2d6a4f); color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: bold; font-family: Tahoma, sans-serif; cursor: pointer; margin-top: 6px; transition: opacity 0.2s; letter-spacing: 1px; }
 .btn:hover { opacity: 0.9; }
 .err { background: #2b0a0a; border: 1px solid #7d1a1a; color: #f08080; padding: 12px 16px; border-radius: 10px; font-size: 13px; margin-bottom: 12px; display: none; }
-
-/* نتیجه */
 #result { display: none; margin-top: 20px; }
 .result-header { background: linear-gradient(135deg,#1b4332,#2d6a4f); border-radius: 16px; padding: 24px; margin-bottom: 14px; text-align: center; }
 .result-header .client-name { font-size: 13px; color: #a8d5ba; opacity: 0.8; margin-bottom: 6px; }
@@ -70,8 +59,6 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
 .analysis-box.success { border-color: #2d6a4f; color: #a8d5ba; }
 .symptom-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .tag { background: #0d2b1e; border: 1px solid #2d6a4f; color: #a8d5ba; padding: 4px 10px; border-radius: 99px; font-size: 12px; }
-
-/* محصولات */
 .product-card { background: #0a0f1e; border: 1px solid #2d6a4f; border-radius: 12px; padding: 14px; margin-bottom: 10px; }
 .p-priority { display: inline-block; font-size: 10px; padding: 2px 10px; border-radius: 99px; margin-bottom: 8px; }
 .p1 { background: #0d2b0d; color: #4caf50; border: 1px solid #4caf50; }
@@ -81,8 +68,6 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
 .p-price { font-size: 12px; color: #6b8a7a; margin-bottom: 8px; }
 .p-why { font-size: 13px; color: #ccc; line-height: 1.9; margin-bottom: 8px; }
 .p-dose { font-size: 12px; color: #a8d5ba; background: #0d2b1e; padding: 7px 12px; border-radius: 6px; line-height: 1.8; }
-
-/* تغذیه */
 .food-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
 .food-box { background: #0a0f1e; border-radius: 10px; padding: 14px; }
 .food-box.good { border: 1px solid #2d6a4f; }
@@ -91,22 +76,18 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
 .food-box.good h4 { color: #a8d5ba; }
 .food-box.bad h4 { color: #f08080; }
 .food-box ul { padding-right: 16px; }
-.food-box li { font-size: 12px; color: #aaa; line-height: 2.1; }
-
-/* سبک زندگی */
+.food-box li { font-size: 12px; color: #aaa; line-height: 1.8; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid #1a2530; }
+.food-box li:last-child { border-bottom: none; margin-bottom: 0; }
 .life-list { list-style: none; }
 .life-list li { font-size: 13px; color: #ccc; line-height: 1.8; padding: 10px 0; border-bottom: 1px solid #1f2d3d; }
 .life-list li:last-child { border-bottom: none; }
-
-/* جمع */
 .total-box { background: linear-gradient(135deg,#1b4332,#2d6a4f); border-radius: 14px; padding: 18px; text-align: center; margin-bottom: 14px; }
 .total-box .t-label { font-size: 12px; color: #d8f3dc; opacity: 0.8; margin-bottom: 6px; }
-.total-box .t-amount { font-size: 26px; font-weight: bold; color: white; }
-
-/* متن پیام */
+.total-box .t-amount { font-size: 24px; font-weight: bold; color: white; }
 .msg-box { background: #0a0f1e; border: 1px solid #2d6a4f; border-radius: 10px; padding: 16px; font-size: 13px; color: #ccc; line-height: 2.3; white-space: pre-line; }
 .copy-btn { width: 100%; padding: 11px; background: #0d2b1e; border: 1px solid #2d6a4f; color: #a8d5ba; border-radius: 8px; font-size: 13px; font-family: Tahoma, sans-serif; cursor: pointer; margin-top: 10px; }
 .copy-btn:hover { background: #2d6a4f; color: white; }
+.mosleh-box { background: #0a0f1e; border: 1px solid #1f2d3d; border-radius: 10px; padding: 12px; margin-top: 8px; font-size: 12px; color: #9bb8a8; line-height: 1.9; }
 </style>
 </head>
 <body>
@@ -118,7 +99,6 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
   <p>اطلاعات مشتری را وارد کنید — سیستم بهترین پکیج و برنامه را تشخیص می‌دهد</p>
 </div>
 
-<!-- اطلاعات پایه -->
 <div class="card">
   <div class="card-head">👤 اطلاعات پایه مشتری</div>
   <div class="card-body">
@@ -136,7 +116,6 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
   </div>
 </div>
 
-<!-- علائم -->
 <div class="card">
   <div class="card-head">🔍 علائم و مشکلات مشتری (چند گزینه)</div>
   <div class="card-body">
@@ -163,38 +142,39 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
       <div class="check-item" data-val="sang_kolieh" onclick="toggleSymp(this)"><span class="check-dot"></span>سنگ کلیه</div>
       <div class="check-item" data-val="tavarom" onclick="toggleSymp(this)"><span class="check-dot"></span>تورم و آب آوردن بدن</div>
       <div class="check-item" data-val="lazari" onclick="toggleSymp(this)"><span class="check-dot"></span>لاغری و کم‌وزنی</div>
+      <div class="check-item" data-val="afzayesh_vazn" onclick="toggleSymp(this)"><span class="check-dot"></span>نیاز به افزایش وزن</div>
       <div class="check-item" data-val="hafeze" onclick="toggleSymp(this)"><span class="check-dot"></span>ضعف حافظه و تمرکز</div>
       <div class="check-item" data-val="moafsal" onclick="toggleSymp(this)"><span class="check-dot"></span>درد مفاصل و زانو</div>
+      <div class="check-item" data-val="varzeshkar" onclick="toggleSymp(this)"><span class="check-dot"></span>ورزشکار / نیاز به انرژی تمرین</div>
+      <div class="check-item" data-val="ghovaye_jensi" onclick="toggleSymp(this)"><span class="check-dot"></span>کاهش قوای جسمی عمومی</div>
     </div>
   </div>
 </div>
 
-<!-- تست بلغم -->
 <div class="card">
   <div class="card-head">🧪 تست بلغم — کدام علائم را دارد؟ (چند گزینه)</div>
   <div class="card-body">
     <p style="font-size:12px;color:#6b8a7a;margin-bottom:10px">موارد زیر را که مشتری تأیید کرده علامت بزنید:</p>
-    <div class="balqham-grid" id="balqhamGrid">
-      <div class="balqham-item" data-val="b1" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>نفخ و ورم معده</div>
-      <div class="balqham-item" data-val="b2" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>یبوست یا هضم کند</div>
-      <div class="balqham-item" data-val="b3" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>خستگی مزمن</div>
-      <div class="balqham-item" data-val="b4" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>ریزه‌خوری و میل به شیرینی</div>
-      <div class="balqham-item" data-val="b5" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>سردی دست و پا</div>
-      <div class="balqham-item" data-val="b6" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>اذیت شدن با لبنیات سرد</div>
-      <div class="balqham-item" data-val="b7" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>ریزش مو زیاد</div>
-      <div class="balqham-item" data-val="b8" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>سفیدی مو زودرس</div>
-      <div class="balqham-item" data-val="b9" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>پف چشم صبح‌ها</div>
-      <div class="balqham-item" data-val="b10" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>آب دهان روی بالشت</div>
-      <div class="balqham-item" data-val="b11" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>ضعف دست و پا</div>
-      <div class="balqham-item" data-val="b12" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>چربی فقط شکم و پهلو</div>
-      <div class="balqham-item" data-val="b13" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>خلط پشت حلق</div>
-      <div class="balqham-item" data-val="b14" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>درد زانو شبانه</div>
-      <div class="balqham-item" data-val="b15" onclick="toggleBalqham(this)"><span class="balqham-dot"></span>کسل بودن و بی‌حالی</div>
+    <div class="balghami-grid" id="balghamiGrid">
+      <div class="balghami-item" data-val="b1" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>نفخ و ورم معده</div>
+      <div class="balghami-item" data-val="b2" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>یبوست یا هضم کند</div>
+      <div class="balghami-item" data-val="b3" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>خستگی مزمن</div>
+      <div class="balghami-item" data-val="b4" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>ریزه‌خوری و میل به شیرینی</div>
+      <div class="balghami-item" data-val="b5" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>سردی دست و پا</div>
+      <div class="balghami-item" data-val="b6" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>اذیت شدن با لبنیات سرد</div>
+      <div class="balghami-item" data-val="b7" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>ریزش مو زیاد</div>
+      <div class="balghami-item" data-val="b8" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>سفیدی مو زودرس</div>
+      <div class="balghami-item" data-val="b9" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>پف چشم صبح‌ها</div>
+      <div class="balghami-item" data-val="b10" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>آب دهان روی بالشت</div>
+      <div class="balghami-item" data-val="b11" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>ضعف دست و پا</div>
+      <div class="balghami-item" data-val="b12" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>چربی فقط شکم و پهلو</div>
+      <div class="balghami-item" data-val="b13" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>خلط پشت حلق</div>
+      <div class="balghami-item" data-val="b14" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>درد زانو شبانه</div>
+      <div class="balghami-item" data-val="b15" onclick="toggleBalqham(this)"><span class="balghami-dot"></span>کسل بودن و بی‌حالی</div>
     </div>
   </div>
 </div>
 
-<!-- زبان -->
 <div class="card">
   <div class="card-head">👅 تشخیص از روی زبان</div>
   <div class="card-body">
@@ -204,12 +184,11 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
       <button class="tongue-btn" onclick="selectTongue(this,'pale')"><span class="tongue-icon">🩶</span>کم‌رنگ و بی‌روح<br><small>غلبه سودا</small></button>
       <button class="tongue-btn" onclick="selectTongue(this,'cracked')"><span class="tongue-icon">🟤</span>شیاردار یا ترک‌دار<br><small>کمبود مایعات</small></button>
       <button class="tongue-btn" onclick="selectTongue(this,'yellow')"><span class="tongue-icon">💛</span>جرم زرد روی زبان<br><small>مشکل کبد</small></button>
-      <button class="tongue-btn" onclick="selectTongue(this,'normal')"><span class="tongue-icon">🌸</span>صورتی طبیعی<br><small>مزاج متعادل</small></button>
+      <button class="tongue-btn" onclick="selectTongue(this,'damavi')"><span class="tongue-icon">🌸</span>صورتی طبیعی<br><small>مزاج دموی متعادل</small></button>
     </div>
   </div>
 </div>
 
-<!-- بودجه -->
 <div class="card">
   <div class="card-head">💰 بودجه مشتری</div>
   <div class="card-body">
@@ -221,7 +200,6 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
   </div>
 </div>
 
-<!-- توضیحات -->
 <div class="card">
   <div class="card-head">📝 توضیحات اضافه (اختیاری)</div>
   <div class="card-body">
@@ -232,7 +210,6 @@ body { font-family: Tahoma, sans-serif; background: #0a0f1e; min-height: 100vh; 
 <div class="err" id="errMsg"></div>
 <button class="btn" onclick="analyze()">🔍 تحلیل و تشخیص پکیج</button>
 
-<!-- نتیجه -->
 <div id="result">
   <div class="result-header" id="resultHeader"></div>
   <div class="card"><div class="card-head">🧬 تحلیل مزاج و وضعیت بدن</div><div class="card-body" id="mizajSection"></div></div>
@@ -250,141 +227,153 @@ let selectedBudget = '';
 let selectedSymptoms = new Set();
 let selectedBalqham = new Set();
 
-function toggleSymp(el) {
-  const val = el.dataset.val;
-  if(selectedSymptoms.has(val)) { selectedSymptoms.delete(val); el.classList.remove('active'); }
-  else { selectedSymptoms.add(val); el.classList.add('active'); }
-}
+function toggleSymp(el){const v=el.dataset.val; if(selectedSymptoms.has(v)){selectedSymptoms.delete(v);el.classList.remove('active');}else{selectedSymptoms.add(v);el.classList.add('active');}}
+function toggleBalqham(el){const v=el.dataset.val; if(selectedBalqham.has(v)){selectedBalqham.delete(v);el.classList.remove('active');}else{selectedBalqham.add(v);el.classList.add('active');}}
+function selectTongue(el,val){document.querySelectorAll('.tongue-btn').forEach(b=>b.classList.remove('active'));el.classList.add('active');selectedTongue=val;}
+function selectBudget(el,val){document.querySelectorAll('.budget-btn').forEach(b=>b.classList.remove('active'));el.classList.add('active');selectedBudget=val;}
 
-function toggleBalqham(el) {
-  const val = el.dataset.val;
-  if(selectedBalqham.has(val)) { selectedBalqham.delete(val); el.classList.remove('active'); }
-  else { selectedBalqham.add(val); el.classList.add('active'); }
-}
-
-function selectTongue(el, val) {
-  document.querySelectorAll('.tongue-btn').forEach(b => b.classList.remove('active'));
-  el.classList.add('active'); selectedTongue = val;
-}
-
-function selectBudget(el, val) {
-  document.querySelectorAll('.budget-btn').forEach(b => b.classList.remove('active'));
-  el.classList.add('active'); selectedBudget = val;
-}
-
+// قیمت‌ها به تومان - دقیق همانطور که اعلام شده
 const products = [
   { id:'kafeLate', name:'کافه لاته با قارچ گانودرما', price:1925000, unit:'بسته ۲۰عددی',
-    benefits:['تقویت سیستم ایمنی بدن','انرژی پایدار در طول روز','ضد التهاب قوی','تقویت حافظه و تمرکز','کاهش استرس اکسیداتیو'],
-    for:['khastegi','moafiyat','hafeze','stress'], mizaj:['balqham','sodavi'],
-    dose:'روزی ۱ عدد صبح یا ظهر — با ۱۷۰ تا ۲۸۵ میلی‌لیتر آب جوش' },
+    benefits:['بالابرنده سوخت‌وساز شدید بدن','مقوی روده، قلب و کبد','پاکسازی سموم بدن','لاغرکننده و انرژی‌زا','ضد درد مفاصل','تقویت اعصاب','ملین طبیعی'],
+    for:['khastegi','moafiyat','hafeze','stress','charbi_shekam','moafsal','yoboosat'], mizaj:['balghami','sodavi'],
+    dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش بریزید و میل کنید | بعدش نیم ساعت پیاده‌روی کنید (یا ۸ انگلیسی داخل خانه) | تا ۱ ساعت چیزی نخورید، بعد صبحانه میل کنید' },
   { id:'kafeMoka', name:'کافه موکا با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
-    benefits:['تقویت عملکرد مغز','کاهش التهاب','افزایش تمرکز','بهبود خلق‌وخو'],
-    for:['khastegi','hafeze','stress'], mizaj:['balqham','sodavi'],
-    dose:'روزی ۱ عدد صبح — با آب جوش' },
-  { id:'kafeSupreme', name:'کافه سوپریم با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
-    benefits:['فرمول قوی با جینسینگ','ضد استرس قوی‌تر','تقویت انرژی و ایمنی','مناسب خستگی مزمن'],
-    for:['khastegi','stress','moafiyat'], mizaj:['balqham','sodavi'],
-    dose:'روزی ۱ عدد صبح — با آب جوش' },
+    benefits:['پاکسازی کبد و سموم بدن','لاغرکننده قوی','انرژی‌زا و پاکسازی بدن','دافع فضولات روده','سفت‌کننده عضلات','تقویت قلب'],
+    for:['khastegi','hafeze','stress','charbi_shekam','kabd'], mizaj:['balghami','sodavi'],
+    dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش | بعدش نیم ساعت پیاده‌روی | تا ۱ ساعت چیزی نخورید' },
+  { id:'kafeSupreme', name:'کافه سوپریم با قارچ گانودرما و جینسینگ', price:1985000, unit:'بسته ۲۰عددی',
+    benefits:['فوق‌العاده انرژی‌زا','مقوی قلب و پمپاژ قلبی','تقویت قوای جسمی عمومی','پاکسازی عمیق کبد','لاغرکننده قوی','گرم‌کننده بدن','بالابرنده شدید متابولیسم'],
+    for:['khastegi','stress','moafiyat','sardi','charbi_shekam','ghovaye_jensi','kabd'], mizaj:['balghami','sodavi'],
+    dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش | بعدش نیم ساعت پیاده‌روی | تا ۱ ساعت چیزی نخورید' },
   { id:'hotChoc', name:'هات چاکلت با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
-    benefits:['کاهش فشار خون','آنتی‌اکسیدان فلاوانول','بهبود عملکرد قلب','کاهش کلسترول'],
-    for:['faresharkhooni','kolesterol','stress'], mizaj:['safravi'],
-    dose:'روزی ۱ عدد عصر یا شب' },
+    benefits:['کاهش فشار خون','آنتی‌اکسیدان فلاوانول قوی','افزایش وزن و حجم برای لاغرها','ملین طبیعی','مقوی کبد','بالابرنده قند خون','تقویت اعصاب و قوای جنسی'],
+    for:['faresharkhooni','kolesterol','stress','afzayesh_vazn','lazari'], mizaj:['safravi'],
+    dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش | بعدش نیم ساعت پیاده‌روی' },
   { id:'masala', name:'قهوه ماسالا با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
-    benefits:['گرم‌کننده بدن','بهبود گوارش','ضد نفخ','تقویت سوخت‌وساز','مناسب سردمزاجان'],
-    for:['sardi','nafkh','yoboosat','khastegi'], mizaj:['balqham','sodavi'],
-    dose:'روزی ۱ عدد صبح با آب جوش' },
+    benefits:['درمان سردی معده و بدن','بالابرنده متابولیسم','لاغرکننده موثر','مناسب سردمزاجان','تقویت قوای جنسی','ضدعفونی‌کننده معده','مفرح و مقوی قلب'],
+    for:['sardi','nafkh','yoboosat','khastegi','charbi_shekam','ghovaye_jensi'], mizaj:['balghami','sodavi'],
+    dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش | بعدش نیم ساعت پیاده‌روی | تا ۱ ساعت چیزی نخورید سپس صبحانه میل کنید' },
   { id:'raziyanehBanovan', name:'دمنوش رازیانه ویژه بانوان', price:249800, unit:'بسته ۲۰عددی',
     benefits:['تنظیم چرخه قاعدگی','کاهش دردهای قاعدگی','تعادل هورمونی','کاهش علائم یائسگی','افزایش شیر مادران'],
-    for:['qaedegi','dard_qaedegi','tavarom'], mizaj:['balqham','safravi'],
-    dose:'روزی ۲ تا ۳ فنجان — ترجیحاً بعد از غذا' },
+    for:['qaedegi','dard_qaedegi','tavarom'], mizaj:['balghami','safravi'],
+    dose:'از روز ۷ام قاعدگی شروع کنید تا انتهای بسته ادامه دهید | حداکثر ۱ ساشه در روز | داخل ۱ لیوان آب جوش بریزید، ۲۰ دقیقه دم بکشد | ترجیحاً بعدازظهر، با فاصله ۲ هفته از غذای اصلی' },
   { id:'kharkhask', name:'دمنوش خارخاسک دیورتیک', price:348000, unit:'بسته ۲۰عددی',
-    benefits:['دفع سنگ کلیه','کاهش تورم بدن','دیورتیک طبیعی','پاکسازی مجاری ادراری','کاهش فشار خون'],
-    for:['sang_kolieh','tavarom','faresharkhooni'], mizaj:['balqham','safravi'],
-    dose:'روزی ۲ فنجان — صبح ناشتا و شب قبل از خواب' },
+    benefits:['دفع و خردکردن سنگ کلیه','بالابرنده تستوسترون آقایان','افزایش قوای جنسی','بهبود عملکرد کلیه','دیورتیک قوی','تقویت استقامت ورزشی'],
+    for:['sang_kolieh','tavarom','faresharkhooni','ghovaye_jensi','varzeshkar'], mizaj:['balghami','safravi'],
+    dose:'۳ بار در روز، هر بار یک تی‌بگ به مدت ۳ تا ۵ دقیقه در آب جوش دم کنید' },
   { id:'badranjboyeh', name:'دمنوش بادرنجبویه مفرح', price:348000, unit:'بسته ۲۰عددی',
-    benefits:['آرام‌بخش طبیعی','تقویت حافظه','کاهش اضطراب','تقویت گوارش','دفع بلغم از مغز'],
-    for:['stress','bikhabi','hafeze','nafkh'], mizaj:['balqham','safravi'],
-    dose:'روزی ۲ تا ۳ فنجان — بعد از ناهار و شب' },
-  { id:'raziyanehNafkh', name:'دمنوش رازیانه ضدنفخ', price:348000, unit:'بسته ۲۰عددی',
-    benefits:['رفع فوری نفخ','بهبود گوارش','کاهش درد شکم','تنظیم روده','مفید بعد از غذاهای سنگین'],
-    for:['nafkh','yoboosat','reflux'], mizaj:['balqham'],
-    dose:'روزی ۲ تا ۳ فنجان — بعد از وعده‌های غذایی' },
-  { id:'aramBakhsh', name:'دمنوش بادرنجبویه آرام‌بخش', price:348000, unit:'بسته ۲۰عددی',
+    benefits:['مقوی اعصاب و مغز','مسهل بلغم مغز','تقویت قلب','پاکسازی خون','مدر و ضدعفونت','مقوی خواب و تمرکز'],
+    for:['stress','bikhabi','hafeze','nafkh'], mizaj:['balghami','safravi'],
+    dose:'۱ ساشه در روز — بیشتر مصرف نکنید | داخل ۱ لیوان آب جوش، ۲۰ دقیقه دم بکشد | بین ساعت ۱ تا ۵ عصر میل شود' },
+  { id:'raziyanehNafkh', name:'دمنوش رازیانه ترکیبی ضدنفخ و یبوست', price:348000, unit:'بسته ۲۰عددی',
+    benefits:['درمان کل نظام هاضمه','درمان سردی معده','کمک به ریزش مو و کم‌خونی','درمان یبوست','تنظیم قند و فشار خون','دفع شن کلیه و سموم بدن','مدر'],
+    for:['nafkh','yoboosat','reflux','sang_kolieh','rizesh','qand'], mizaj:['balghami'],
+    dose:'هر ساشه برای ۱ روز است — هر تی‌بگ ۲ بار مصرف شود (بعد اول داخل لیوان بماند، بار دوم آب‌جوش جدید بریزید) | یکبار بین صبحانه و ناهار، یکبار بین ناهار و شام' },
+  { id:'aramBakhsh', name:'دمنوش بادرنجبویه ترکیبی آرام‌بخش', price:348000, unit:'بسته ۲۰عددی',
     benefits:['بهبود کیفیت خواب','کاهش اضطراب شبانه','آرامش اعصاب','مناسب بی‌خوابی مزمن'],
     for:['bikhabi','stress'], mizaj:['safravi','sodavi'],
     dose:'۱ فنجان ۳۰ دقیقه قبل از خواب' },
   { id:'shahtareh', name:'دمنوش شاهتره مصفی خون', price:1879000, unit:'بسته',
-    benefits:['پاکسازی و تقویت کبد','دفع سموم بدن','بهبود کبد چرب','کاهش چربی خون','صافی خون'],
-    for:['kabd','kolesterol','poost'], mizaj:['safravi','balqham'],
-    dose:'روزی ۲ فنجان — صبح ناشتا و شب' },
-  { id:'chaiSabz', name:'دمنوش چای سبز کاهش وزن', price:1879000, unit:'بسته',
-    benefits:['چربی‌سوزی موثر','کاهش اشتها','تنظیم قند خون','کاهش کلسترول','سرشار از آنتی‌اکسیدان'],
-    for:['charbi_shekam','qand','kolesterol'], mizaj:['balqham'],
-    dose:'روزی ۳ فنجان — نیم ساعت قبل از هر وعده غذایی | منع مصرف در بارداری' },
-  { id:'saboosBeranj', name:'سبوس برنج', price:468000, unit:'بسته ۲۵ساشه',
-    benefits:['جلوگیری از ریزش مو','تأمین فیبر غذایی','کاهش کلسترول','تنظیم قند خون','ایجاد احساس سیری'],
-    for:['rizesh','kolesterol','qand','charbi_shekam','yoboosat'], mizaj:['balqham','sodavi'],
-    dose:'روزی ۱ تا ۲ ساشه — داخل ماست، سالاد یا صبحانه' },
+    benefits:['پاکسازی و تقویت کبد','مسهل سودا و رقیق‌کننده خون','بهبود جوش و لک پوست','تقویت و درمان ریزش مو','بهبود خواب و کنترل خشم','کمک به درمان افسردگی','بهبود کیست زنان'],
+    for:['kabd','kolesterol','poost','rizesh','stress','bikhabi'], mizaj:['safravi','balghami'],
+    dose:'هر روز ۲ ساشه — یکی بین صبحانه و ناهار، یکی بین ناهار و شام | حداقل ۵ ساعت فاصله بین ۲ تی‌بگ | فاصله با غذا حداقل ۲ ساعت | ۱۰ دقیقه در قوری یا ۱۵ دقیقه در لیوان دم شود | در صورت افت فشار، با عسل یا خرما میل کنید' },
+  { id:'chaiSabz', name:'دمنوش چای سبز ترکیبی — موثر در کاهش وزن', price:1879000, unit:'بسته',
+    benefits:['کاهنده اشتها طبیعی','افزایش سوخت‌وساز بدن','کاهش وزن و سایز با مجوز رسمی غذا و دارو','مدر و ملین','تنظیم فعالیت غدد مترشحه داخلی'],
+    for:['charbi_shekam','qand','kolesterol','rizesh','poost','kabd'], mizaj:['balghami'],
+    dose:'روزانه ۳ بار، هر بار ۱ تی‌بگ: نیم‌ساعت قبل هر وعده غذایی (کاهنده اشتها) + ۱ ساعت بعد هر وعده | تی‌بگ را با ۲۵۰ سی‌سی آب در لیوان دردار یا قوری ۱۰ دقیقه به‌آرامی بجوشانید، سپس ۳ تا ۵ دقیقه دم بکشد | حتماً گرم میل شود | ⚠️ منع مصرف در بارداری و شیردهی | با داروی ضدانعقاد (وارفارین، آسپرین) مصرف نشود' },
+  { id:'saboosBeranj', name:'سبوس برنج از لایه دوم برنج قهوه‌ای', price:468000, unit:'بسته ۲۵ساشه',
+    benefits:['جلوگیری از ریزش و سفیدی مو','تأمین فیبر غذایی','کاهش کلسترول','تنظیم قند خون','ایجاد احساس سیری و کمک لاغری'],
+    for:['rizesh','kolesterol','qand','charbi_shekam','yoboosat'], mizaj:['balghami','sodavi'],
+    dose:'روز ۱ تا ۱۵: روزی ۱ ساشه | روز ۱۶ تا ۲۰: قطع مصرف | روز ۲۱ تا ۳۰: روزی ۱ ساشه | نصف بسته ۲۰ دقیقه قبل ناهار، نصف دیگر ۲۰ دقیقه قبل شام | داخل ماست کم‌چرب، شیر ولرم یا آب ولرم (افراد بلغمی فقط داخل آب)' },
   { id:'saboosChand', name:'سبوس چند غله', price:440000, unit:'بسته',
     benefits:['فیبر کامل چندگانه','درمان یبوست','کاهش کلسترول','تقویت اعصاب','ویتامین B کامل'],
-    for:['yoboosat','kolesterol','moafsal'], mizaj:['balqham','sodavi'],
-    dose:'روزی ۱ تا ۲ قاشق — داخل ماست یا آش و سوپ' },
+    for:['yoboosat','kolesterol','moafsal'], mizaj:['balghami','sodavi'],
+    dose:'روزی ۱ تا ۲ قاشق — داخل ماست یا آش و سوپ، یا هنگام پخت برنج/خورشت' },
   { id:'javanahGandom', name:'پودر جوانه گندم', price:440000, unit:'بسته',
     benefits:['جلوگیری از پیری زودرس','تقویت پوست و مو','آنتی‌اکسیدان قوی','انرژی پایدار','تقویت سیستم ایمنی'],
-    for:['rizesh','poost','khastegi','moafiyat','lazari'], mizaj:['sodavi','balqham'],
-    dose:'روزی ۱ تا ۲ قاشق — داخل ماست، اسموتی یا سالاد' },
-  { id:'macha', name:'چای ماچا', price:798000, unit:'بسته',
-    benefits:['تمرکز و هوشیاری بالا','آنتی‌اکسیدان فوق‌العاده','کاهش استرس','چربی‌سوزی ملایم','بهبود خلق‌وخو'],
-    for:['stress','hafeze','charbi_shekam','khastegi'], mizaj:['safravi','balqham'],
-    dose:'روزی ۱ فنجان — ترجیحاً صبح | با معده خالی مصرف نشود' },
+    for:['rizesh','poost','khastegi','moafiyat','lazari'], mizaj:['sodavi','balghami'],
+    dose:'هر ساشه برای ۱ روز است | نصف بسته ۲۰ دقیقه بعد ناهار، نصف دیگر ۲۰ دقیقه بعد شام | داخل آبمیوه یا شیر بریزید و میل کنید' },
+  { id:'macha', name:'چای ماچا نو — چربی‌سوزی فوق‌العاده', price:798000, unit:'بسته',
+    benefits:['ضدالتهاب — کمک به آرتروز','پیشگیری از سرطان پروستات، پوست، ریه، کبد','چربی‌سوزی با تندکردن متابولیسم','محافظت قلب و کبد','کاهش استرس و اضطراب','تنظیم فشار و قند خون','تقویت ایمنی و کاهش کلسترول','افزایش هوشیاری و تمرکز'],
+    for:['stress','hafeze','charbi_shekam','khastegi','moafsal','qand','kolesterol','faresharkhooni'], mizaj:['safravi','balghami'],
+    dose:'۲ ساعت بعد از ناهار، ۱ لیوان آب جوش بردارید، ۱ دقیقه صبر کنید تا کمی خنک شود، سپس ۱ ساشه چای ماچا داخلش بریزید و میل کنید' },
   { id:'dynamine', name:'نوشیدنی ورزشی داینامین', price:1794000, unit:'باکس ۶عددی',
-    benefits:['جایگزین الکترولیت','۱۰ ویتامین و ۸ ماده معدنی','رفع خستگی سریع','جلوگیری از گرفتگی عضلات','تمرکز و نشاط'],
-    for:['khastegi','moafiyat','hafeze','moafsal'], mizaj:['balqham','sodavi'],
-    dose:'بعد از ورزش یا در روزهای گرم — با ۵۰۰ میلی‌لیتر آب' },
-  { id:'hypotonic', name:'نوشیدنی هیپوتونیک', price:1794000, unit:'بسته',
-    benefits:['بدون قند و کالری','مناسب دیابتی','جذب ۴ برابر سریع‌تر از آب','تأمین ویتامین','مناسب زنان باردار'],
-    for:['qand','khastegi','moafiyat'], mizaj:['safravi','balqham'],
-    dose:'در طول روز یا بعد از فعالیت بدنی' },
-  { id:'seerSiyah', name:'سیر سیاه فرآوری شده', price:492000, unit:'بسته',
-    benefits:['آنتی‌اکسیدان فوق‌العاده قوی','تقویت سیستم ایمنی','کاهش کلسترول','تنظیم فشار خون','ضد التهاب','بدون بوی نامطبوع'],
-    for:['moafiyat','kolesterol','faresharkhooni','kabd','poost'], mizaj:['safravi','balqham','sodavi'],
-    dose:'روزی ۱ تا ۲ حبه — همراه غذا | احتیاط برای مصرف‌کنندگان ضدانعقاد خون' },
+    benefits:['انرژی‌زای فوری','مولتی‌ویتامین کامل','تقویت عضلات','بالابرنده تستوسترون','مدر و پاکسازی بدن','بهبود عملکرد کبد و قلب','جایگزین سالم نوشیدنی‌های انرژی‌زا'],
+    for:['khastegi','moafiyat','hafeze','moafsal','varzeshkar','ghovaye_jensi'], mizaj:['balghami','sodavi'],
+    dose:'هر بطری برای ۲ روز است — نصف بطری امروز، نصف دیگر فردا | بهترین زمان: حین پیاده‌روی یا ورزش | در جای خشک و خنک نگهداری شود' },
+  { id:'seerSiyah', name:'سیر سیاه فرآوری‌شده طبیعی', price:492000, unit:'بسته',
+    benefits:['پیشگیری و کمک به درمان سرطان','کاهش وزن و لاغری','کاهش چربی خون','محافظت قلب و عروق','کنترل و بهبود دیابت','ضد التهاب و ضد حساسیت','محافظت کبد'],
+    for:['moafiyat','kolesterol','faresharkhooni','kabd','poost','charbi_shekam','qand'], mizaj:['safravi','balghami','sodavi'],
+    dose:'هر روز صبح، ۱ ساعت بعد از صبحانه، ۱ حبه سیر را بجوید یا کامل قورت دهید | بیشتر مصرف نکنید — باعث افت فشار می‌شود | احتیاط برای مصرف‌کنندگان داروی ضدانعقاد خون' },
   { id:'asal500', name:'عسل طبیعی ۵۰۰ گرمی', price:1475000, unit:'بسته',
-    benefits:['آنتی‌بیوتیک طبیعی','تقویت حافظه','بهبود گوارش','تقویت سیستم ایمنی','انرژی سریع','محافظت از کبد'],
-    for:['hafeze','moafiyat','yoboosat','kabd','khastegi'], mizaj:['balqham','sodavi'],
+    benefits:['آنتی‌بیوتیک طبیعی قوی','تقویت حافظه','بهبود گوارش و یبوست','تقویت سیستم ایمنی','انرژی سریع','محافظت از کبد'],
+    for:['hafeze','moafiyat','yoboosat','kabd','khastegi'], mizaj:['balghami','sodavi'],
     dose:'روزی ۱ تا ۲ قاشق چای‌خوری — ناشتا با آب ولرم | احتیاط برای دیابتی‌ها' },
   { id:'asal900', name:'عسل طبیعی ۹۰۰ گرمی', price:2350000, unit:'بسته',
-    benefits:['آنتی‌بیوتیک طبیعی','تقویت حافظه','بهبود گوارش','تقویت سیستم ایمنی','انرژی سریع','صرفه اقتصادی بیشتر'],
-    for:['hafeze','moafiyat','yoboosat','kabd','khastegi'], mizaj:['balqham','sodavi'],
+    benefits:['آنتی‌بیوتیک طبیعی قوی','تقویت حافظه','بهبود گوارش و یبوست','تقویت سیستم ایمنی','انرژی سریع','صرفه اقتصادی بیشتر'],
+    for:['hafeze','moafiyat','yoboosat','kabd','khastegi'], mizaj:['balghami','sodavi'],
     dose:'روزی ۱ تا ۲ قاشق چای‌خوری — ناشتا با آب ولرم | احتیاط برای دیابتی‌ها' },
   { id:'khormaTabii', name:'خرما بار طبیعی', price:820600, unit:'بسته',
     benefits:['انرژی فوری و طبیعی','سرشار از آهن و پتاسیم','تقویت استخوان','بهبود کم‌خونی','مقوی و مغذی'],
-    for:['khastegi','lazari','moafiyat','moafsal'], mizaj:['balqham','sodavi'],
+    for:['khastegi','lazari','moafiyat','moafsal','afzayesh_vazn'], mizaj:['balghami','sodavi'],
     dose:'روزی ۲ تا ۳ عدد — صبح یا قبل از ورزش' },
   { id:'khormaZanjabil', name:'خرما بار زنجبیلی', price:593000, unit:'بسته',
     benefits:['گرم‌کننده بدن','تقویت گوارش','ضد تهوع','ضد التهاب','مناسب سردمزاجان'],
-    for:['sardi','nafkh','yoboosat','khastegi'], mizaj:['balqham','sodavi'],
+    for:['sardi','nafkh','yoboosat','khastegi'], mizaj:['balghami','sodavi'],
     dose:'روزی ۲ تا ۳ عدد — صبح یا بعد از غذا' },
   { id:'khormaDarchin', name:'خرما بار دارچینی', price:593000, unit:'بسته',
     benefits:['تنظیم قند خون','گرم‌کننده','تقویت سوخت‌وساز','ضد التهاب','مناسب دیابتی‌ها'],
-    for:['qand','sardi','charbi_shekam','kolesterol'], mizaj:['balqham','sodavi'],
+    for:['qand','sardi','charbi_shekam','kolesterol'], mizaj:['balghami','sodavi'],
     dose:'روزی ۲ تا ۳ عدد — صبح ناشتا' },
   { id:'khormaRejimi', name:'خرما بار رژیمی', price:820600, unit:'بسته',
     benefits:['کم‌کالری‌تر','مناسب رژیم لاغری','تأمین انرژی بدون چاقی','فیبر بالا','احساس سیری'],
-    for:['charbi_shekam','qand','lazari'], mizaj:['balqham'],
+    for:['charbi_shekam','qand','lazari'], mizaj:['balghami'],
     dose:'روزی ۲ تا ۳ عدد — بین وعده‌ها' },
   { id:'khormaEnerji', name:'خرما بار انرژی‌زا', price:820600, unit:'بسته',
     benefits:['انرژی فوق‌العاده','مناسب ورزشکاران','تأمین الکترولیت','ضد خستگی','تقویت عضلات'],
-    for:['khastegi','moafsal','lazari','moafiyat'], mizaj:['sodavi','balqham'],
+    for:['khastegi','moafsal','lazari','moafiyat','varzeshkar'], mizaj:['sodavi','balghami'],
     dose:'قبل یا بعد از ورزش — روزی ۲ تا ۳ عدد' },
   { id:'khormaTaqviyati', name:'خرما بار تقویتی', price:820600, unit:'بسته',
     benefits:['فرمول تقویتی کامل','مناسب دوران بهبودی','تقویت سیستم ایمنی','مقوی عمومی'],
-    for:['moafiyat','khastegi','lazari','rizesh'], mizaj:['balqham','sodavi'],
-    dose:'روزی ۲ تا ۳ عدد — صبح و عصر' }
+    for:['moafiyat','khastegi','lazari','rizesh'], mizaj:['balghami','sodavi'],
+    dose:'روزی ۲ تا ۳ عدد — صبح و عصر' },
+  { id:'proteinKicha', name:'پروتئین بار کیچا', price:1078000, unit:'۶ ساشه ۴۰گرمی',
+    benefits:['جو دوسر، خرما و عسل برای انرژی پایدار','کره بادام زمینی برای پروتئین و چربی سالم','کینوا و دانه چیا برای امگا۳','مناسب میان‌وعده سالم'],
+    for:['khastegi','varzeshkar','afzayesh_vazn','lazari'], mizaj:['balghami','sodavi'],
+    dose:'به‌عنوان میان‌وعده بین وعده‌های اصلی یا قبل/بعد از ورزش مصرف شود' },
+  { id:'proteinFroot', name:'پروتئین بار فروتس', price:1347500, unit:'۶ ساشه ۴۰گرمی',
+    benefits:['میوه‌های خشک (بلوبری، توت‌فرنگی، تمشک، موز)','آنتی‌اکسیدان بالا','منبع پتاسیم و ویتامین B6 و C','انرژی طبیعی و خوشمزه'],
+    for:['khastegi','poost','varzeshkar','moafiyat'], mizaj:['balghami','sodavi'],
+    dose:'میان‌وعده سالم بین وعده‌های غذایی' },
+  { id:'proteinNats', name:'پروتئین بار ناتس', price:1347500, unit:'۶ ساشه ۴۰گرمی',
+    benefits:['ترکیب خشکبار: گردو، پسته، فندق، بادام','فیبر بالا برای گوارش','پتاسیم، مس، منگنز و ویتامین B','چربی سالم و پروتئین گیاهی'],
+    for:['khastegi','varzeshkar','moafsal','afzayesh_vazn'], mizaj:['sodavi','balghami'],
+    dose:'میان‌وعده سالم — مناسب قبل یا بعد از ورزش' },
+  { id:'proteinKeto', name:'پروتئین بار کتو', price:1347500, unit:'۶ ساشه ۴۰گرمی',
+    benefits:['چای سبز برای آنتی‌اکسیدان قوی','گردو و تخم کدو و دانه چیا — امگا۳','روغن نارگیل و آرد بادام','تعادل قند خون با اینورت ساکاروز'],
+    for:['charbi_shekam','qand','varzeshkar','khastegi'], mizaj:['safravi','balghami'],
+    dose:'میان‌وعده مناسب رژیم‌های کم‌کربوهیدرات' },
+  { id:'proteinChocoMint', name:'پروتئین بار شکلات نعناع', price:1078000, unit:'۶ ساشه ۴۰گرمی',
+    benefits:['طعم شکلات و نعنا','کره بادام زمینی و خرما برای انرژی','کنجد برای امگا۳','فیبر جو دوسر برای گوارش'],
+    for:['khastegi','varzeshkar','nafkh'], mizaj:['balghami','sodavi'],
+    dose:'میان‌وعده خوشمزه بین وعده‌های غذایی' },
+  { id:'proteinEspresso', name:'پروتئین بار اسپرسو', price:1078000, unit:'۶ ساشه ۴۰گرمی',
+    benefits:['قهوه اسپرسو طبیعی برای انرژی و تمرکز','مناسب قبل از ورزش یا کار ذهنی','کافئین طبیعی','افزایش وزن کنترل‌شده در صورت نیاز'],
+    for:['khastegi','hafeze','varzeshkar','afzayesh_vazn'], mizaj:['balghami','sodavi'],
+    dose:'۱ عدد بین صبحانه و ناهار، ۱ عدد بین ناهار و شام | بهتر است پیش از ورزش یا کار ذهنی مصرف شود' },
+  { id:'proteinMacha', name:'پروتئین بار ماچا', price:1078000, unit:'۶ ساشه ۴۰گرمی',
+    benefits:['چای سبز ماچا برای آنتی‌اکسیدان قوی','دانه چیا و کینوا — امگا۳','عصاره لیمو برای طراوت','انرژی پایدار از جو دوسر و خرما'],
+    for:['stress','khastegi','varzeshkar','charbi_shekam'], mizaj:['safravi','balghami'],
+    dose:'میان‌وعده سالم — مناسب صبح یا قبل از فعالیت' },
+  { id:'proteinPeanut', name:'پروتئین بار بادام زمینی', price:1347500, unit:'۶ ساشه ۴۰گرمی',
+    benefits:['پروتئین گیاهی بالا از بادام زمینی','چربی غیراشباع سالم','ویتامین‌های گروه B','انرژی پایدار برای ورزشکاران'],
+    for:['varzeshkar','khastegi','afzayesh_vazn','moafsal'], mizaj:['sodavi','balghami'],
+    dose:'میان‌وعده پروتئینی — مناسب قبل یا بعد از تمرین ورزشی' }
 ];
 
 const mizajInfo = {
-  white: { name:'غلبه بلغم (سرد و تر)', icon:'💧', type:'balqham',
+  white: { name:'غلبه بلغم (سرد و تر)', icon:'💧', type:'balghami',
     desc:'زبان سفید و ضخیم نشانه غلبه بلغم در بدن است. در طب سنتی ایران، این حالت به معنای کندی سوخت‌وساز، تجمع رطوبت و سردی در بدن است. بدن در دفع رطوبت اضافه ضعیف است و این باعث می‌شود چربی‌ها به‌سختی بسوزند، انرژی زود تحلیل برود و وزن به‌سختی کاهش یابد.' },
   red: { name:'غلبه صفرا (گرم و خشک)', icon:'🔥', type:'safravi',
     desc:'زبان قرمز و ملتهب نشانه غلبه صفرا و حرارت زیاد در بدن است. این حالت می‌تواند باعث رفلاکس، سوزش معده، عصبانیت، بی‌خوابی، مشکلات پوستی و التهاب مزمن شود. بدن نیاز به خنک‌کننده‌های طبیعی دارد.' },
@@ -394,84 +383,138 @@ const mizajInfo = {
     desc:'شیار یا ترک روی زبان نشانه کمبود مایعات در بدن و حرارت داخلی است. این حالت معمولاً با خشکی پوست، یبوست، تشنگی زیاد و خستگی همراه است. بدن نیاز فوری به آبرسانی و مواد معدنی دارد.' },
   yellow: { name:'اختلال کبد و کیسه صفرا', icon:'💛', type:'kabd',
     desc:'جرم زرد روی زبان نشانه اختلال در عملکرد کبد و ترشح صفراست. این حالت می‌تواند با کبد چرب، کلسترول بالا، مشکلات پوستی و گوارشی همراه باشد. کبد نیاز فوری به پاکسازی و حمایت دارد.' },
-  normal: { name:'مزاج نسبتاً متعادل', icon:'🌸', type:'motadel',
-    desc:'زبان در حالت طبیعی قرار دارد. مشکلات موجود بیشتر ناشی از عادات غذایی نادرست یا سبک زندگی است. با اصلاح تغذیه و استفاده از مکمل‌های مناسب می‌توان به سرعت نتیجه گرفت.' }
+  damavi: { name:'دموی (گرم و تر) — مزاج متعادل', icon:'🌸', type:'damavi',
+    desc:'زبان صورتی و طبیعی نشانه مزاج دموی است — متعادل‌ترین حالت در طب سنتی، ترکیبی موزون از گرما و رطوبت. این مزاج با سلامت عمومی بالا و انرژی پایدار همراه است. مشکلات موجود بیشتر ناشی از عادات غذایی نادرست یا سبک زندگی است تا عدم تعادل مزاجی شدید؛ با اصلاح تغذیه و مکمل‌های مناسب می‌توان به سرعت نتیجه گرفت.' }
 };
 
 const nutritionData = {
-  balqham: {
-    good: ['زنجبیل، دارچین، فلفل سیاه، هل — هر روز در چای یا غذا','گوشت قرمز کم‌چرب و مرغ بخارپز — ۳ تا ۴ بار در هفته','عسل طبیعی صبح ناشتا با آب ولرم','سیر و پیاز تازه در غذاها','آبگوشت و سوپ گرم — به‌ویژه زمستان','خرما و انجیر به‌عنوان میان‌وعده','سبزیجات پخته مثل کدو، هویج، اسفناج','ادویه‌های گرم در پخت‌وپز'],
-    bad: ['لبنیات سرد به‌ویژه شیر یخچالی و بستنی','غذاهای سرخ‌شده و پرچرب','نوشیدنی‌های یخ و سرد','آرد سفید، نان سفید و شیرینی صنعتی','موز، طالبی و هندوانه زیاد','برنج سفید زیاد','غذاهای کنسروی و فراوری‌شده','کافئین زیاد']
+  balghami: {
+    good: [
+      {item:'زنجبیل، دارچین، فلفل سیاه، هل', why:'این ادویه‌های "آتشین" گردش خون رو تحریک می‌کنن و دمای داخلی بدن رو بالا می‌برن — دقیقاً چیزی که یک بدن بلغمی برای روشن کردن موتور سوخت‌وسازش لازم دارد 🔥'},
+      {item:'گوشت قرمز کم‌چرب و مرغ بخارپز', why:'پروتئین حیوانی، طبق طب سنتی "گرم" است و به تعدیل رطوبت اضافه بدن کمک می‌کند — ۳ تا ۴ بار در هفته کافی است'},
+      {item:'عسل طبیعی صبح ناشتا با آب ولرم', why:'عسل یک "گرم‌کننده طبیعی" است که هم انرژی فوری می‌دهد و هم به گفته طب سنتی بلغم را می‌شکند'},
+      {item:'سیر و پیاز تازه در غذاها', why:'این دو ادویه گرم، علاوه بر طعم، به‌صورت طبیعی ضدباکتری و محرک گردش خون هستند'},
+      {item:'آبگوشت و سوپ گرم', why:'غذای گرم و آبکی، بدون اینکه سرد باشد، گوارش کند بلغمی‌ها را تسهیل می‌کند — مخصوصاً زمستان'},
+      {item:'خرما و انجیر به‌عنوان میان‌وعده', why:'انرژی سریع و طبیعی، جایگزین سالم شیرینی صنعتی که بلغم را تشدید می‌کند'},
+      {item:'سبزیجات پخته مثل کدو، هویج، اسفناج', why:'پخته بهتر از خام جذب می‌شود — هضم آسان‌تر برای معده‌ای که سوخت‌وسازش کند است'},
+      {item:'ادویه‌های گرم در پخت‌وپز', why:'استفاده روزانه از ادویه‌جات گرم، نسخه‌ای ساده برای "آتش زدن" زیر سوخت‌وساز راکد بلغمی است'}
+    ],
+    bad: [
+      {item:'لبنیات سرد به‌ویژه شیر یخچالی و بستنی', why:'این‌ها "سردترین" خوراکی‌ها در طب سنتی‌اند — دقیقاً نقطه ضعف بلغمی‌ها را تشدید می‌کنند'},
+      {item:'غذاهای سرخ‌شده و پرچرب', why:'هضم سخت و کند، که برای معده‌ای که خودش کندی گوارش دارد، فاجعه‌بار است'},
+      {item:'نوشیدنی‌های یخ و سرد', why:'حتی نوشیدنی خوب اگر یخ باشد، سوخت‌وساز را منجمد می‌کند'},
+      {item:'آرد سفید، نان سفید و شیرینی صنعتی', why:'قند سریع باعث نوسان انرژی و تجمع رطوبت اضافه در بدن بلغمی می‌شود'},
+      {item:'موز، طالبی و هندوانه زیاد', why:'میوه‌های سرد و تر در طب سنتی، اگر زیاد مصرف شوند رطوبت بلغمی را بیشتر می‌کنند'},
+      {item:'برنج سفید زیاد', why:'بدون فیبر و نسبتاً سرد — بهتر جای آن سبوس یا غلات کامل بنشیند'},
+      {item:'غذاهای کنسروی و فراوری‌شده', why:'نمک و نگه‌دارنده زیاد، بار اضافه روی سیستم گوارشی کند می‌گذارد'},
+      {item:'کافئین زیاد بدون تعدیل', why:'کافئین خام بدون گرم‌کننده، می‌تواند سیستم عصبی را بدون کمک به سوخت‌وساز تحریک کند'}
+    ]
   },
   safravi: {
-    good: ['خیار، کدو، کاهو، کرفس — سبزیجات سرد','ماست و دوغ طبیعی — روزانه','آب‌میوه طبیعی خنک (نه یخ)','ماهی آب‌پز یا بخارپز','هندوانه، خربزه، انگور','نعناع، گشنیز، ریحان تازه','روغن زیتون خام روی سالاد','چای سبز سرد شده'],
-    bad: ['غذاهای تند، فلفل قرمز، خردل','گوشت قرمز زیاد — بیش از ۲ بار هفته','قهوه زیاد و چای پررنگ','روغن‌های اشباع و سرخ‌شدنی','نمک زیاد','ادویه‌های تند و پرحرارت','الکل و دخانیات','غذاهای کنسروی پرنمک']
+    good: [
+      {item:'خیار، کدو، کاهو، کرفس', why:'سبزیجات با محتوای آب بالا، طبیعتاً "سرد" هستند و التهاب صفراوی را خنک می‌کنند 🧊'},
+      {item:'ماست و دوغ طبیعی', why:'لبنیات تخمیرشده هم پروبیوتیک می‌دهند هم اثر خنک‌کننده روی معده ملتهب صفراوی دارند'},
+      {item:'آب‌میوه طبیعی خنک (نه یخ)', why:'ویتامین C و آب فراوان، بدون شوک سرمایی به سیستم گوارش'},
+      {item:'ماهی آب‌پز یا بخارپز', why:'پروتئین سبک‌تر از گوشت قرمز، با امگا۳ ضدالتهاب طبیعی'},
+      {item:'هندوانه، خربزه، انگور', why:'این میوه‌ها دقیقاً ضد حرارت صفراوی عمل می‌کنند — طبیعتشان سرد و تر است'},
+      {item:'نعناع، گشنیز، ریحان تازه', why:'این سبزی‌های معطر، اسپاسم گوارشی ناشی از حرارت زیاد را آرام می‌کنند'},
+      {item:'روغن زیتون خام روی سالاد', why:'چربی سالم بدون فرآیند گرما، که سیستم گوارش ملتهب را تحریک نمی‌کند'},
+      {item:'چای سبز سرد شده', why:'آنتی‌اکسیدان فراوان بدون افزودن حرارت اضافه به بدنی که خودش گرم است'}
+    ],
+    bad: [
+      {item:'غذاهای تند، فلفل قرمز، خردل', why:'این‌ها مستقیماً آتش صفرا را شعله‌ورتر می‌کنند — دقیقاً برعکس چیزی که بدن نیاز دارد'},
+      {item:'گوشت قرمز زیاد', why:'طبیعت گرم گوشت قرمز، التهاب موجود را تشدید می‌کند — بیش از ۲ بار در هفته توصیه نمی‌شود'},
+      {item:'قهوه زیاد و چای پررنگ', why:'کافئین زیاد، که خودش محرک است، روی بدنی که از قبل پرتحرک و گرم است اثر دوچندان می‌گذارد'},
+      {item:'روغن‌های اشباع و سرخ‌شدنی', why:'این روغن‌ها در طب سنتی "گرم و خشک" محسوب می‌شوند و التهاب را افزایش می‌دهند'},
+      {item:'نمک زیاد', why:'احتباس آب و فشار خون بالاتر، که برای مزاج گرم خطر بیشتری دارد'},
+      {item:'ادویه‌های تند و پرحرارت', why:'زنجبیل و فلفل زیاد، که برای بلغمی‌ها خوب است، برای صفراوی‌ها آتش‌افزا است'},
+      {item:'الکل و دخانیات', why:'هر دو مستقیماً کبد را که در صفراوی‌ها حساس‌تر است درگیر می‌کنند'},
+      {item:'غذاهای کنسروی پرنمک', why:'نگه‌دارنده‌های شیمیایی، بار اضافی روی سیستمی که خودش فعال و حساس است می‌گذارند'}
+    ]
   },
   sodavi: {
-    good: ['سوپ و آش گرم — هر روز','عسل طبیعی صبح ناشتا','انجیر، انگور، خرما — میان‌وعده روزانه','روغن زیتون بکر — روزانه','آجیل تازه — گردو، بادام، پسته','زعفران در چای یا غذا','گوشت بره و مرغ پخته','ادویه‌های گرم‌کننده']
-    ,bad: ['غذاهای سرد و خشک','نگرانی و استرس مزمن — از جمله عوامل بدتر شدن','سبزیجات خام زیاد در هوای سرد','روزه طولانی و نخوردن صبحانه','بادمجان و نخود زیاد','ترشیجات زیاد','خواب کم','انزوا و تنهایی']
+    good: [
+      {item:'سوپ و آش گرم', why:'غذای گرم و مرطوب دقیقاً نقطه مقابل خشکی و سردی سوداوی است — مثل شارژ باتری خالی 🔋'},
+      {item:'عسل طبیعی صبح ناشتا', why:'انرژی فوری و گرم‌کننده طبیعی، که هم خون‌ساز است هم روحیه‌بخش'},
+      {item:'انجیر، انگور، خرما', why:'میوه‌های خشک شیرین، در طب سنتی "گرم" محسوب شده و کمبود خون سوداوی را جبران می‌کنند'},
+      {item:'روغن زیتون بکر', why:'چربی سالم که خشکی پوست و بافت سوداوی را از داخل ترمیم می‌کند'},
+      {item:'آجیل تازه — گردو، بادام، پسته', why:'چربی‌های مغذی و انرژی متراکم، دقیقاً چیزی که بدن لاغر و کم‌انرژی سوداوی نیاز دارد'},
+      {item:'زعفران در چای یا غذا', why:'در طب سنتی به‌عنوان "شادی‌آور" شناخته می‌شود — برای خلق‌وخوی پایین سوداوی‌ها عالی است'},
+      {item:'گوشت بره و مرغ پخته', why:'پروتئین گرم که هم عضله‌سازی می‌کند هم انرژی پایدار می‌دهد'},
+      {item:'ادویه‌های گرم‌کننده', why:'استفاده روزانه، بدن سرد و خشک را به‌تدریج گرم و نرم می‌کند'}
+    ],
+    bad: [
+      {item:'غذاهای سرد و خشک', why:'این‌ها دقیقاً مزاج موجود را تشدید می‌کنند — سرما روی سرما اثر می‌گذارد'},
+      {item:'نگرانی و استرس مزمن', why:'استرس در طب سنتی مستقیماً "سودا" تولید می‌کند — یک چرخه معیوب که باید شکسته شود'},
+      {item:'سبزیجات خام زیاد در هوای سرد', why:'سبزی خام سرد است؛ در فصل سرد، بدن سوداوی را بیشتر سرد می‌کند'},
+      {item:'روزه طولانی و نخوردن صبحانه', why:'افت قند خون باعث ضعف بیشتر در بدنی می‌شود که از قبل کم‌انرژی است'},
+      {item:'بادمجان و نخود زیاد', why:'این دو در طب سنتی به‌عنوان "تولیدکننده سودا" شناخته می‌شوند'},
+      {item:'ترشیجات زیاد', why:'طعم ترش، طبیعتی خشک و سرد دارد که با هدف گرم‌کردن بدن در تضاد است'},
+      {item:'خواب کم', why:'بدن سوداوی برای بازسازی انرژی به خواب کافی‌تر از مزاج‌های دیگر نیاز دارد'},
+      {item:'انزوا و تنهایی', why:'ارتباط اجتماعی کم باعث تشدید خلق پایین سوداوی می‌شود — این بخش غذایی نیست ولی حیاتی است'}
+    ]
   },
   kabd: {
-    good: ['هویج، چغندر، کلم بروکلی — هر روز','آووکادو و گردو — منابع چربی سالم','مرکبات (لیمو، پرتقال) — ویتامین C','جعفری و گشنیز تازه — مصفی کبد','آب لیموناشتا هر صبح — ۱ لیوان','چای سبز — ۲ تا ۳ فنجان روزانه','زغال‌اخته و توت‌فرنگی','سیر سیاه یا سیر تازه']
-    ,bad: ['الکل و دخانیات — ممنوع کامل','غذاهای سرخ‌شده — ممنوع','شیرینی و قند زیاد','نمک زیاد','فست‌فود و غذاهای آماده','کربوهیدرات تصفیه‌شده','داروهای غیرضروری','چربی ترانس']
+    good: [
+      {item:'هویج، چغندر، کلم بروکلی', why:'این سبزیجات آنزیم‌های فاز ۲ کبدی را فعال می‌کنند که مسئول دفع سموم هستند 🧬'},
+      {item:'آووکادو و گردو', why:'چربی‌های سالم که بدون فشار اضافه به کبد، چربی خوب بدن را تأمین می‌کنند'},
+      {item:'مرکبات (لیمو، پرتقال)', why:'ویتامین C آنتی‌اکسیدان قوی برای محافظت سلول‌های کبدی از استرس اکسیداتیو است'},
+      {item:'جعفری و گشنیز تازه', why:'در طب سنتی به‌عنوان "مصفی کبد" شناخته می‌شوند و خاصیت ادراری دارند'},
+      {item:'آب لیمو ناشتا هر صبح', why:'تحریک ترشح صفرا در ابتدای روز، به شروع پاکسازی طبیعی کبد کمک می‌کند'},
+      {item:'چای سبز — ۲ تا ۳ فنجان روزانه', why:'کاتچین‌های چای سبز در مطالعات با بهبود آنزیم‌های کبدی مرتبط بوده‌اند'},
+      {item:'زغال‌اخته و توت‌فرنگی', why:'آنتی‌اکسیدان بالا، کمک به کاهش بار اکسیداتیو روی کبد'},
+      {item:'سیر سیاه یا سیر تازه', why:'ترکیبات گوگردی سیر در حمایت از مسیرهای سم‌زدایی کبد نقش دارند'}
+    ],
+    bad: [
+      {item:'الکل و دخانیات', why:'مستقیم‌ترین و شناخته‌شده‌ترین عامل آسیب به سلول‌های کبدی'},
+      {item:'غذاهای سرخ‌شده', why:'چربی ترانس، کبد را مجبور به کار اضافه برای متابولیزه کردن می‌کند'},
+      {item:'شیرینی و قند زیاد', why:'قند اضافی مستقیماً به چربی کبدی تبدیل می‌شود — مکانیسم اصلی کبد چرب غیرالکلی'},
+      {item:'نمک زیاد', why:'احتباس مایعات، فشار بیشتری به کل سیستم گردش خون از جمله کبد وارد می‌کند'},
+      {item:'فست‌فود و غذاهای آماده', why:'ترکیب چربی بد، نمک و نگه‌دارنده، بار سنگینی روی کبد می‌گذارد'},
+      {item:'کربوهیدرات تصفیه‌شده', why:'مثل قند عمل می‌کند و به تجمع چربی در کبد کمک می‌کند'},
+      {item:'داروهای غیرضروری', why:'هر دارو باید توسط کبد متابولیزه شود — مصرف بی‌رویه بار اضافه ایجاد می‌کند'},
+      {item:'چربی ترانس', why:'مستقیماً با التهاب کبدی و افزایش آنزیم‌های کبدی در مطالعات مرتبط است'}
+    ]
   },
-  motadel: {
-    good: ['میوه‌های تازه و فصلی — هر روز','سبزیجات رنگارنگ — هر وعده','ماهی — حداقل ۲ بار هفته','غلات کامل جای آرد سفید','آجیل و دانه‌ها — مشتی در روز','روغن زیتون به‌جای روغن معمولی','حبوبات — عدس، لوبیا، نخود','آب کافی — ۸ لیوان در روز']
-    ,bad: ['پرخوری — مهم‌ترین دشمن سلامت','غذاهای فراوری‌شده و کنسروی','قند و شکر زیاد','چربی اشباع و ترانس','نمک زیاد','نوشابه و آبمیوه صنعتی','حذف وعده‌های غذایی','خوردن دیروقت شب']
+  damavi: {
+    good: [
+      {item:'میوه‌های تازه و فصلی', why:'ویتامین، فیبر و آب در بهترین فرم طبیعی — هر فصل میوه‌ای متناسب با نیاز بدن می‌رسد'},
+      {item:'سبزیجات رنگارنگ', why:'هر رنگ نشان‌دهنده آنتی‌اکسیدان متفاوتی است — تنوع رنگ یعنی تنوع مواد مغذی'},
+      {item:'ماهی', why:'امگا۳ که بدن خودش نمی‌سازد و باید از غذا تأمین شود — حداقل ۲ بار در هفته'},
+      {item:'غلات کامل به‌جای آرد سفید', why:'فیبر باقی‌مانده، قند خون را آرام‌تر بالا می‌برد و احساس سیری بیشتری می‌دهد'},
+      {item:'آجیل و دانه‌ها', why:'چربی سالم و پروتئین گیاهی در یک مشت — میان‌وعده ایده‌آل'},
+      {item:'روغن زیتون', why:'چربی تک‌غیراشباع که با سلامت قلب در مطالعات متعدد مرتبط بوده است'},
+      {item:'حبوبات', why:'پروتئین گیاهی ارزان و فیبر بالا، ترکیبی نادر در دنیای غذایی'},
+      {item:'آب کافی', why:'هر واکنش متابولیکی بدن به آب نیاز دارد — کم‌آبی یعنی کندی همه فرآیندها'}
+    ],
+    bad: [
+      {item:'پرخوری', why:'حتی غذای سالم اگر زیاد خورده شود، بار اضافه به سیستم گوارش و متابولیسم تحمیل می‌کند'},
+      {item:'غذاهای فراوری‌شده', why:'نمک، قند و چربی پنهان که معمولاً بیشتر از حد لازم در این غذاها وجود دارد'},
+      {item:'قند و شکر زیاد', why:'نوسان شدید قند خون که در درازمدت به مقاومت انسولینی منجر می‌شود'},
+      {item:'چربی اشباع و ترانس', why:'با افزایش کلسترول بد (LDL) و خطر بیماری قلبی مرتبط است'},
+      {item:'نمک زیاد', why:'فشار خون بالا، یکی از مستقیم‌ترین رابطه‌های غذا و بیماری'},
+      {item:'نوشابه و آبمیوه صنعتی', why:'قند مایع جذب بسیار سریع‌تری نسبت به قند جامد دارد و کنترل آن سخت‌تر است'},
+      {item:'حذف وعده‌های غذایی', why:'باعث افت قند خون و پرخوری جبرانی در وعده بعدی می‌شود'},
+      {item:'خوردن دیروقت شب', why:'متابولیسم شبانه کندتر است و غذای دیروقت راحت‌تر به چربی تبدیل می‌شود'}
+    ]
   }
 };
 
+// جدول مصلحات طب سنتی - برای تعدیل مزاج غذاها
+const mosalahatData = {
+  balghami: { title:'مصلحات برای تعدیل غذاهای سرد (وقتی مزاج بلغمی دارید)', items:['شیر و لبنیات را با عسل یا دارچین مصرف کنید','ماست را با آویشن یا زیره تعدیل کنید','سبزیجات خام را با روغن زیتون و سرکه میل کنید','میوه‌های سردمزاج (خربزه، هندوانه) را با عسل یا دارچین بخورید'] },
+  safravi: { title:'مصلحات برای تعدیل غذاهای گرم (وقتی مزاج صفراوی دارید)', items:['گوشت قرمز را با گلپر، سرکه و آب انار ترش تعدیل کنید','ادویه‌های گرم را با گلاب یا کاهو متعادل کنید','خرما را با سرکه یا آب انار میل کنید','چای و قهوه پررنگ را کمتر و با شیر تعدیل کنید'] },
+  sodavi: { title:'مصلحات برای تقویت و گرم‌کردن (وقتی مزاج سوداوی دارید)', items:['غذاهای سرد را با زنجبیل، دارچین و زعفران گرم کنید','حبوبات را با زیره، دارچین و روغن زیتون بپزید','میوه‌های سرد را با عسل و گلنگبین تعدیل کنید','سبزیجات خام زمستانی را پخته میل کنید'] },
+  kabd: { title:'مصلحات برای تقویت کبد', items:['غذاهای چرب را با سرکه و آبغوره تعدیل کنید','گوشت قرمز را با گشنیز و سماق سبک‌تر کنید','از ادویه‌های تند با احتیاط استفاده کنید'] },
+  damavi: { title:'نکات کلی تعدیل مزاج غذا', items:['هر ماده غذایی گرم را با مصلح سرد و هر ماده سرد را با مصلح گرم تعدیل کنید','عسل، گلنگبین و دارچین از مصلحات رایج طب سنتی هستند','ترکیب درست غذاها هضم را آسان‌تر می‌کند'] }
+};
+
 const lifestyleData = {
-  balqham: [
-    '☀️ پیاده‌روی سریع هر روز حداقل ۳۰ تا ۴۵ دقیقه — مهم‌ترین توصیه',
-    '🌡️ حمام آب گرم ۲ تا ۳ بار در هفته برای تحریک گردش خون و دفع رطوبت',
-    '😴 خواب منظم — نه بیشتر از ۷ ساعت (خواب زیاد بلغم را تشدید می‌کند)',
-    '🏃 ورزش‌های هوازی مثل دوچرخه، شنا یا ایروبیک ۳ بار در هفته',
-    '☕ نوشیدنی‌های گرم در طول روز — از آب یخ پرهیز کنید',
-    '🌅 فعالیت صبحگاهی بسیار مهم است — صبح‌ها کسل‌ترین زمان برای بلغمی‌هاست',
-    '🧘 یوگا یا کشش بدنی برای فعال کردن متابولیسم',
-    '🌿 اتاق خود را گرم نگه دارید و از نشستن در هوای سرد و مرطوب بپرهیزید'
-  ],
-  safravi: [
-    '🌊 ورزش‌های آرام مثل شنا، یوگا و تای‌چی — از ورزش‌های خشن پرهیز کنید',
-    '😴 خواب کافی و منظم — حتماً قبل از ۱۱ شب بخوابید',
-    '🧘 مدیتیشن و تنفس عمیق روزانه حداقل ۱۵ دقیقه',
-    '❄️ دوش آب خنک (نه سرد) بعد از ورزش برای کاهش حرارت',
-    '🌿 دور از استرس و محیط‌های پرسروصدا — محیط آرام انتخاب کنید',
-    '🚶 پیاده‌روی آرام صبح در طبیعت یا پارک',
-    '🌙 قبل از خواب از صفحه نمایش دوری کنید',
-    '💧 آب کافی بنوشید — حداقل ۸ لیوان در روز'
-  ],
-  sodavi: [
-    '☀️ قرار گرفتن در معرض آفتاب صبحگاهی حداقل ۲۰ دقیقه',
-    '🤸 ورزش‌های سبک و منظم — هر روز ۲۰ تا ۳۰ دقیقه',
-    '👥 ارتباط اجتماعی و دور از انزوا — با دوستان و خانواده بیشتر باشید',
-    '🎵 موسیقی شاد و فعالیت‌های لذت‌بخش هر روز',
-    '🌡️ بدن را همیشه گرم نگه دارید — از سرما دوری کنید',
-    '💆 ماساژ آرام با روغن زیتون یا روغن بادام — هفتگی',
-    '🌿 گرفتن صبحانه کامل — مهم‌ترین وعده برای سوداوی‌هاست',
-    '😊 فعالیت‌های شاد و خلاقانه برای بهبود خلق‌وخو'
-  ],
-  kabd: [
-    '🥤 ۸ تا ۱۰ لیوان آب در روز — اولین قدم',
-    '🚶 ۴۵ دقیقه پیاده‌روی روزانه برای کاهش چربی کبد',
-    '🚭 ترک دخانیات — فوری و ضروری',
-    '⚖️ کاهش وزن تدریجی — هر هفته ۵۰۰ گرم ایمن است',
-    '💊 پرهیز از داروهای غیرضروری که کبد را درگیر می‌کنند',
-    '🧘 کاهش استرس — کورتیزول بالا به کبد آسیب می‌زند',
-    '🌙 حداقل ۷ ساعت خواب — کبد شب‌ها پاکسازی می‌کند',
-    '🍽️ وعده‌های کوچک و مکرر به‌جای وعده‌های حجیم'
-  ],
-  motadel: [
-    '🏃 ورزش منظم ۳ تا ۵ بار در هفته — ترکیبی از هوازی و قدرتی',
-    '😴 ۷ تا ۸ ساعت خواب با کیفیت — زمان ثابت بخوابید',
-    '💧 ۸ لیوان آب در روز — قبل از هر وعده ۱ لیوان بنوشید',
-    '🥗 وعده‌های غذایی منظم — حذف وعده ممنوع',
-    '🧘 مدیریت استرس با مدیتیشن یا تنفس عمیق روزانه',
-    '☀️ هوای تازه و نور آفتاب هر روز',
-    '📵 ۱ ساعت قبل از خواب صفحه نمایش را کنار بگذارید',
-    '🤸 کشش و یوگا هر روز ۱۰ دقیقه برای سلامت مفاصل'
-  ]
+  balghami: ['☀️ پیاده‌روی سریع هر روز حداقل ۳۰ تا ۴۵ دقیقه — مهم‌ترین توصیه','🌡️ حمام آب گرم ۲ تا ۳ بار در هفته برای تحریک گردش خون و دفع رطوبت','😴 خواب منظم — نه بیشتر از ۷ ساعت (خواب زیاد بلغم را تشدید می‌کند)','🏃 ورزش‌های هوازی مثل دوچرخه، شنا یا ایروبیک ۳ بار در هفته','☕ نوشیدنی‌های گرم در طول روز — از آب یخ پرهیز کنید','🌅 فعالیت صبحگاهی بسیار مهم است','🧘 یوگا یا کشش بدنی برای فعال کردن متابولیسم','🌿 اتاق را گرم نگه دارید و از هوای سرد و مرطوب بپرهیزید'],
+  safravi: ['🌊 ورزش‌های آرام مثل شنا، یوگا و تای‌چی — از ورزش‌های خشن پرهیز کنید','😴 خواب کافی و منظم — حتماً قبل از ۱۱ شب بخوابید','🧘 مدیتیشن و تنفس عمیق روزانه حداقل ۱۵ دقیقه','❄️ دوش آب خنک (نه سرد) بعد از ورزش برای کاهش حرارت','🌿 دور از استرس و محیط‌های پرسروصدا','🚶 پیاده‌روی آرام صبح در طبیعت یا پارک','🌙 قبل از خواب از صفحه نمایش دوری کنید','💧 آب کافی بنوشید — حداقل ۸ لیوان در روز'],
+  sodavi: ['☀️ قرار گرفتن در معرض آفتاب صبحگاهی حداقل ۲۰ دقیقه','🤸 ورزش‌های سبک و منظم — هر روز ۲۰ تا ۳۰ دقیقه','👥 ارتباط اجتماعی و دور از انزوا','🎵 موسیقی شاد و فعالیت‌های لذت‌بخش هر روز','🌡️ بدن را همیشه گرم نگه دارید','💆 ماساژ آرام با روغن زیتون یا بادام — هفتگی','🌿 صبحانه کامل — مهم‌ترین وعده برای سوداوی‌هاست','😊 فعالیت‌های شاد و خلاقانه'],
+  kabd: ['🥤 ۸ تا ۱۰ لیوان آب در روز','🚶 ۴۵ دقیقه پیاده‌روی روزانه برای کاهش چربی کبد','🚭 ترک دخانیات — فوری و ضروری','⚖️ کاهش وزن تدریجی — هر هفته ۵۰۰ گرم ایمن است','💊 پرهیز از داروهای غیرضروری','🧘 کاهش استرس — کورتیزول بالا به کبد آسیب می‌زند','🌙 حداقل ۷ ساعت خواب','🍽️ وعده‌های کوچک و مکرر'],
+  damavi: ['🏃 ورزش منظم ۳ تا ۵ بار در هفته','😴 ۷ تا ۸ ساعت خواب با کیفیت','💧 ۸ لیوان آب در روز','🥗 وعده‌های غذایی منظم','🧘 مدیریت استرس روزانه','☀️ هوای تازه و نور آفتاب هر روز','📵 ۱ ساعت قبل خواب صفحه نمایش کنار بگذارید','🤸 کشش و یوگا هر روز ۱۰ دقیقه']
 };
 
 function analyze() {
@@ -483,136 +526,191 @@ function analyze() {
   const extra = document.getElementById('extraInfo').value.trim();
   const err = document.getElementById('errMsg');
   const symptoms = Array.from(selectedSymptoms);
-  const balqhamItems = Array.from(selectedBalqham);
+  const balghamiItems = Array.from(selectedBalqham);
 
-  if(!name){ err.style.display='block'; err.textContent='⚠️ لطفاً نام مشتری را وارد کنید'; return; }
-  if(!selectedBudget){ err.style.display='block'; err.textContent='⚠️ لطفاً بودجه مشتری را انتخاب کنید'; return; }
-  if(!selectedTongue){ err.style.display='block'; err.textContent='⚠️ لطفاً وضعیت زبان مشتری را انتخاب کنید'; return; }
+  if(!name){err.style.display='block';err.textContent='⚠️ لطفاً نام مشتری را وارد کنید';return;}
+  if(!selectedBudget){err.style.display='block';err.textContent='⚠️ لطفاً بودجه مشتری را انتخاب کنید';return;}
+  if(!selectedTongue){err.style.display='block';err.textContent='⚠️ لطفاً وضعیت زبان مشتری را انتخاب کنید';return;}
   err.style.display='none';
 
-  let bmi=0, bmiText='', bmiColor='#ccc';
+  let bmi=0,bmiText='',bmiColor='#ccc';
   if(height && weight){
-    bmi = (weight/((height/100)**2)).toFixed(1);
-    if(bmi<18.5){ bmiText=`کم‌وزن (BMI: ${bmi})`; bmiColor='#64b5f6'; }
-    else if(bmi<25){ bmiText=`وزن طبیعی (BMI: ${bmi})`; bmiColor='#4caf50'; }
-    else if(bmi<30){ bmiText=`اضافه وزن (BMI: ${bmi})`; bmiColor='#ffc107'; }
-    else{ bmiText=`چاقی (BMI: ${bmi})`; bmiColor='#f08080'; }
+    bmi=(weight/((height/100)**2)).toFixed(1);
+    if(bmi<18.5){bmiText=`کم‌وزن (BMI: ${bmi})`;bmiColor='#64b5f6';}
+    else if(bmi<25){bmiText=`وزن طبیعی (BMI: ${bmi})`;bmiColor='#4caf50';}
+    else if(bmi<30){bmiText=`اضافه وزن (BMI: ${bmi})`;bmiColor='#ffc107';}
+    else{bmiText=`چاقی (BMI: ${bmi})`;bmiColor='#f08080';}
   }
 
   const mizaj = mizajInfo[selectedTongue];
-  const balqhamCount = balqhamItems.length;
-  const balqhamLevel = balqhamCount>=8 ? 'شدید' : balqhamCount>=4 ? 'متوسط' : balqhamCount>=1 ? 'خفیف' : 'ندارد';
+  const balghamiCount = balghamiItems.length;
+  const balghamiLevel = balghamiCount>=8?'شدید':balghamiCount>=4?'متوسط':balghamiCount>=1?'خفیف':'ندارد';
 
-  // انتخاب محصولات
-  const budgetLimit = selectedBudget==='low' ? 3000000 : selectedBudget==='mid' ? 6000000 : 15000000;
-  let scored = products.map(p => {
-    let score = 0;
-    p.for.forEach(f => { if(symptoms.includes(f)) score+=3; });
-    if(p.mizaj.includes(mizaj.type)) score+=4;
-    if(mizaj.type==='balqham' && balqhamCount>=4 && p.mizaj.includes('balqham')) score+=2;
-    if(mizaj.type==='kabd') { if(['shahtareh','seerSiyah','chaiSabz'].includes(p.id)) score+=4; }
-    if(symptoms.includes('rizesh') && ['saboosBeranj','javanahGandom'].includes(p.id)) score+=3;
-    if(symptoms.includes('bikhabi') && ['aramBakhsh','badranjboyeh'].includes(p.id)) score+=3;
-    if(symptoms.includes('qaedegi') && p.id==='raziyanehBanovan') score+=5;
-    if(symptoms.includes('sang_kolieh') && p.id==='kharkhask') score+=5;
-    if(symptoms.includes('kabd') && p.id==='shahtareh') score+=5;
-    if(symptoms.includes('qand') && ['hypotonic','khormaDarchin'].includes(p.id)) score+=3;
-    if(symptoms.includes('charbi_shekam') && ['chaiSabz','khormaRejimi'].includes(p.id)) score+=3;
-    return {...p, score};
-  }).filter(p=>p.score>0).sort((a,b)=>b.score-a.score);
+  // بودجه واقعی‌تر و بدون سقف کاذب - برای پکیج پروپیمون
+  const budgetLimit = selectedBudget==='low'?3500000:selectedBudget==='mid'?7000000:25000000;
 
-  // حذف تکراری (اگر هم لاته هم موکا هم سوپریم باشن، یکی انتخاب کن)
-  let coffeeAdded = false;
-  let filtered = [];
-  for(let p of scored){
-    if(['kafeLate','kafeMoka','kafeSupreme'].includes(p.id)){
-      if(!coffeeAdded){ filtered.push(p); coffeeAdded=true; }
-    } else if(['asal500','asal900'].includes(p.id)){
-      if(!filtered.find(x=>x.id==='asal500'||x.id==='asal900')) filtered.push(p);
-    } else {
-      filtered.push(p);
+  let scored = products.map(p=>{
+    let score=0;
+    p.for.forEach(f=>{if(symptoms.includes(f))score+=3;});
+    if(p.mizaj.includes(mizaj.type))score+=4;
+    if(mizaj.type==='balghami' && balghamiCount>=4 && p.mizaj.includes('balghami'))score+=2;
+    if(mizaj.type==='kabd'){if(['shahtareh','seerSiyah','chaiSabz'].includes(p.id))score+=4;}
+    if(symptoms.includes('rizesh') && ['saboosBeranj','javanahGandom','chaiSabz'].includes(p.id))score+=3;
+    if(symptoms.includes('bikhabi') && ['aramBakhsh','badranjboyeh'].includes(p.id))score+=3;
+    if(symptoms.includes('qaedegi') && p.id==='raziyanehBanovan')score+=5;
+    if(symptoms.includes('sang_kolieh') && ['kharkhask','raziyanehNafkh'].includes(p.id))score+=5;
+    if(symptoms.includes('kabd') && ['shahtareh','kafeMoka'].includes(p.id))score+=5;
+    if(symptoms.includes('qand') && ['hypotonic','khormaDarchin','chaiSabz'].includes(p.id))score+=3;
+    if(symptoms.includes('charbi_shekam') && ['chaiSabz','khormaRejimi','kafeSupreme'].includes(p.id))score+=3;
+    if(symptoms.includes('varzeshkar') && ['dynamine','proteinNats','proteinPeanut','kharkhask'].includes(p.id))score+=4;
+    if(symptoms.includes('afzayesh_vazn') && ['hotChoc','proteinFroot','proteinNats','proteinPeanut','khormaTabii'].includes(p.id))score+=4;
+    if(symptoms.includes('ghovaye_jensi') && ['kafeSupreme','masala','kharkhask','dynamine'].includes(p.id))score+=4;
+    return {...p,score};
+  }).sort((a,b)=>b.score-a.score);
+
+  const coreCandidates = scored.filter(p=>p.score>=5);
+  let coreSelected=[], coffeeAdded=false;
+  for(let p of coreCandidates){
+    if(['kafeLate','kafeMoka','kafeSupreme','hotChoc','masala'].includes(p.id)){
+      if(coffeeAdded) continue;
+      coffeeAdded=true;
     }
+    if(coreSelected.length<4) coreSelected.push({...p,tier:'core',qty:1});
   }
+
+  let baseSelected=[];
+  const honeyProduct = products.find(p=>p.id==='asal500');
+  const khormaProduct = products.find(p=>p.id==='khormaTabii');
+  const seerProduct = products.find(p=>p.id==='seerSiyah');
+  if(honeyProduct) baseSelected.push({...honeyProduct,tier:'base',qty:1});
+  if(khormaProduct) baseSelected.push({...khormaProduct,tier:'base',qty:1});
+  if(seerProduct && !coreSelected.find(p=>p.id==='seerSiyah')) baseSelected.push({...seerProduct,tier:'base',qty:1});
+
+  const usedIds = new Set([...coreSelected.map(p=>p.id), ...baseSelected.map(p=>p.id)]);
+  const valueCandidates = scored.filter(p=>p.score>0 && p.score<5 && !usedIds.has(p.id));
+  let valueSelected=[], proteinCount=0;
+  for(let p of valueCandidates){
+    if(p.id.startsWith('protein')){
+      if(proteinCount>=1) continue;
+      proteinCount++;
+    }
+    if(['asal900'].includes(p.id) && usedIds.has('asal500')) continue;
+    valueSelected.push({...p,tier:'value',qty:1});
+  }
+
+  let allCandidates = [...coreSelected, ...baseSelected, ...valueSelected];
 
   let selected=[], totalCost=0;
-  for(let p of filtered){
-    if(totalCost+p.price<=budgetLimit && selected.length<6){
-      selected.push(p); totalCost+=p.price;
+  const multiPackEligible = ['kafeLate','kafeMoka','kafeSupreme','hotChoc','masala','raziyanehNafkh','shahtareh','chaiSabz','saboosBeranj','kharkhask'];
+
+  for(let p of allCandidates){
+    if(totalCost+p.price<=budgetLimit){
+      selected.push({...p});
+      totalCost+=p.price;
     }
   }
-  if(selected.length===0){ selected.push(products[0]); totalCost=products[0].price; }
 
-  // نمایش هدر
+  let extraRounds=0;
+  while(extraRounds<3){
+    let addedThisRound=false;
+    for(let item of selected){
+      if(multiPackEligible.includes(item.id) && totalCost+item.price<=budgetLimit){
+        item.qty = (item.qty||1)+1;
+        totalCost+=item.price;
+        addedThisRound=true;
+        if(totalCost>=budgetLimit*0.92) break;
+      }
+    }
+    if(!addedThisRound) break;
+    extraRounds++;
+    if(totalCost>=budgetLimit*0.92) break;
+  }
+
+  for(let p of scored){
+    if(totalCost>=budgetLimit*0.9) break;
+    if(!selected.find(s=>s.id===p.id) && totalCost+p.price<=budgetLimit){
+      selected.push({...p,tier:'value',qty:1});
+      totalCost+=p.price;
+    }
+  }
+
+  if(selected.length===0){selected.push({...products[0],tier:'core',qty:1});totalCost=products[0].price;}
+
   document.getElementById('resultHeader').innerHTML=`
     <div class="client-name">${name} ${age?'— '+age+' ساله':''} ${gender==='female'?'(خانم)':gender==='male'?'(آقا)':''}</div>
     <div class="mizaj-title">${mizaj.icon} ${mizaj.name}</div>
     <div class="mizaj-sub">تشخیص بر اساس زبان‌شناسی، تست بلغم و علائم بالینی</div>
   `;
 
-  // تحلیل مزاج
-  const sympLabels = {nafkh:'نفخ',yoboosat:'یبوست',khastegi:'خستگی',rizekhori:'ریزه‌خوری',sardi:'سردی بدن',rizesh:'ریزش مو',puf:'پف صورت',charbi_shekam:'چربی شکم',reflux:'رفلاکس',stress:'استرس',bikhabi:'بی‌خوابی',kabd:'کبد چرب',kolesterol:'کلسترول بالا',faresharkhooni:'فشار خون',qand:'قند خون',moafiyat:'ضعف ایمنی',poost:'مشکل پوست',qaedegi:'بی‌نظمی قاعدگی',dard_qaedegi:'دردهای قاعدگی',sang_kolieh:'سنگ کلیه',tavarom:'تورم',lazari:'لاغری',hafeze:'ضعف حافظه',moafsal:'درد مفاصل'};
+  const sympLabels = {nafkh:'نفخ',yoboosat:'یبوست',khastegi:'خستگی',rizekhori:'ریزه‌خوری',sardi:'سردی بدن',rizesh:'ریزش مو',puf:'پف صورت',charbi_shekam:'چربی شکم',reflux:'رفلاکس',stress:'استرس',bikhabi:'بی‌خوابی',kabd:'کبد چرب',kolesterol:'کلسترول بالا',faresharkhooni:'فشار خون',qand:'قند خون',moafiyat:'ضعف ایمنی',poost:'مشکل پوست',qaedegi:'بی‌نظمی قاعدگی',dard_qaedegi:'دردهای قاعدگی',sang_kolieh:'سنگ کلیه',tavarom:'تورم',lazari:'لاغری',afzayesh_vazn:'نیاز افزایش وزن',hafeze:'ضعف حافظه',moafsal:'درد مفاصل',varzeshkar:'ورزشکار',ghovaye_jensi:'کاهش قوای جسمی'};
   const tags = symptoms.map(s=>`<span class="tag">${sympLabels[s]||s}</span>`).join('');
 
   document.getElementById('mizajSection').innerHTML=`
     <div class="section-title">🔬 تشخیص مزاج</div>
     <div class="analysis-box">${mizaj.desc}</div>
     ${bmiText?`<div class="analysis-box">📊 شاخص توده بدنی: <strong style="color:${bmiColor}">${bmiText}</strong></div>`:''}
-    ${balqhamCount>0?`<div class="analysis-box ${balqhamCount>=8?'warn':''}">🧪 تست بلغم: <strong>${balqhamCount} مورد از ۱۵ — غلبه بلغم ${balqhamLevel}</strong>${balqhamCount>=8?' | ⚠️ نیاز به درمان جدی دارد':''}</div>`:''}
+    ${balghamiCount>0?`<div class="analysis-box ${balghamiCount>=8?'warn':''}">🧪 تست بلغم: <strong>${balghamiCount} مورد از ۱۵ — غلبه بلغم ${balghamiLevel}</strong>${balghamiCount>=8?' | ⚠️ نیاز به درمان جدی دارد':''}</div>`:''}
     ${symptoms.length>0?`<div class="section-title" style="margin-top:14px">⚠️ علائم ثبت‌شده</div><div class="symptom-tags">${tags}</div>`:''}
     ${extra?`<div class="analysis-box warn">📋 نکات ویژه مشتری: ${extra}</div>`:''}
   `;
 
-  // محصولات
+  const tierLabel = {core:['p1','🎯 هسته اصلی درمان'], base:['p2','💪 تقویتی پایه'], value:['p3','⭐ ارزش‌افزا']};
   let prodHtml='';
-  selected.forEach((p,i)=>{
-    const badge = i===0?['p1','🥇 اولویت اول — ضروری']:i===1?['p2','🥈 اولویت دوم']:['p3','🔵 مکمل پیشنهادی'];
-    prodHtml+=`<div class="product-card">
-      <span class="p-priority ${badge[0]}">${badge[1]}</span>
+  let coreHtml='', baseHtml='', valueHtml='';
+  selected.forEach((p)=>{
+    const badge = tierLabel[p.tier] || tierLabel.value;
+    const qtyTag = p.qty>1 ? `<span style="background:#2d6a4f;color:white;padding:2px 8px;border-radius:99px;font-size:11px;margin-right:6px">${p.qty} بسته</span>` : '';
+    const totalForItem = p.price * (p.qty||1);
+    const card = `<div class="product-card">
+      <span class="p-priority ${badge[0]}">${badge[1]}</span> ${qtyTag}
       <div class="p-name">${p.name}</div>
-      <div class="p-price">💰 ${(p.price/10).toLocaleString()} تومان | ${p.unit}</div>
+      <div class="p-price">💰 ${p.price.toLocaleString()} تومان${p.qty>1?` × ${p.qty} = ${totalForItem.toLocaleString()} تومان`:''} | ${p.unit}</div>
       <div class="p-why">✅ ${p.benefits.join(' &nbsp;|&nbsp; ')}</div>
-      <div class="p-dose">📌 روش مصرف: ${p.dose}</div>
+      <div class="p-dose">📌 دستورالعمل مصرف: ${p.dose}</div>
     </div>`;
+    if(p.tier==='core') coreHtml+=card;
+    else if(p.tier==='base') baseHtml+=card;
+    else valueHtml+=card;
   });
+  prodHtml = (coreHtml?`<div class="section-title">🎯 هسته اصلی درمان — مستقیماً برای مشکل اصلی</div>${coreHtml}`:'') +
+             (baseHtml?`<div class="section-title" style="margin-top:16px">💪 تقویتی پایه — برای همه مشتریان توصیه می‌شود</div>${baseHtml}`:'') +
+             (valueHtml?`<div class="section-title" style="margin-top:16px">⭐ ارزش‌افزا — تکمیل‌کننده نتیجه</div>${valueHtml}`:'');
   document.getElementById('productsSection').innerHTML=prodHtml;
 
-  // تغذیه
-  const nut = nutritionData[mizaj.type] || nutritionData.motadel;
+  const nut = nutritionData[mizaj.type]||nutritionData.damavi;
+  const mosleh = mosalahatData[mizaj.type]||mosalahatData.damavi;
   document.getElementById('nutritionSection').innerHTML=`
     <div class="food-grid">
-      <div class="food-box good"><h4>✅ غذاهای مفید و توصیه‌شده</h4><ul>${nut.good.map(f=>`<li>${f}</li>`).join('')}</ul></div>
-      <div class="food-box bad"><h4>❌ باید پرهیز کنید</h4><ul>${nut.bad.map(f=>`<li>${f}</li>`).join('')}</ul></div>
+      <div class="food-box good"><h4>✅ غذاهای مفید و توصیه‌شده</h4><ul>${nut.good.map(f=>`<li><strong>${f.item}</strong><br><span style="color:#7a9a8a;font-size:11px">${f.why}</span></li>`).join('')}</ul></div>
+      <div class="food-box bad"><h4>❌ باید پرهیز کنید</h4><ul>${nut.bad.map(f=>`<li><strong>${f.item}</strong><br><span style="color:#c98080;font-size:11px">${f.why}</span></li>`).join('')}</ul></div>
     </div>
-    ${symptoms.includes('charbi_shekam')?'<div class="analysis-box success">💡 برای چربی شکم: بعد از شام ۱۰ دقیقه پیاده‌روی کنید — این ساده‌ترین و موثرترین کار است</div>':''}
-    ${symptoms.includes('kabd')?'<div class="analysis-box success">💡 برای کبد چرب: هر روز صبح ناشتا یک لیوان آب گرم با لیمو بنوشید</div>':''}
-    ${symptoms.includes('rizesh')?'<div class="analysis-box success">💡 برای ریزش مو: سبوس برنج را روزانه با ماست مصرف کنید — نتیجه از هفته سوم پیداست</div>':''}
+    <div class="mosleh-box"><strong style="color:#a8d5ba">🌿 ${mosleh.title}</strong><br>${mosleh.items.map(i=>'• '+i).join('<br>')}</div>
+    ${symptoms.includes('charbi_shekam')?'<div class="analysis-box success" style="margin-top:10px">💡 برای چربی شکم: بعد از شام ۱۰ دقیقه پیاده‌روی کنید</div>':''}
+    ${symptoms.includes('kabd')?'<div class="analysis-box success" style="margin-top:10px">💡 برای کبد چرب: هر روز صبح ناشتا یک لیوان آب گرم با لیمو بنوشید</div>':''}
+    ${symptoms.includes('rizesh')?'<div class="analysis-box success" style="margin-top:10px">💡 برای ریزش مو: سبوس برنج را روزانه با ماست مصرف کنید — نتیجه از هفته سوم پیداست</div>':''}
   `;
 
-  // سبک زندگی
-  const life = lifestyleData[mizaj.type] || lifestyleData.motadel;
-  document.getElementById('lifestyleSection').innerHTML=`
-    <ul class="life-list">${life.map(l=>`<li>${l}</li>`).join('')}</ul>
-  `;
+  const life = lifestyleData[mizaj.type]||lifestyleData.damavi;
+  document.getElementById('lifestyleSection').innerHTML=`<ul class="life-list">${life.map(l=>`<li>${l}</li>`).join('')}</ul>`;
 
-  // جمع
   document.getElementById('totalBox').innerHTML=`
     <div class="t-label">جمع هزینه پکیج پیشنهادی</div>
-    <div class="t-amount">${(totalCost/10).toLocaleString()} تومان</div>
+    <div class="t-amount">${totalCost.toLocaleString()} تومان</div>
   `;
 
-  // متن پیام
-  const prodList = selected.map((p,i)=>`${i===0?'🥇':i===1?'🥈':'🔵'} ${p.name} — ${(p.price/10).toLocaleString()} تومان`).join('\n');
+  const tierEmoji = {core:'🎯',base:'💪',value:'⭐'};
+  const prodList = selected.map((p)=>`${tierEmoji[p.tier]||'⭐'} ${p.name}${p.qty>1?` (${p.qty} بسته)`:''} — ${(p.price*(p.qty||1)).toLocaleString()} تومان`).join('\n');
   const sympText = symptoms.slice(0,4).map(s=>sympLabels[s]||s).join('، ');
   const msg = `${name} عزیز 🌿
 
 با توجه به بررسی کامل علائم و تحلیل مزاج شما، تشخیص داده شد که بدنتون دچار **${mizaj.name}** است.
 
-${mizaj.type==='balqham'?`این وضعیت باعث شده سوخت‌وسازتون کند بشه و بدنتون نتونه چربی‌ها رو بسوزونه. به همین دلیل علائمی مثل ${sympText} دارید.`:mizaj.type==='safravi'?`این وضعیت باعث التهاب و حرارت زیاد در بدنتونه که می‌تونه علائمی مثل ${sympText} ایجاد کنه.`:mizaj.type==='sodavi'?`این وضعیت باعث کمبود انرژی و خون در بدنتونه که علائمی مثل ${sympText} رو ایجاد کرده.`:`با اصلاح تغذیه و استفاده از مکمل‌های مناسب می‌تونید علائمی مثل ${sympText} رو برطرف کنید.`}
+${mizaj.type==='balghami'?`این وضعیت باعث شده سوخت‌وسازتون کند بشه و بدنتون نتونه چربی‌ها رو بسوزونه. به همین دلیل علائمی مثل ${sympText} دارید.`:mizaj.type==='safravi'?`این وضعیت باعث التهاب و حرارت زیاد در بدنتونه که می‌تونه علائمی مثل ${sympText} ایجاد کنه.`:mizaj.type==='sodavi'?`این وضعیت باعث کمبود انرژی و خون در بدنتونه که علائمی مثل ${sympText} رو ایجاد کرده.`:`با اصلاح تغذیه و استفاده از مکمل‌های مناسب می‌تونید علائمی مثل ${sympText} رو برطرف کنید.`}
 
 📦 پکیج پیشنهادی اختصاصی برای شما:
 ${prodList}
 
-💰 جمع کل: ${(totalCost/10).toLocaleString()} تومان
+💰 جمع کل: ${totalCost.toLocaleString()} تومان
 
 با این پکیج از ریشه مشکل درمان می‌کنیم، نه فقط علائم رو.
 نتیجه از هفته دوم احساس می‌کنید 🌱
@@ -629,9 +727,9 @@ ${prodList}
 }
 
 function copyMsg(){
-  const txt = document.getElementById('msgText').innerText;
+  const txt=document.getElementById('msgText').innerText;
   navigator.clipboard.writeText(txt).then(()=>{
-    const btn = document.querySelector('.copy-btn');
+    const btn=document.querySelector('.copy-btn');
     btn.textContent='✅ کپی شد!';
     setTimeout(()=>btn.textContent='📋 کپی متن پیام',2000);
   });
