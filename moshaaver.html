@@ -234,139 +234,139 @@ function selectBudget(el,val){document.querySelectorAll('.budget-btn').forEach(b
 
 // قیمت‌ها به تومان - دقیق همانطور که اعلام شده
 const products = [
-  { id:'kafeLate', name:'کافه لاته با قارچ گانودرما', price:1925000, unit:'بسته ۲۰عددی',
+  { id:'kafeLate', category:'coffee', name:'کافه لاته با قارچ گانودرما', price:1925000, unit:'بسته ۲۰عددی',
     benefits:['بالابرنده سوخت‌وساز شدید بدن','مقوی روده، قلب و کبد','پاکسازی سموم بدن','لاغرکننده و انرژی‌زا','ضد درد مفاصل','تقویت اعصاب','ملین طبیعی'],
     for:['khastegi','moafiyat','hafeze','stress','charbi_shekam','moafsal','yoboosat'], mizaj:['balghami','sodavi'],
     dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش بریزید و میل کنید | بعدش نیم ساعت پیاده‌روی کنید (یا ۸ انگلیسی داخل خانه) | تا ۱ ساعت چیزی نخورید، بعد صبحانه میل کنید' },
-  { id:'kafeMoka', name:'کافه موکا با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
+  { id:'kafeMoka', category:'coffee', name:'کافه موکا با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
     benefits:['پاکسازی کبد و سموم بدن','لاغرکننده قوی','انرژی‌زا و پاکسازی بدن','دافع فضولات روده','سفت‌کننده عضلات','تقویت قلب'],
     for:['khastegi','hafeze','stress','charbi_shekam','kabd'], mizaj:['balghami','sodavi'],
     dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش | بعدش نیم ساعت پیاده‌روی | تا ۱ ساعت چیزی نخورید' },
-  { id:'kafeSupreme', name:'کافه سوپریم با قارچ گانودرما و جینسینگ', price:1985000, unit:'بسته ۲۰عددی',
+  { id:'kafeSupreme', category:'coffee', name:'کافه سوپریم با قارچ گانودرما و جینسینگ', price:1985000, unit:'بسته ۲۰عددی',
     benefits:['فوق‌العاده انرژی‌زا','مقوی قلب و پمپاژ قلبی','تقویت قوای جسمی عمومی','پاکسازی عمیق کبد','لاغرکننده قوی','گرم‌کننده بدن','بالابرنده شدید متابولیسم'],
     for:['khastegi','stress','moafiyat','sardi','charbi_shekam','ghovaye_jensi','kabd'], mizaj:['balghami','sodavi'],
     dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش | بعدش نیم ساعت پیاده‌روی | تا ۱ ساعت چیزی نخورید' },
-  { id:'hotChoc', name:'هات چاکلت با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
+  { id:'hotChoc', category:'coffee', name:'هات چاکلت با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
     benefits:['کاهش فشار خون','آنتی‌اکسیدان فلاوانول قوی','افزایش وزن و حجم برای لاغرها','ملین طبیعی','مقوی کبد','بالابرنده قند خون','تقویت اعصاب و قوای جنسی'],
     for:['faresharkhooni','kolesterol','stress','afzayesh_vazn','lazari'], mizaj:['safravi'],
     dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش | بعدش نیم ساعت پیاده‌روی' },
-  { id:'masala', name:'قهوه ماسالا با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
+  { id:'masala', category:'coffee', name:'قهوه ماسالا با قارچ گانودرما', price:1985000, unit:'بسته ۲۰عددی',
     benefits:['درمان سردی معده و بدن','بالابرنده متابولیسم','لاغرکننده موثر','مناسب سردمزاجان','تقویت قوای جنسی','ضدعفونی‌کننده معده','مفرح و مقوی قلب'],
     for:['sardi','nafkh','yoboosat','khastegi','charbi_shekam','ghovaye_jensi'], mizaj:['balghami','sodavi'],
     dose:'از روز ۱ تا ۱۰ مصرف کنید، ۵ روز استراحت، از روز ۱۶ تا ۲۵ دوباره مصرف کنید | صبح ناشتا داخل نصف لیوان آب جوش | بعدش نیم ساعت پیاده‌روی | تا ۱ ساعت چیزی نخورید سپس صبحانه میل کنید' },
-  { id:'raziyanehBanovan', name:'دمنوش رازیانه ویژه بانوان', price:249800, unit:'بسته ۲۰عددی',
+  { id:'raziyanehBanovan', category:'herbal_tea', name:'دمنوش رازیانه ویژه بانوان', price:249800, unit:'بسته ۲۰عددی',
     benefits:['تنظیم چرخه قاعدگی','کاهش دردهای قاعدگی','تعادل هورمونی','کاهش علائم یائسگی','افزایش شیر مادران'],
     for:['qaedegi','dard_qaedegi','tavarom'], mizaj:['balghami','safravi'],
     dose:'از روز ۷ام قاعدگی شروع کنید تا انتهای بسته ادامه دهید | حداکثر ۱ ساشه در روز | داخل ۱ لیوان آب جوش بریزید، ۲۰ دقیقه دم بکشد | ترجیحاً بعدازظهر، با فاصله ۲ هفته از غذای اصلی' },
-  { id:'kharkhask', name:'دمنوش خارخاسک دیورتیک', price:348000, unit:'بسته ۲۰عددی',
+  { id:'kharkhask', category:'herbal_tea', name:'دمنوش خارخاسک دیورتیک', price:348000, unit:'بسته ۲۰عددی',
     benefits:['دفع و خردکردن سنگ کلیه','بالابرنده تستوسترون آقایان','افزایش قوای جنسی','بهبود عملکرد کلیه','دیورتیک قوی','تقویت استقامت ورزشی'],
     for:['sang_kolieh','tavarom','faresharkhooni','ghovaye_jensi','varzeshkar'], mizaj:['balghami','safravi'],
     dose:'۳ بار در روز، هر بار یک تی‌بگ به مدت ۳ تا ۵ دقیقه در آب جوش دم کنید' },
-  { id:'badranjboyeh', name:'دمنوش بادرنجبویه مفرح', price:348000, unit:'بسته ۲۰عددی',
+  { id:'badranjboyeh', category:'herbal_tea', name:'دمنوش بادرنجبویه مفرح', price:348000, unit:'بسته ۲۰عددی',
     benefits:['مقوی اعصاب و مغز','مسهل بلغم مغز','تقویت قلب','پاکسازی خون','مدر و ضدعفونت','مقوی خواب و تمرکز'],
     for:['stress','bikhabi','hafeze','nafkh'], mizaj:['balghami','safravi'],
     dose:'۱ ساشه در روز — بیشتر مصرف نکنید | داخل ۱ لیوان آب جوش، ۲۰ دقیقه دم بکشد | بین ساعت ۱ تا ۵ عصر میل شود' },
-  { id:'raziyanehNafkh', name:'دمنوش رازیانه ترکیبی ضدنفخ و یبوست', price:348000, unit:'بسته ۲۰عددی',
+  { id:'raziyanehNafkh', category:'herbal_tea', name:'دمنوش رازیانه ترکیبی ضدنفخ و یبوست', price:348000, unit:'بسته ۲۰عددی',
     benefits:['درمان کل نظام هاضمه','درمان سردی معده','کمک به ریزش مو و کم‌خونی','درمان یبوست','تنظیم قند و فشار خون','دفع شن کلیه و سموم بدن','مدر'],
     for:['nafkh','yoboosat','reflux','sang_kolieh','rizesh','qand'], mizaj:['balghami'],
     dose:'هر ساشه برای ۱ روز است — هر تی‌بگ ۲ بار مصرف شود (بعد اول داخل لیوان بماند، بار دوم آب‌جوش جدید بریزید) | یکبار بین صبحانه و ناهار، یکبار بین ناهار و شام' },
-  { id:'aramBakhsh', name:'دمنوش بادرنجبویه ترکیبی آرام‌بخش', price:348000, unit:'بسته ۲۰عددی',
+  { id:'aramBakhsh', category:'herbal_tea', name:'دمنوش بادرنجبویه ترکیبی آرام‌بخش', price:348000, unit:'بسته ۲۰عددی',
     benefits:['بهبود کیفیت خواب','کاهش اضطراب شبانه','آرامش اعصاب','مناسب بی‌خوابی مزمن'],
     for:['bikhabi','stress'], mizaj:['safravi','sodavi'],
     dose:'۱ فنجان ۳۰ دقیقه قبل از خواب' },
-  { id:'shahtareh', name:'دمنوش شاهتره مصفی خون', price:1879000, unit:'بسته',
+  { id:'shahtareh', category:'herbal_tea', name:'دمنوش شاهتره مصفی خون', price:1879000, unit:'بسته',
     benefits:['پاکسازی و تقویت کبد','مسهل سودا و رقیق‌کننده خون','بهبود جوش و لک پوست','تقویت و درمان ریزش مو','بهبود خواب و کنترل خشم','کمک به درمان افسردگی','بهبود کیست زنان'],
     for:['kabd','kolesterol','poost','rizesh','stress','bikhabi'], mizaj:['safravi','balghami'],
     dose:'هر روز ۲ ساشه — یکی بین صبحانه و ناهار، یکی بین ناهار و شام | حداقل ۵ ساعت فاصله بین ۲ تی‌بگ | فاصله با غذا حداقل ۲ ساعت | ۱۰ دقیقه در قوری یا ۱۵ دقیقه در لیوان دم شود | در صورت افت فشار، با عسل یا خرما میل کنید' },
-  { id:'chaiSabz', name:'دمنوش چای سبز ترکیبی — موثر در کاهش وزن', price:1879000, unit:'بسته',
+  { id:'chaiSabz', category:'herbal_tea', name:'دمنوش چای سبز ترکیبی — موثر در کاهش وزن', price:1879000, unit:'بسته',
     benefits:['کاهنده اشتها طبیعی','افزایش سوخت‌وساز بدن','کاهش وزن و سایز با مجوز رسمی غذا و دارو','مدر و ملین','تنظیم فعالیت غدد مترشحه داخلی'],
     for:['charbi_shekam','qand','kolesterol','rizesh','poost','kabd'], mizaj:['balghami'],
     dose:'روزانه ۳ بار، هر بار ۱ تی‌بگ: نیم‌ساعت قبل هر وعده غذایی (کاهنده اشتها) + ۱ ساعت بعد هر وعده | تی‌بگ را با ۲۵۰ سی‌سی آب در لیوان دردار یا قوری ۱۰ دقیقه به‌آرامی بجوشانید، سپس ۳ تا ۵ دقیقه دم بکشد | حتماً گرم میل شود | ⚠️ منع مصرف در بارداری و شیردهی | با داروی ضدانعقاد (وارفارین، آسپرین) مصرف نشود' },
-  { id:'saboosBeranj', name:'سبوس برنج از لایه دوم برنج قهوه‌ای', price:468000, unit:'بسته ۲۵ساشه',
+  { id:'saboosBeranj', category:'fiber', name:'سبوس برنج از لایه دوم برنج قهوه‌ای', price:468000, unit:'بسته ۲۵ساشه',
     benefits:['جلوگیری از ریزش و سفیدی مو','تأمین فیبر غذایی','کاهش کلسترول','تنظیم قند خون','ایجاد احساس سیری و کمک لاغری'],
     for:['rizesh','kolesterol','qand','charbi_shekam','yoboosat'], mizaj:['balghami','sodavi'],
     dose:'روز ۱ تا ۱۵: روزی ۱ ساشه | روز ۱۶ تا ۲۰: قطع مصرف | روز ۲۱ تا ۳۰: روزی ۱ ساشه | نصف بسته ۲۰ دقیقه قبل ناهار، نصف دیگر ۲۰ دقیقه قبل شام | داخل ماست کم‌چرب، شیر ولرم یا آب ولرم (افراد بلغمی فقط داخل آب)' },
-  { id:'saboosChand', name:'سبوس چند غله', price:440000, unit:'بسته',
+  { id:'saboosChand', category:'fiber', name:'سبوس چند غله', price:440000, unit:'بسته',
     benefits:['فیبر کامل چندگانه','درمان یبوست','کاهش کلسترول','تقویت اعصاب','ویتامین B کامل'],
     for:['yoboosat','kolesterol','moafsal'], mizaj:['balghami','sodavi'],
     dose:'روزی ۱ تا ۲ قاشق — داخل ماست یا آش و سوپ، یا هنگام پخت برنج/خورشت' },
-  { id:'javanahGandom', name:'پودر جوانه گندم', price:440000, unit:'بسته',
+  { id:'javanahGandom', category:'fiber', name:'پودر جوانه گندم', price:440000, unit:'بسته',
     benefits:['جلوگیری از پیری زودرس','تقویت پوست و مو','آنتی‌اکسیدان قوی','انرژی پایدار','تقویت سیستم ایمنی'],
     for:['rizesh','poost','khastegi','moafiyat','lazari'], mizaj:['sodavi','balghami'],
     dose:'هر ساشه برای ۱ روز است | نصف بسته ۲۰ دقیقه بعد ناهار، نصف دیگر ۲۰ دقیقه بعد شام | داخل آبمیوه یا شیر بریزید و میل کنید' },
-  { id:'macha', name:'چای ماچا نو — چربی‌سوزی فوق‌العاده', price:798000, unit:'بسته',
+  { id:'macha', category:'special_tea', name:'چای ماچا نو — چربی‌سوزی فوق‌العاده', price:798000, unit:'بسته',
     benefits:['ضدالتهاب — کمک به آرتروز','پیشگیری از سرطان پروستات، پوست، ریه، کبد','چربی‌سوزی با تندکردن متابولیسم','محافظت قلب و کبد','کاهش استرس و اضطراب','تنظیم فشار و قند خون','تقویت ایمنی و کاهش کلسترول','افزایش هوشیاری و تمرکز'],
     for:['stress','hafeze','charbi_shekam','khastegi','moafsal','qand','kolesterol','faresharkhooni'], mizaj:['safravi','balghami'],
     dose:'۲ ساعت بعد از ناهار، ۱ لیوان آب جوش بردارید، ۱ دقیقه صبر کنید تا کمی خنک شود، سپس ۱ ساشه چای ماچا داخلش بریزید و میل کنید' },
-  { id:'dynamine', name:'نوشیدنی ورزشی داینامین', price:1794000, unit:'باکس ۶عددی',
+  { id:'dynamine', category:'sports_drink', name:'نوشیدنی ورزشی داینامین', price:1794000, unit:'باکس ۶عددی',
     benefits:['انرژی‌زای فوری','مولتی‌ویتامین کامل','تقویت عضلات','بالابرنده تستوسترون','مدر و پاکسازی بدن','بهبود عملکرد کبد و قلب','جایگزین سالم نوشیدنی‌های انرژی‌زا'],
     for:['khastegi','moafiyat','hafeze','moafsal','varzeshkar','ghovaye_jensi'], mizaj:['balghami','sodavi'],
     dose:'هر بطری برای ۲ روز است — نصف بطری امروز، نصف دیگر فردا | بهترین زمان: حین پیاده‌روی یا ورزش | در جای خشک و خنک نگهداری شود' },
-  { id:'seerSiyah', name:'سیر سیاه فرآوری‌شده طبیعی', price:492000, unit:'بسته',
+  { id:'seerSiyah', category:'base_tonic', name:'سیر سیاه فرآوری‌شده طبیعی', price:492000, unit:'بسته',
     benefits:['پیشگیری و کمک به درمان سرطان','کاهش وزن و لاغری','کاهش چربی خون','محافظت قلب و عروق','کنترل و بهبود دیابت','ضد التهاب و ضد حساسیت','محافظت کبد'],
     for:['moafiyat','kolesterol','faresharkhooni','kabd','poost','charbi_shekam','qand'], mizaj:['safravi','balghami','sodavi'],
     dose:'هر روز صبح، ۱ ساعت بعد از صبحانه، ۱ حبه سیر را بجوید یا کامل قورت دهید | بیشتر مصرف نکنید — باعث افت فشار می‌شود | احتیاط برای مصرف‌کنندگان داروی ضدانعقاد خون' },
-  { id:'asal500', name:'عسل طبیعی ۵۰۰ گرمی', price:1475000, unit:'بسته',
+  { id:'asal500', category:'base_tonic', name:'عسل طبیعی ۵۰۰ گرمی', price:1475000, unit:'بسته',
     benefits:['آنتی‌بیوتیک طبیعی قوی','تقویت حافظه','بهبود گوارش و یبوست','تقویت سیستم ایمنی','انرژی سریع','محافظت از کبد'],
     for:['hafeze','moafiyat','yoboosat','kabd','khastegi'], mizaj:['balghami','sodavi'],
     dose:'روزی ۱ تا ۲ قاشق چای‌خوری — ناشتا با آب ولرم | احتیاط برای دیابتی‌ها' },
-  { id:'asal900', name:'عسل طبیعی ۹۰۰ گرمی', price:2350000, unit:'بسته',
+  { id:'asal900', category:'base_tonic', name:'عسل طبیعی ۹۰۰ گرمی', price:2350000, unit:'بسته',
     benefits:['آنتی‌بیوتیک طبیعی قوی','تقویت حافظه','بهبود گوارش و یبوست','تقویت سیستم ایمنی','انرژی سریع','صرفه اقتصادی بیشتر'],
     for:['hafeze','moafiyat','yoboosat','kabd','khastegi'], mizaj:['balghami','sodavi'],
     dose:'روزی ۱ تا ۲ قاشق چای‌خوری — ناشتا با آب ولرم | احتیاط برای دیابتی‌ها' },
-  { id:'khormaTabii', name:'خرما بار طبیعی', price:820600, unit:'بسته',
+  { id:'khormaTabii', category:'snack', name:'خرما بار طبیعی', price:820600, unit:'بسته',
     benefits:['انرژی فوری و طبیعی','سرشار از آهن و پتاسیم','تقویت استخوان','بهبود کم‌خونی','مقوی و مغذی'],
     for:['khastegi','lazari','moafiyat','moafsal','afzayesh_vazn'], mizaj:['balghami','sodavi'],
     dose:'روزی ۲ تا ۳ عدد — صبح یا قبل از ورزش' },
-  { id:'khormaZanjabil', name:'خرما بار زنجبیلی', price:593000, unit:'بسته',
+  { id:'khormaZanjabil', category:'snack', name:'خرما بار زنجبیلی', price:593000, unit:'بسته',
     benefits:['گرم‌کننده بدن','تقویت گوارش','ضد تهوع','ضد التهاب','مناسب سردمزاجان'],
     for:['sardi','nafkh','yoboosat','khastegi'], mizaj:['balghami','sodavi'],
     dose:'روزی ۲ تا ۳ عدد — صبح یا بعد از غذا' },
-  { id:'khormaDarchin', name:'خرما بار دارچینی', price:593000, unit:'بسته',
+  { id:'khormaDarchin', category:'snack', name:'خرما بار دارچینی', price:593000, unit:'بسته',
     benefits:['تنظیم قند خون','گرم‌کننده','تقویت سوخت‌وساز','ضد التهاب','مناسب دیابتی‌ها'],
     for:['qand','sardi','charbi_shekam','kolesterol'], mizaj:['balghami','sodavi'],
     dose:'روزی ۲ تا ۳ عدد — صبح ناشتا' },
-  { id:'khormaRejimi', name:'خرما بار رژیمی', price:820600, unit:'بسته',
+  { id:'khormaRejimi', category:'snack', name:'خرما بار رژیمی', price:820600, unit:'بسته',
     benefits:['کم‌کالری‌تر','مناسب رژیم لاغری','تأمین انرژی بدون چاقی','فیبر بالا','احساس سیری'],
     for:['charbi_shekam','qand','lazari'], mizaj:['balghami'],
     dose:'روزی ۲ تا ۳ عدد — بین وعده‌ها' },
-  { id:'khormaEnerji', name:'خرما بار انرژی‌زا', price:820600, unit:'بسته',
+  { id:'khormaEnerji', category:'snack', name:'خرما بار انرژی‌زا', price:820600, unit:'بسته',
     benefits:['انرژی فوق‌العاده','مناسب ورزشکاران','تأمین الکترولیت','ضد خستگی','تقویت عضلات'],
     for:['khastegi','moafsal','lazari','moafiyat','varzeshkar'], mizaj:['sodavi','balghami'],
     dose:'قبل یا بعد از ورزش — روزی ۲ تا ۳ عدد' },
-  { id:'khormaTaqviyati', name:'خرما بار تقویتی', price:820600, unit:'بسته',
+  { id:'khormaTaqviyati', category:'snack', name:'خرما بار تقویتی', price:820600, unit:'بسته',
     benefits:['فرمول تقویتی کامل','مناسب دوران بهبودی','تقویت سیستم ایمنی','مقوی عمومی'],
     for:['moafiyat','khastegi','lazari','rizesh'], mizaj:['balghami','sodavi'],
     dose:'روزی ۲ تا ۳ عدد — صبح و عصر' },
-  { id:'proteinKicha', name:'پروتئین بار کیچا', price:1078000, unit:'۶ ساشه ۴۰گرمی',
+  { id:'proteinKicha', category:'protein_bar', name:'پروتئین بار کیچا', price:1078000, unit:'۶ ساشه ۴۰گرمی',
     benefits:['جو دوسر، خرما و عسل برای انرژی پایدار','کره بادام زمینی برای پروتئین و چربی سالم','کینوا و دانه چیا برای امگا۳','مناسب میان‌وعده سالم'],
     for:['khastegi','varzeshkar','afzayesh_vazn','lazari'], mizaj:['balghami','sodavi'],
     dose:'به‌عنوان میان‌وعده بین وعده‌های اصلی یا قبل/بعد از ورزش مصرف شود' },
-  { id:'proteinFroot', name:'پروتئین بار فروتس', price:1347500, unit:'۶ ساشه ۴۰گرمی',
+  { id:'proteinFroot', category:'protein_bar', name:'پروتئین بار فروتس', price:1347500, unit:'۶ ساشه ۴۰گرمی',
     benefits:['میوه‌های خشک (بلوبری، توت‌فرنگی، تمشک، موز)','آنتی‌اکسیدان بالا','منبع پتاسیم و ویتامین B6 و C','انرژی طبیعی و خوشمزه'],
     for:['khastegi','poost','varzeshkar','moafiyat'], mizaj:['balghami','sodavi'],
     dose:'میان‌وعده سالم بین وعده‌های غذایی' },
-  { id:'proteinNats', name:'پروتئین بار ناتس', price:1347500, unit:'۶ ساشه ۴۰گرمی',
+  { id:'proteinNats', category:'protein_bar', name:'پروتئین بار ناتس', price:1347500, unit:'۶ ساشه ۴۰گرمی',
     benefits:['ترکیب خشکبار: گردو، پسته، فندق، بادام','فیبر بالا برای گوارش','پتاسیم، مس، منگنز و ویتامین B','چربی سالم و پروتئین گیاهی'],
     for:['khastegi','varzeshkar','moafsal','afzayesh_vazn'], mizaj:['sodavi','balghami'],
     dose:'میان‌وعده سالم — مناسب قبل یا بعد از ورزش' },
-  { id:'proteinKeto', name:'پروتئین بار کتو', price:1347500, unit:'۶ ساشه ۴۰گرمی',
+  { id:'proteinKeto', category:'protein_bar', name:'پروتئین بار کتو', price:1347500, unit:'۶ ساشه ۴۰گرمی',
     benefits:['چای سبز برای آنتی‌اکسیدان قوی','گردو و تخم کدو و دانه چیا — امگا۳','روغن نارگیل و آرد بادام','تعادل قند خون با اینورت ساکاروز'],
     for:['charbi_shekam','qand','varzeshkar','khastegi'], mizaj:['safravi','balghami'],
     dose:'میان‌وعده مناسب رژیم‌های کم‌کربوهیدرات' },
-  { id:'proteinChocoMint', name:'پروتئین بار شکلات نعناع', price:1078000, unit:'۶ ساشه ۴۰گرمی',
+  { id:'proteinChocoMint', category:'protein_bar', name:'پروتئین بار شکلات نعناع', price:1078000, unit:'۶ ساشه ۴۰گرمی',
     benefits:['طعم شکلات و نعنا','کره بادام زمینی و خرما برای انرژی','کنجد برای امگا۳','فیبر جو دوسر برای گوارش'],
     for:['khastegi','varzeshkar','nafkh'], mizaj:['balghami','sodavi'],
     dose:'میان‌وعده خوشمزه بین وعده‌های غذایی' },
-  { id:'proteinEspresso', name:'پروتئین بار اسپرسو', price:1078000, unit:'۶ ساشه ۴۰گرمی',
+  { id:'proteinEspresso', category:'protein_bar', name:'پروتئین بار اسپرسو', price:1078000, unit:'۶ ساشه ۴۰گرمی',
     benefits:['قهوه اسپرسو طبیعی برای انرژی و تمرکز','مناسب قبل از ورزش یا کار ذهنی','کافئین طبیعی','افزایش وزن کنترل‌شده در صورت نیاز'],
     for:['khastegi','hafeze','varzeshkar','afzayesh_vazn'], mizaj:['balghami','sodavi'],
     dose:'۱ عدد بین صبحانه و ناهار، ۱ عدد بین ناهار و شام | بهتر است پیش از ورزش یا کار ذهنی مصرف شود' },
-  { id:'proteinMacha', name:'پروتئین بار ماچا', price:1078000, unit:'۶ ساشه ۴۰گرمی',
+  { id:'proteinMacha', category:'protein_bar', name:'پروتئین بار ماچا', price:1078000, unit:'۶ ساشه ۴۰گرمی',
     benefits:['چای سبز ماچا برای آنتی‌اکسیدان قوی','دانه چیا و کینوا — امگا۳','عصاره لیمو برای طراوت','انرژی پایدار از جو دوسر و خرما'],
     for:['stress','khastegi','varzeshkar','charbi_shekam'], mizaj:['safravi','balghami'],
     dose:'میان‌وعده سالم — مناسب صبح یا قبل از فعالیت' },
-  { id:'proteinPeanut', name:'پروتئین بار بادام زمینی', price:1347500, unit:'۶ ساشه ۴۰گرمی',
+  { id:'proteinPeanut', category:'protein_bar', name:'پروتئین بار بادام زمینی', price:1347500, unit:'۶ ساشه ۴۰گرمی',
     benefits:['پروتئین گیاهی بالا از بادام زمینی','چربی غیراشباع سالم','ویتامین‌های گروه B','انرژی پایدار برای ورزشکاران'],
     for:['varzeshkar','khastegi','afzayesh_vazn','moafsal'], mizaj:['sodavi','balghami'],
     dose:'میان‌وعده پروتئینی — مناسب قبل یا بعد از تمرین ورزشی' }
@@ -546,9 +546,13 @@ function analyze() {
   const balghamiCount = balghamiItems.length;
   const balghamiLevel = balghamiCount>=8?'شدید':balghamiCount>=4?'متوسط':balghamiCount>=1?'خفیف':'ندارد';
 
-  // بودجه واقعی‌تر و بدون سقف کاذب - برای پکیج پروپیمون
   const budgetLimit = selectedBudget==='low'?3500000:selectedBudget==='mid'?7000000:25000000;
 
+  // ===================================================================
+  // منطق جدید پکیج‌سازی — سیستم ۴ لایه (Slot-Based Recommendation)
+  // ===================================================================
+
+  // امتیازدهی پایه به همه محصولات (برای انتخاب بهترین‌ها داخل هر جایگاه)
   let scored = products.map(p=>{
     let score=0;
     p.for.forEach(f=>{if(symptoms.includes(f))score+=3;});
@@ -566,75 +570,103 @@ function analyze() {
     if(symptoms.includes('afzayesh_vazn') && ['hotChoc','proteinFroot','proteinNats','proteinPeanut','khormaTabii'].includes(p.id))score+=4;
     if(symptoms.includes('ghovaye_jensi') && ['kafeSupreme','masala','kharkhask','dynamine'].includes(p.id))score+=4;
     return {...p,score};
-  }).sort((a,b)=>b.score-a.score);
+  });
+  const scoreOf = id => (scored.find(p=>p.id===id)||{}).score || 0;
+  const getP = id => scored.find(p=>p.id===id);
 
-  const coreCandidates = scored.filter(p=>p.score>=5);
-  let coreSelected=[], coffeeAdded=false;
-  for(let p of coreCandidates){
-    if(['kafeLate','kafeMoka','kafeSupreme','hotChoc','masala'].includes(p.id)){
-      if(coffeeAdded) continue;
-      coffeeAdded=true;
-    }
-    if(coreSelected.length<4) coreSelected.push({...p,tier:'core',qty:1});
+  let selected=[], totalCost=0, usedIds=new Set();
+  function tryAdd(p, tier){
+    if(!p || usedIds.has(p.id)) return false;
+    if(totalCost+p.price>budgetLimit) return false;
+    selected.push({...p,tier,qty:1});
+    usedIds.add(p.id);
+    totalCost+=p.price;
+    return true;
   }
 
-  let baseSelected=[];
-  const honeyProduct = products.find(p=>p.id==='asal500');
-  const khormaProduct = products.find(p=>p.id==='khormaTabii');
-  const seerProduct = products.find(p=>p.id==='seerSiyah');
-  if(honeyProduct) baseSelected.push({...honeyProduct,tier:'base',qty:1});
-  if(khormaProduct) baseSelected.push({...khormaProduct,tier:'base',qty:1});
-  if(seerProduct && !coreSelected.find(p=>p.id==='seerSiyah')) baseSelected.push({...seerProduct,tier:'base',qty:1});
+  // ---------- لایه ۱: Symptom Champions (قهرمان‌های علامت) ----------
+  // برای هر علامت خاص، محصول متخصصش تقریباً همیشه باید در پکیج باشد
+  const symptomChampions = {
+    kabd: 'shahtareh', charbi_shekam: 'chaiSabz', sang_kolieh: 'kharkhask',
+    qaedegi: 'raziyanehBanovan', dard_qaedegi: 'raziyanehBanovan',
+    bikhabi: 'aramBakhsh', rizesh: 'saboosBeranj', poost: 'seerSiyah',
+    qand: 'chaiSabz', kolesterol: 'seerSiyah', varzeshkar: 'dynamine',
+    afzayesh_vazn: 'khormaTabii', ghovaye_jensi: 'kharkhask',
+    tavarom: 'kharkhask', hafeze: 'badranjboyeh', moafiyat: 'seerSiyah'
+  };
+  symptoms.forEach(s => {
+    const championId = symptomChampions[s];
+    if(championId) tryAdd(getP(championId), 'champion');
+  });
 
-  const usedIds = new Set([...coreSelected.map(p=>p.id), ...baseSelected.map(p=>p.id)]);
-  const valueCandidates = scored.filter(p=>p.score>0 && p.score<5 && !usedIds.has(p.id));
-  let valueSelected=[], proteinCount=0;
+  // ---------- لایه ۲: Mandatory Slots (جایگاه‌های ثابت پکیج) ----------
+  // هر پکیج باید حتماً یک نماینده از هر دسته اصلی داشته باشد
+  const slotDefs = [
+    { category:'coffee', label:'نوشیدنی اصلی' },
+    { category:'herbal_tea', label:'دمنوش اصلی' },
+    { category:'fiber', label:'فیبر و غلات' },
+    { category:'base_tonic', label:'تقویتی پایه' },
+    { category:'snack', label:'میان‌وعده' }
+  ];
+  slotDefs.forEach(slot => {
+    // اگه از این دسته چیزی از قبل انتخاب نشده، بهترین گزینه امتیازدار این دسته رو اضافه کن
+    const alreadyHasCategory = selected.some(p=>p.category===slot.category);
+    if(alreadyHasCategory) return;
+    const candidates = scored.filter(p=>p.category===slot.category && !usedIds.has(p.id)).sort((a,b)=>b.score-a.score);
+    if(candidates.length>0) tryAdd(candidates[0], 'slot');
+  });
+
+  // ---------- لایه ۳: Value Fillers (پر کردن هوشمند با محصولات مرتبط) ----------
+  // محصولات باقیمانده با امتیاز مثبت که هنوز انتخاب نشدن، بر اساس امتیاز اضافه می‌شوند
+  // دسته‌هایی مثل قهوه و پروتئین‌بار باید حداکثر ۱ نمونه در کل پکیج داشته باشند (نه بیشتر)
+  // میان‌وعده‌ها (خرما بار) حداکثر ۲ طعم متفاوت مجازند تا پکیج بیش از حد یکنواخت با یک نوع کالا پر نشود
+  const singleInstanceCategories = ['coffee', 'protein_bar'];
+  const maxTwoCategories = ['snack', 'herbal_tea'];
+  const valueCandidates = scored.filter(p=>p.score>0 && !usedIds.has(p.id)).sort((a,b)=>b.score-a.score);
   for(let p of valueCandidates){
-    if(p.id.startsWith('protein')){
-      if(proteinCount>=1) continue;
-      proteinCount++;
+    if(singleInstanceCategories.includes(p.category)){
+      const alreadyHasCategory = selected.some(s=>s.category===p.category);
+      if(alreadyHasCategory) continue;
     }
-    if(['asal900'].includes(p.id) && usedIds.has('asal500')) continue;
-    valueSelected.push({...p,tier:'value',qty:1});
+    if(maxTwoCategories.includes(p.category)){
+      const countInCategory = selected.filter(s=>s.category===p.category).length;
+      if(countInCategory>=2) continue;
+    }
+    if(p.id==='asal900' && usedIds.has('asal500')) continue;
+    if(p.id==='asal500' && usedIds.has('asal900')) continue;
+    tryAdd(p, 'value');
   }
 
-  let allCandidates = [...coreSelected, ...baseSelected, ...valueSelected];
-
-  let selected=[], totalCost=0;
-  const multiPackEligible = ['kafeLate','kafeMoka','kafeSupreme','hotChoc','masala','raziyanehNafkh','shahtareh','chaiSabz','saboosBeranj','kharkhask'];
-
-  for(let p of allCandidates){
-    if(totalCost+p.price<=budgetLimit){
-      selected.push({...p});
-      totalCost+=p.price;
-    }
-  }
-
-  let extraRounds=0;
-  while(extraRounds<3){
-    let addedThisRound=false;
-    for(let item of selected){
-      if(multiPackEligible.includes(item.id) && totalCost+item.price<=budgetLimit){
-        item.qty = (item.qty||1)+1;
-        totalCost+=item.price;
-        addedThisRound=true;
-        if(totalCost>=budgetLimit*0.92) break;
+  // ---------- لایه ۴: Multi-Pack (بسته دوم فقط برای محصولات دوره‌ای مصرف روزانه) ----------
+  // فقط محصولاتی که دوره مصرف طولانی (۳۰+ روز با ۲-۴ بار مصرف روزانه) دارند مجاز به تکرار هستند
+  const multiPackEligible = ['chaiSabz','shahtareh','raziyanehNafkh','kharkhask','saboosBeranj'];
+  if(totalCost < budgetLimit*0.85){
+    let extraRounds=0;
+    while(extraRounds<2 && totalCost<budgetLimit*0.9){
+      let addedThisRound=false;
+      for(let item of selected){
+        if(multiPackEligible.includes(item.id) && item.qty<2 && totalCost+item.price<=budgetLimit){
+          item.qty=(item.qty||1)+1;
+          totalCost+=item.price;
+          addedThisRound=true;
+          if(totalCost>=budgetLimit*0.9) break;
+        }
       }
-    }
-    if(!addedThisRound) break;
-    extraRounds++;
-    if(totalCost>=budgetLimit*0.92) break;
-  }
-
-  for(let p of scored){
-    if(totalCost>=budgetLimit*0.9) break;
-    if(!selected.find(s=>s.id===p.id) && totalCost+p.price<=budgetLimit){
-      selected.push({...p,tier:'value',qty:1});
-      totalCost+=p.price;
+      if(!addedThisRound) break;
+      extraRounds++;
     }
   }
 
-  if(selected.length===0){selected.push({...products[0],tier:'core',qty:1});totalCost=products[0].price;}
+  if(selected.length===0){
+    const fallback = {...products[0],tier:'slot',qty:1};
+    selected.push(fallback);
+    totalCost=products[0].price;
+  }
+
+  // مرتب‌سازی نمایش: قهرمان‌ها اول، بعد جایگاه‌ها، بعد ارزش‌افزا
+  const tierOrder = {champion:0, slot:1, value:2};
+  selected.sort((a,b)=>(tierOrder[a.tier]??3)-(tierOrder[b.tier]??3));
+
 
   document.getElementById('resultHeader').innerHTML=`
     <div class="client-name">${name} ${age?'— '+age+' ساله':''} ${gender==='female'?'(خانم)':gender==='male'?'(آقا)':''}</div>
@@ -654,9 +686,9 @@ function analyze() {
     ${extra?`<div class="analysis-box warn">📋 نکات ویژه مشتری: ${extra}</div>`:''}
   `;
 
-  const tierLabel = {core:['p1','🎯 هسته اصلی درمان'], base:['p2','💪 تقویتی پایه'], value:['p3','⭐ ارزش‌افزا']};
+  const tierLabel = {champion:['p1','🏆 تخصصی برای مشکل شما'], slot:['p2','📦 پایه پکیج'], value:['p3','⭐ ارزش‌افزا']};
   let prodHtml='';
-  let coreHtml='', baseHtml='', valueHtml='';
+  let championHtml='', slotHtml='', valueHtml='';
   selected.forEach((p)=>{
     const badge = tierLabel[p.tier] || tierLabel.value;
     const qtyTag = p.qty>1 ? `<span style="background:#2d6a4f;color:white;padding:2px 8px;border-radius:99px;font-size:11px;margin-right:6px">${p.qty} بسته</span>` : '';
@@ -668,12 +700,12 @@ function analyze() {
       <div class="p-why">✅ ${p.benefits.join(' &nbsp;|&nbsp; ')}</div>
       <div class="p-dose">📌 دستورالعمل مصرف: ${p.dose}</div>
     </div>`;
-    if(p.tier==='core') coreHtml+=card;
-    else if(p.tier==='base') baseHtml+=card;
+    if(p.tier==='champion') championHtml+=card;
+    else if(p.tier==='slot') slotHtml+=card;
     else valueHtml+=card;
   });
-  prodHtml = (coreHtml?`<div class="section-title">🎯 هسته اصلی درمان — مستقیماً برای مشکل اصلی</div>${coreHtml}`:'') +
-             (baseHtml?`<div class="section-title" style="margin-top:16px">💪 تقویتی پایه — برای همه مشتریان توصیه می‌شود</div>${baseHtml}`:'') +
+  prodHtml = (championHtml?`<div class="section-title">🏆 تخصصی برای مشکل شما — مستقیماً هدف‌گذاری‌شده</div>${championHtml}`:'') +
+             (slotHtml?`<div class="section-title" style="margin-top:16px">📦 پایه پکیج — نوشیدنی، دمنوش، فیبر و تقویتی</div>${slotHtml}`:'') +
              (valueHtml?`<div class="section-title" style="margin-top:16px">⭐ ارزش‌افزا — تکمیل‌کننده نتیجه</div>${valueHtml}`:'');
   document.getElementById('productsSection').innerHTML=prodHtml;
 
@@ -698,7 +730,7 @@ function analyze() {
     <div class="t-amount">${totalCost.toLocaleString()} تومان</div>
   `;
 
-  const tierEmoji = {core:'🎯',base:'💪',value:'⭐'};
+  const tierEmoji = {champion:'🏆',slot:'📦',value:'⭐'};
   const prodList = selected.map((p)=>`${tierEmoji[p.tier]||'⭐'} ${p.name}${p.qty>1?` (${p.qty} بسته)`:''} — ${(p.price*(p.qty||1)).toLocaleString()} تومان`).join('\n');
   const sympText = symptoms.slice(0,4).map(s=>sympLabels[s]||s).join('، ');
   const msg = `${name} عزیز 🌿
